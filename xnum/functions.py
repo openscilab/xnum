@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """XNum functions."""
 from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
+from .params import INVALID_SOURCE_MESSAGE, INVALID_TARGET_MESSAGE, INVALID_TEXT_MESSAGE
 import re
 
 def detect_system(char: str) -> NumeralSystem:
@@ -18,8 +19,12 @@ def translate_digit(c: str, target: NumeralSystem) -> str:
 
 
 def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSystem.AUTO) -> str:
+    if not isinstance(text, str):
+        raise ValueError(INVALID_TEXT_MESSAGE)
     if not isinstance(target, NumeralSystem):
-        raise ValueError("Target must be a NumeralSystem enum member")
+        raise ValueError(INVALID_TARGET_MESSAGE)
+    if not isinstance(source, NumeralSystem):
+        raise ValueError(INVALID_SOURCE_MESSAGE)
 
     def convert_match(match):
         token = match.group()
