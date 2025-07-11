@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """XNum functions."""
+import re
+from typing import Match
 from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TARGET_MESSAGE, INVALID_TEXT_MESSAGE
-import re
+
 
 
 def detect_system(char: str) -> NumeralSystem:
@@ -45,7 +47,12 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
     if not isinstance(source, NumeralSystem):
         raise ValueError(INVALID_SOURCE_MESSAGE)
 
-    def convert_match(match):
+    def convert_match(match: Match[str]):
+        """
+        Replacement function for use with re.sub.
+
+        :param match: a regular expression match object
+        """
         token = match.group()
         result = []
         for char in token:
