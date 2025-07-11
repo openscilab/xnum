@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ## [0.1] - 2025-xx-xx
 ### Added
-- Item1
-- Item2
-- Item3
+- English digits
+- Persian digits
+- Hindi digits
+- Arabic-Indic digits
+- Bengali digits
 
 
 [Unreleased]: https://github.com/openscilab/xnum/compare/v0.1...dev
