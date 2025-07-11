@@ -4,6 +4,7 @@ from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TARGET_MESSAGE, INVALID_TEXT_MESSAGE
 import re
 
+
 def detect_system(char: str) -> NumeralSystem:
     """
     Detect numeral system.
@@ -61,4 +62,3 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
     pattern = r'[{}]+'.format(''.join(re.escape(digit) for digits in NUMERAL_MAPS.values() for digit in digits))
     result = re.sub(pattern, convert_match, text)
     return result
-

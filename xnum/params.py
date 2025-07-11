@@ -6,7 +6,7 @@ XNUM_VERSION = "0.1"
 
 ENGLISH_DIGITS = "0123456789"
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
-HINDI_DIGITS   = "०१२३४५६७८९"
+HINDI_DIGITS = "०१२३४५६७८९"
 ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
 BENGALI_DIGITS = "০১২৩৪৫৬৭৮৯"
 
@@ -23,6 +23,7 @@ for system, digits in NUMERAL_MAPS.items():
     for index, char in enumerate(digits):
         ALL_DIGIT_MAPS[char] = str(index)
 
+
 class NumeralSystem(Enum):
     ENGLISH = "english"
     PERSIAN = "persian"
@@ -30,6 +31,7 @@ class NumeralSystem(Enum):
     ARABIC_INDIC = "arabic_indic"
     BENGALI = "bengali"
     AUTO = "auto"
+
 
 INVALID_SOURCE_MESSAGE = "Invalid value. `source` must be an instance of NumeralSystem enum."
 INVALID_TARGET_MESSAGE = "Invalid value. `target` must be an instance of NumeralSystem enum."
