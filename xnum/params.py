@@ -20,8 +20,8 @@ NUMERAL_MAPS = {
 
 ALL_DIGIT_MAPS = {}
 for system, digits in NUMERAL_MAPS.items():
-    for idx, ch in enumerate(digits):
-        ALL_DIGIT_MAPS[ch] = str(idx)
+    for index, char in enumerate(digits):
+        ALL_DIGIT_MAPS[char] = str(index)
 
 class NumeralSystem(Enum):
     ENGLISH = "english"
