@@ -5,20 +5,38 @@ from .params import INVALID_SOURCE_MESSAGE, INVALID_TARGET_MESSAGE, INVALID_TEXT
 import re
 
 def detect_system(char: str) -> NumeralSystem:
+    """
+    Detect numeral system.
+
+    :param char: character
+    """
     for system, digits in NUMERAL_MAPS.items():
         if char in digits:
             return NumeralSystem(system)
     return NumeralSystem.ENGLISH
 
 
-def translate_digit(c: str, target: NumeralSystem) -> str:
-    if c in ALL_DIGIT_MAPS:
-        standard = ALL_DIGIT_MAPS[c]
+def translate_digit(char: str, target: NumeralSystem) -> str:
+    """
+    Translate digit.
+
+    :param char: character
+    :param target: target numeral system
+    """
+    if char in ALL_DIGIT_MAPS:
+        standard = ALL_DIGIT_MAPS[char]
         return NUMERAL_MAPS[target.value][int(standard)]
-    return c
+    return char
 
 
 def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSystem.AUTO) -> str:
+    """
+    Convert function.
+
+    :param text: input text
+    :param target: target numeral system
+    :param source: source numeral system
+    """
     if not isinstance(text, str):
         raise ValueError(INVALID_TEXT_MESSAGE)
     if not isinstance(target, NumeralSystem):
@@ -28,20 +46,19 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
 
     def convert_match(match):
         token = match.group()
-
         result = []
-        for c in token:
-            detected = detect_system(c)
+        for char in token:
+            detected = detect_system(char)
             if source == NumeralSystem.AUTO:
-                result.append(translate_digit(c, target))
+                result.append(translate_digit(char, target))
             elif detected == source:
-                result.append(translate_digit(c, target))
+                result.append(translate_digit(char, target))
             else:
-                result.append(c)
+                result.append(char)
 
         return ''.join(result)
 
-    pattern = r'[{}]+'.format(''.join(re.escape(d) for digits in NUMERAL_MAPS.values() for d in digits))
+    pattern = r'[{}]+'.format(''.join(re.escape(digit) for digits in NUMERAL_MAPS.values() for digit in digits))
     result = re.sub(pattern, convert_match, text)
     return result
 
