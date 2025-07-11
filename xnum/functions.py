@@ -6,7 +6,6 @@ from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TARGET_MESSAGE, INVALID_TEXT_MESSAGE
 
 
-
 def detect_system(char: str) -> NumeralSystem:
     """
     Detect numeral system.
