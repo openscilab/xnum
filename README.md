@@ -69,7 +69,21 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 
 ## Usage
 
-TODO
+```pycon
+>>> from xnum import convert, NumeralSystem
+>>> print(convert("۱۲۳ apples & ٤٥۶ cars", target=NumeralSystem.ENGLISH))
+123 apples & 456 cars
+>>> print(convert("۱۲۳ and ٤٥۶", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
+१२३ and ٤٥۶
+```
+
+## Supported numeral systems
+
+- English
+- Persian
+- Hindi
+- Arabic-Indic
+- Bengali
 
 ## Issues & bug reports
 
