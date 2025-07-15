@@ -22,9 +22,13 @@ about:
     home: https://github.com/openscilab/xnum
     license: MIT
     license_family: MIT
-    summary: XNum: TODO
+    summary: XNum: Universal Numeral System Converter
     description: |
-	TODO
+	XNum is a simple and lightweight Python library that helps you convert digits between different numeral systems
+    like English, Persian, Hindi, Arabic-Indic, Bengali, and more.
+    It can automatically detect mixed numeral formats in a piece of text and convert only the numbers, leaving the rest untouched.
+    Whether you are building multilingual apps or processing localized data, XNum makes it easy to handle numbers across different
+    languages with a clean and easy-to-use API.
 	
         Website: https://openscilab.com
 
