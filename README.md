@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>XNum: TODO</h1>
+    <h1>XNum: Universal Numeral System Converter</h1>
     <br/>
     <a href="https://badge.fury.io/py/xnum"><img src="https://badge.fury.io/py/xnum.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
@@ -11,9 +11,10 @@
 
 ## Overview
 <p align="justify">
-TODO
-
+<b>XNum</b> is a simple and lightweight Python library that helps you convert digits between different numeral systems — like English, Persian, Hindi, Arabic-Indic, Bengali, and more.
+It can automatically detect mixed numeral formats in a piece of text and convert only the numbers, leaving the rest untouched. Whether you're building multilingual apps or processing localized data, <b>XNum</b> makes it easy to handle numbers across different languages with a clean and easy-to-use API.
 </p>
+
 <table>
     <tr>
         <td align="center">PyPI Counter</td>
