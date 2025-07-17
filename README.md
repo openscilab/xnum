@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>XNum: TODO</h1>
+    <h1>XNum: Universal Numeral System Converter</h1>
     <br/>
     <a href="https://badge.fury.io/py/xnum"><img src="https://badge.fury.io/py/xnum.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
@@ -11,9 +11,10 @@
 
 ## Overview
 <p align="justify">
-TODO
-
+<b>XNum</b> is a simple and lightweight Python library that helps you convert digits between different numeral systems — like English, Persian, Hindi, Arabic-Indic, Bengali, and more.
+It can automatically detect mixed numeral formats in a piece of text and convert only the numbers, leaving the rest untouched. Whether you're building multilingual apps or processing localized data, <b>XNum</b> makes it easy to handle numbers across different languages with a clean and easy-to-use API.
 </p>
+
 <table>
     <tr>
         <td align="center">PyPI Counter</td>
@@ -68,7 +69,21 @@ TODO
 
 ## Usage
 
-TODO
+```pycon
+>>> from xnum import convert, NumeralSystem
+>>> print(convert("۱۲۳ apples & ٤٥۶ cars", target=NumeralSystem.ENGLISH))
+123 apples & 456 cars
+>>> print(convert("۱۲۳ and ٤٥٦", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
+१२३ and ٤٥۶
+```
+
+## Supported numeral systems
+
+- English
+- Persian
+- Hindi
+- Arabic-Indic
+- Bengali
 
 ## Issues & bug reports
 
@@ -92,4 +107,4 @@ Give a ⭐️ if this project helped you!
 ### Donate to our project
 If you do like our project and we hope that you do, can you please support us? Our project is not and is never going to be working for profit. We need the money just so we can continue doing what we do ;-) .			
 
-<a href="https://openscilab.com/#donation" target="_blank"><img src="https://github.com/openscilab/xnum/raw/main/otherfiles/donation.png" height="90px" width="270px" alt="XNum Donation"></a>
+<a href="https://openscilab.com/#donation" target="_blank"><img src="https://github.com/openscilab/xnum/raw/main/otherfiles/donation.png" width="270" alt="XNum Donation"></a>

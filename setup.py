@@ -23,7 +23,11 @@ def read_description() -> str:
             description += c.read()
         return description
     except Exception:
-        return '''TODO'''
+        return '''XNum is a simple and lightweight Python library that helps you convert digits between different numeral systems
+                  like English, Persian, Hindi, Arabic-Indic, Bengali, and more.
+                  It can automatically detect mixed numeral formats in a piece of text and convert only the numbers, leaving the rest untouched.
+                  Whether you're building multilingual apps or processing localized data, XNum makes it easy to handle numbers across different
+                  languages with a clean and easy-to-use API.'''
 
 
 setup(
@@ -31,14 +35,14 @@ setup(
     packages=[
         'xnum', ],
     version='0.1',
-    description='XNum: TODO',
+    description='XNum: Universal Numeral System Converter',
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='XNum Development Team',
     author_email='xnum@openscilab.com',
     url='https://github.com/openscilab/xnum',
     download_url='https://github.com/openscilab/xnum/tarball/v0.1',
-    keywords="TODO",
+    keywords="convert numeral number numeral-system digits",
     project_urls={
             'Source': 'https://github.com/openscilab/xnum',
     },
