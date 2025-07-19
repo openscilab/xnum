@@ -2,6 +2,7 @@ from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Bengali tests"
 
+
 def test_identity_conversion():
     assert convert("০১২৩৪৫৬৭৮৯", source=NumeralSystem.BENGALI, target=NumeralSystem.BENGALI) == "০১২৩৪৫৬৭৮৯"
 
