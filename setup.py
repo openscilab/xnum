@@ -64,11 +64,9 @@ setup(
         'Intended Audience :: Education',
         'Intended Audience :: End Users/Desktop',
         'Intended Audience :: Manufacturing',
-        'Intended Audience :: Science/Research',
         'Topic :: Education',
-        'Topic :: Scientific/Engineering',
-        'Topic :: Scientific/Engineering :: Information Analysis',
-        'Topic :: Scientific/Engineering :: Artificial Intelligence',
+        'Topic :: Text Editors :: Text Processing',
+        'Topic :: Software Development :: Localization',
     ],
     license='MIT',
 )
