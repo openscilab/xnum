@@ -25,6 +25,8 @@ for system, digits in NUMERAL_MAPS.items():
 
 
 class NumeralSystem(Enum):
+    """Numeral System enum."""
+
     ENGLISH = "english"
     PERSIAN = "persian"
     HINDI = "hindi"
