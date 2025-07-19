@@ -3,6 +3,10 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Arabic-Indic tests"
 
 
+def test_identity_conversion():
+    assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.ARABIC_INDIC) == "٠١٢٣٤٥٦٧٨٩"
+
+
 def test_arabic_indic_to_english1():
     assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.ENGLISH) == "0123456789"
 

@@ -2,6 +2,9 @@ from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Persian tests"
 
+def test_identity_conversion():
+    assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
+
 
 def test_persian_to_english1():
     assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.ENGLISH) == "0123456789"

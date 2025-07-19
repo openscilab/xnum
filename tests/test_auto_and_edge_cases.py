@@ -15,11 +15,6 @@ def test_no_conversion_if_not_matching_source():
     assert convert("০১২ and ٤٥٦", source=NumeralSystem.ENGLISH, target=NumeralSystem.HINDI) == "০১২ and ٤٥٦"
 
 
-def test_identity_conversion():
-    assert convert("0123456789", source=NumeralSystem.ENGLISH, target=NumeralSystem.ENGLISH) == "0123456789"
-    assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
-
-
 def test_empty_string():
     assert convert("", target=NumeralSystem.ENGLISH) == ""
 
