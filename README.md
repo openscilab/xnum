@@ -49,13 +49,6 @@ It can automatically detect mixed numeral formats in a piece of text and convert
             </td>
     </tr>
 </table>
-<table>
-    <tr> 
-        <td align="center">Code Quality</td>
-        <td align="center"></td>
-        <td align="center"></td>
-    </tr>
-</table>
 
 
 ## Installation
