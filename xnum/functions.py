@@ -48,7 +48,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
 
     def convert_match(match: Match[str]):
         """
-        Replacement function for use with re.sub.
+        Function for use with re.sub.
 
         :param match: a regular expression match object
         """
