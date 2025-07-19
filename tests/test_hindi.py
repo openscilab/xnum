@@ -13,20 +13,20 @@ def test_hindi_to_english2():
 
 
 def test_hindi_to_persian1():
-    assert convert("०१२३४५६７८९", source=NumeralSystem.HINDI, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
+    assert convert("०१२३४५६७८९", source=NumeralSystem.HINDI, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
 
 
 def test_hindi_to_persian2():
-    assert convert("abc ०१२३४५६７८९ abc", source=NumeralSystem.HINDI,
+    assert convert("abc ०१२३४५६७८९ abc", source=NumeralSystem.HINDI,
                    target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
 
 
 def test_hindi_to_arabic_indic1():
-    assert convert("०१२३४५६７८९", source=NumeralSystem.HINDI, target=NumeralSystem.ARABIC_INDIC) == "٠١٢٣٤٥٦٧٨٩"
+    assert convert("०१२३४५६७८९", source=NumeralSystem.HINDI, target=NumeralSystem.ARABIC_INDIC) == "٠١٢٣٤٥٦٧٨٩"
 
 
 def test_hindi_to_arabic_indic2():
-    assert convert("abc ०१२३४५६７८९ abc", source=NumeralSystem.HINDI,
+    assert convert("abc ०१२३४५६७८९ abc", source=NumeralSystem.HINDI,
                    target=NumeralSystem.ARABIC_INDIC) == "abc ٠١٢٣٤٥٦٧٨٩ abc"
 
 

@@ -22,12 +22,12 @@ def test_arabic_indic_to_persian2():
 
 
 def test_arabic_indic_to_hindi1():
-    assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.HINDI) == "०१२३४५६７८९"
+    assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.HINDI) == "०१२३४५६७८९"
 
 
 def test_arabic_indic_to_hindi2():
     assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
-                   target=NumeralSystem.HINDI) == "abc ०१२३४५६７८९ abc"
+                   target=NumeralSystem.HINDI) == "abc ०१२३४५६७८९ abc"
 
 
 def test_arabic_indic_to_bengali1():
