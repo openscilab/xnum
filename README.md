@@ -49,13 +49,6 @@ It can automatically detect mixed numeral formats in a piece of text and convert
             </td>
     </tr>
 </table>
-<table>
-    <tr> 
-        <td align="center">Code Quality</td>
-        <td align="center"></td>
-        <td align="center"></td>
-    </tr>
-</table>
 
 
 ## Installation
@@ -90,12 +83,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [xnum@openscilab.com](mailto:xnum@openscilab.com "xnum@openscilab.com"). 
 
 - Please complete the issue template
- 
-You can also join our discord server
 
-<a href="https://discord.gg/cZxGwZ6utB">
-  <img src="https://img.shields.io/discord/1064533716615049236.svg?style=for-the-badge" alt="Discord Channel">
-</a>
 
 ## Show your support
 
