@@ -3,7 +3,8 @@
 import re
 from typing import Match
 from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
-from .params import INVALID_SOURCE_MESSAGE, INVALID_TARGET_MESSAGE, INVALID_TEXT_MESSAGE
+from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
+from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
 
 
 def detect_system(char: str) -> NumeralSystem:
@@ -42,7 +43,9 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
     if not isinstance(text, str):
         raise ValueError(INVALID_TEXT_MESSAGE)
     if not isinstance(target, NumeralSystem):
-        raise ValueError(INVALID_TARGET_MESSAGE)
+        raise ValueError(INVALID_TARGET_MESSAGE1)
+    if target == NumeralSystem.AUTO:
+        raise ValueError(INVALID_TARGET_MESSAGE2)
     if not isinstance(source, NumeralSystem):
         raise ValueError(INVALID_SOURCE_MESSAGE)
 
