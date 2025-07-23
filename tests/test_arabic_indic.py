@@ -41,3 +41,12 @@ def test_arabic_indic_to_bengali1():
 def test_arabic_indic_to_bengali2():
     assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
                    target=NumeralSystem.BENGALI) == "abc ০১২৩৪৫৬৭৮৯ abc"
+
+
+def test_arabic_indic_to_thai1():
+    assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.THAI) == "๐๑๒๓๔๕๖๗๘๙"
+
+
+def test_arabic_indic_to_thai2():
+    assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
+                   target=NumeralSystem.THAI) == "abc ๐๑๒๓๔๕๖๗๘๙ abc"

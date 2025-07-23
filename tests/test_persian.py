@@ -41,3 +41,12 @@ def test_persian_to_bengali1():
 def test_persian_to_bengali2():
     assert convert("abc ۰۱۲۳۴۵۶۷۸۹ abc", source=NumeralSystem.PERSIAN,
                    target=NumeralSystem.BENGALI) == "abc ০১২৩৪৫৬৭৮৯ abc"
+
+
+def test_persian_to_thai1():
+    assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.THAI) == "๐๑๒๓๔๕๖๗๘๙"
+
+
+def test_persian_to_thai2():
+    assert convert("abc ۰۱۲۳۴۵۶۷۸۹ abc", source=NumeralSystem.PERSIAN,
+                   target=NumeralSystem.THAI) == "abc ๐๑๒๓๔๕๖๗๘๙ abc"
