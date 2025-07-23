@@ -9,13 +9,15 @@ PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 HINDI_DIGITS = "०१२३४५६७८९"
 ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
 BENGALI_DIGITS = "০১২৩৪৫৬৭৮৯"
+THAI_DIGITS = "๐๑๒๓๔๕๖๗๘๙"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
     "persian": PERSIAN_DIGITS,
     "hindi": HINDI_DIGITS,
     "arabic_indic": ARABIC_INDIC_DIGITS,
-    "bengali": BENGALI_DIGITS
+    "bengali": BENGALI_DIGITS,
+    "thai": THAI_DIGITS
 }
 
 ALL_DIGIT_MAPS = {}
@@ -32,6 +34,7 @@ class NumeralSystem(Enum):
     HINDI = "hindi"
     ARABIC_INDIC = "arabic_indic"
     BENGALI = "bengali"
+    THAI = "thai"
     AUTO = "auto"
 
 
