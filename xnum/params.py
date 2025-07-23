@@ -36,5 +36,6 @@ class NumeralSystem(Enum):
 
 
 INVALID_SOURCE_MESSAGE = "Invalid value. `source` must be an instance of NumeralSystem enum."
-INVALID_TARGET_MESSAGE = "Invalid value. `target` must be an instance of NumeralSystem enum."
+INVALID_TARGET_MESSAGE1 = "Invalid value. `target` must be an instance of NumeralSystem enum."
+INVALID_TARGET_MESSAGE2 = "Invalid value. `target` cannot be NumeralSystem.AUTO."
 INVALID_TEXT_MESSAGE = "Invalid value. `text` must be a string."
