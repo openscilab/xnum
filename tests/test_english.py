@@ -41,3 +41,12 @@ def test_english_to_bengali1():
 def test_english_to_bengali2():
     assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
                    target=NumeralSystem.BENGALI) == "abc ০১২৩৪৫৬৭৮৯ abc"
+
+
+def test_english_to_thai1():
+    assert convert("0123456789", source=NumeralSystem.ENGLISH, target=NumeralSystem.THAI) == "๐๑๒๓๔๕๖๗๘๙"
+
+
+def test_english_to_thai2():
+    assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
+                   target=NumeralSystem.THAI) == "abc ๐๑๒๓๔๕๖๗๘๙ abc"
