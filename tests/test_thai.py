@@ -39,7 +39,7 @@ def test_thai_to_bengali1():
 
 
 def test_thai_to_bengali2():
-    assert convert("abc ๐๑๒๓๔๕๖็๘๙ abc", source=NumeralSystem.THAI,
+    assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
                    target=NumeralSystem.BENGALI) == "abc ০১২৩৪৫৬৭৮৯ abc"
 
 
