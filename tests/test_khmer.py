@@ -57,5 +57,5 @@ def test_khmer_to_persian1():
 
 
 def test_khmer_to_persian2():
-    assert convert("abc ០១២៣۴៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
+    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
