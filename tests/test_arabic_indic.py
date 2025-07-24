@@ -50,3 +50,12 @@ def test_arabic_indic_to_thai1():
 def test_arabic_indic_to_thai2():
     assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
                    target=NumeralSystem.THAI) == "abc ๐๑๒๓๔๕๖๗๘๙ abc"
+
+
+def test_arabic_indic_to_khmer1():
+    assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.KHMER) == "០១២៣៤៥៦៧៨៩"
+
+
+def test_arabic_indic_to_khmer2():
+    assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
+                   target=NumeralSystem.KHMER) == "abc ០១២៣៤៥៦៧៨៩ abc"
