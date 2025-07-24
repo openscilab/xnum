@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Thai numeral system
+- Khmer numeral system
 ### Changed
 - Test system modified
 - `target` parameter bug fixed

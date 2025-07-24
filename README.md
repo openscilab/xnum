@@ -78,6 +78,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Arabic-Indic
 - Bengali
 - Thai
+- Khmer
 
 ## Issues & bug reports
 
