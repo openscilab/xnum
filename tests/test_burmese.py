@@ -30,7 +30,7 @@ def test_burmese_to_arabic_indic1():
 
 
 def test_burmese_to_arabic_indic2():
-    assert convert("abc ၀၁၂၃၄٥၆၇၈၉ abc", source=NumeralSystem.BURMESE,
+    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
                    target=NumeralSystem.ARABIC_INDIC) == "abc ٠١٢٣٤٥٦٧٨٩ abc"
 
 
