@@ -50,3 +50,12 @@ def test_persian_to_thai1():
 def test_persian_to_thai2():
     assert convert("abc ۰۱۲۳۴۵۶۷۸۹ abc", source=NumeralSystem.PERSIAN,
                    target=NumeralSystem.THAI) == "abc ๐๑๒๓๔๕๖๗๘๙ abc"
+
+
+def test_persian_to_khmer1():
+    assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.KHMER) == "០១២៣៤៥៦៧៨៩"
+
+
+def test_persian_to_khmer2():
+    assert convert("abc ۰۱۲۳۴۵۶۷۸۹ abc", source=NumeralSystem.PERSIAN,
+                   target=NumeralSystem.KHMER) == "abc ០១២៣៤៥៦៧៨៩ abc"
