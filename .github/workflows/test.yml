@@ -40,6 +40,10 @@ jobs:
         run: |
           python otherfiles/requirements-splitter.py
           pip install --upgrade --upgrade-strategy=only-if-needed -r test-requirements.txt
+      - name: Conflict check
+        run: |
+          python otherfiles/conflict_check.py
+        if: matrix.python-version == env.TEST_PYTHON_VERSION
       - name: Test with pytest 
         run: |
           python -m pytest . --cov=xnum --cov-report=term
