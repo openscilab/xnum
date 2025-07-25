@@ -6,4 +6,7 @@
 
 # Other Contributors
 ----------
+- [ChatGPT](https://chat.openai.com/) ++
+
+++ Graphic designer
 
