@@ -55,6 +55,10 @@ jobs:
           python -m bandit -r xnum -s B311,B105
           python -m pydocstyle -v
         if: matrix.python-version == env.TEST_PYTHON_VERSION
+      - name: Conflict check
+        run: |
+          python otherfiles/conflict_check.py
+        if: matrix.python-version == env.TEST_PYTHON_VERSION
       - name: Version check
         run: |
           python otherfiles/version_check.py
