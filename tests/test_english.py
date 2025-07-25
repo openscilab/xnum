@@ -59,3 +59,13 @@ def test_english_to_khmer1():
 def test_english_to_khmer2():
     assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
                    target=NumeralSystem.KHMER) == "abc ០១២៣៤៥៦៧៨៩ abc"
+
+
+def test_english_to_burmese1():
+    assert convert("0123456789", source=NumeralSystem.ENGLISH, target=NumeralSystem.BURMESE) == "၀၁၂၃၄၅၆၇၈၉"
+
+
+
+def test_english_to_burmese2():
+    assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
+                   target=NumeralSystem.BURMESE) == "abc ၀၁၂၃၄၅၆၇၈၉ abc"
