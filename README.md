@@ -1,4 +1,5 @@
 <div align="center">
+	<img src="https://github.com/openscilab/xnum/raw/logo/otherfiles/logo.png" alt="XNum Logo" width="424">
     <h1>XNum: Universal Numeral System Converter</h1>
     <br/>
     <a href="https://badge.fury.io/py/xnum"><img src="https://badge.fury.io/py/xnum.svg" alt="PyPI version"></a>
