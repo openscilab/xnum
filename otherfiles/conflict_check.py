@@ -16,8 +16,8 @@ def detect_conflicts() -> bool:
                 other_system, other_index = seen[char]
                 print("  Conflict detected:")
                 print("    Character: '{char}'".format(char=char))
-                print(
-                    "    System 1:  {other_system} -> {other_index}".format(other_system=other_system, other_index=other_index))
+                print("    System 1:  {other_system} -> {other_index}".format(
+                    other_system=other_system, other_index=other_index))
                 print("    System 2:  {system} -> {index}".format(system=system, index=index))
                 return False
             seen[char] = (system, index)
