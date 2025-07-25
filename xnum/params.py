@@ -5,7 +5,7 @@ from enum import Enum
 XNUM_VERSION = "0.1"
 
 ENGLISH_DIGITS = "0123456789"
-PERSIAN_DIGITS = "٠۱۲۳۴۵۶۷۸۹"
+PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 HINDI_DIGITS = "०१२३४५६७८९"
 ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
 BENGALI_DIGITS = "০১২৩৪৫৬৭৮৯"
