@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Thai numeral system
 - Khmer numeral system
 - Burmese numeral system
+- Logo
 ### Changed
 - Test system modified
 - `target` parameter bug fixed
