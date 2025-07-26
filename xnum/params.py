@@ -2,7 +2,7 @@
 """XNum parameters and constants."""
 from enum import Enum
 
-XNUM_VERSION = "0.1"
+XNUM_VERSION = "0.2"
 
 ENGLISH_DIGITS = "0123456789"
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
