@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Test system modified
 - `target` parameter bug fixed
+- Readme modified
 ## [0.1] - 2025-07-20
 ### Added
 - English numeral system
