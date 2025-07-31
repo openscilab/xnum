@@ -12,6 +12,7 @@ BENGALI_DIGITS = "০১২৩৪৫৬৭৮৯"
 THAI_DIGITS = "๐๑๒๓๔๕๖๗๘๙"
 KHMER_DIGITS = "០១២៣៤៥៦៧៨៩"
 BURMESE_DIGITS = "၀၁၂၃၄၅၆၇၈၉"
+TIBETAN_DIGITS = "༠༡༢༣༤༥༦༧༨༩"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -21,7 +22,8 @@ NUMERAL_MAPS = {
     "bengali": BENGALI_DIGITS,
     "thai": THAI_DIGITS,
     "khmer": KHMER_DIGITS,
-    "burmese": BURMESE_DIGITS
+    "burmese": BURMESE_DIGITS,
+    "tibetan": TIBETAN_DIGITS
 }
 
 ALL_DIGIT_MAPS = {}
@@ -41,6 +43,7 @@ class NumeralSystem(Enum):
     THAI = "thai"
     KHMER = "khmer"
     BURMESE = "burmese"
+    TIBETAN = "tibetan"
     AUTO = "auto"
 
 
