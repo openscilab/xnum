@@ -83,6 +83,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Thai
 - Khmer
 - Burmese
+- Tibetan
 
 ## Issues & bug reports
 
