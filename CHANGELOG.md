@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Tibetan numeral system
+- Gujarati numeral system
 ## [0.2] - 2025-07-28
 ### Added
 - Thai numeral system
