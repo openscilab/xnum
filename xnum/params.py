@@ -13,6 +13,7 @@ THAI_DIGITS = "๐๑๒๓๔๕๖๗๘๙"
 KHMER_DIGITS = "០១២៣៤៥៦៧៨៩"
 BURMESE_DIGITS = "၀၁၂၃၄၅၆၇၈၉"
 TIBETAN_DIGITS = "༠༡༢༣༤༥༦༧༨༩"
+GUJARATI_DIGITS = "૦૧૨૩૪૫૬૭૮૯"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
