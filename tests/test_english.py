@@ -77,3 +77,12 @@ def test_english_to_tibetan1():
 def test_english_to_tibetan2():
     assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
                    target=NumeralSystem.TIBETAN) == "abc ༠༡༢༣༤༥༦༧༨༩ abc"
+
+
+def test_english_to_gujarati1():
+    assert convert("0123456789", source=NumeralSystem.ENGLISH, target=NumeralSystem.GUJARATI) == "૦૧૨૩૪૫૬૭૮૯"
+
+
+def test_english_to_gujarati2():
+    assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
+                   target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
