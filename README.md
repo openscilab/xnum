@@ -84,6 +84,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Khmer
 - Burmese
 - Tibetan
+- Gujarati
 
 ## Issues & bug reports
 

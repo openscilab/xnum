@@ -77,3 +77,12 @@ def test_burmese_to_tibetan1():
 def test_burmese_to_tibetan2():
     assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
                    target=NumeralSystem.TIBETAN) == "abc ༠༡༢༣༤༥༦༧༨༩ abc"
+
+
+def test_burmese_to_gujarati1():
+    assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.GUJARATI) == "૦૧૨૩૪૫૬૭૮૯"
+
+
+def test_burmese_to_gujarati2():
+    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
+                   target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"

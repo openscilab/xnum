@@ -77,3 +77,12 @@ def test_tibetan_to_persian1():
 def test_tibetan_to_persian2():
     assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
                    target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
+
+
+def test_tibetan_to_gujarati1():
+    assert convert("༠༡༢༣༤༥༦༧༨༩", source=NumeralSystem.TIBETAN, target=NumeralSystem.GUJARATI) == "૦૧૨૩૪૫૬૭૮૯"
+
+
+def test_tibetan_to_gujarati2():
+    assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
+                   target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
