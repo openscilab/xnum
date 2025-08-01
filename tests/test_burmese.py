@@ -86,3 +86,12 @@ def test_burmese_to_gujarati1():
 def test_burmese_to_gujarati2():
     assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
                    target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
+
+
+def test_burmese_to_odia1():
+    assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.ODIA) == "୦୧୨୩୪୫୬୭୮୯"
+
+
+def test_burmese_to_odia2():
+    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
+                   target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"

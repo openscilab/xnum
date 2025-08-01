@@ -86,3 +86,12 @@ def test_khmer_to_gujarati1():
 def test_khmer_to_gujarati2():
     assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
+
+
+def test_khmer_to_odia1():
+    assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.ODIA) == "୦୧୨୩୪୫୬୭୮୯"
+
+
+def test_khmer_to_odia2():
+    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
+                   target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"

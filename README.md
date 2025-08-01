@@ -85,6 +85,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Burmese
 - Tibetan
 - Gujarati
+- Odia
 
 ## Issues & bug reports
 

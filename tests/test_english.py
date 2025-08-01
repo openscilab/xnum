@@ -86,3 +86,12 @@ def test_english_to_gujarati1():
 def test_english_to_gujarati2():
     assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
                    target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
+
+
+def test_english_to_odia1():
+    assert convert("0123456789", source=NumeralSystem.ENGLISH, target=NumeralSystem.ODIA) == "୦୧୨୩୪୫୬୭୮୯"
+
+
+def test_english_to_odia2():
+    assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
+                   target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
