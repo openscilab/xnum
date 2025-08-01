@@ -24,7 +24,8 @@ NUMERAL_MAPS = {
     "thai": THAI_DIGITS,
     "khmer": KHMER_DIGITS,
     "burmese": BURMESE_DIGITS,
-    "tibetan": TIBETAN_DIGITS
+    "tibetan": TIBETAN_DIGITS,
+    "gujarati": GUJARATI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
