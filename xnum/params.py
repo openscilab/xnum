@@ -46,6 +46,7 @@ class NumeralSystem(Enum):
     KHMER = "khmer"
     BURMESE = "burmese"
     TIBETAN = "tibetan"
+    GUJARATI = "gujarati"
     AUTO = "auto"
 
 
