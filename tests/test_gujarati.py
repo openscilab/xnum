@@ -77,3 +77,11 @@ def test_gujarati_to_tibetan1():
 
 def test_gujarati_to_tibetan2():
     assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.TIBETAN) == "abc ༠༡༢༣༤༥༦༧༨༩ abc"
+
+
+def test_gujarati_to_odia1():
+    assert convert("૦૧૨૩૪૫૬૭૮૯", source=NumeralSystem.GUJARATI, target=NumeralSystem.ODIA) == "୦୧୨୩୪୫୬୭୮୯"
+
+
+def test_gujarati_to_odia2():
+    assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"

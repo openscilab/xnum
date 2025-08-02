@@ -86,3 +86,12 @@ def test_arabic_indic_to_gujarati1():
 def test_arabic_indic_to_gujarati2():
     assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
                    target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
+
+
+def test_arabic_indic_to_odia1():
+    assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.ODIA) == "୦୧୨୩୪୫୬୭୮୯"
+
+
+def test_arabic_indic_to_odia2():
+    assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
+                   target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
