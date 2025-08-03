@@ -73,6 +73,8 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 १२३ and ٤٥۶
 ```
 
+ℹ️ `source` default value is `NumeralSystem.AUTO`
+
 ## Supported numeral systems
 
 - English
