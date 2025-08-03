@@ -4,6 +4,7 @@
     <br/>
     <a href="https://badge.fury.io/py/xnum"><img src="https://badge.fury.io/py/xnum.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
+    <a href="https://codecov.io/gh/openscilab/xnum"><img src="https://codecov.io/gh/openscilab/xnum/graph/badge.svg?token=0R14OKY0TB"></a>
     <a href="https://github.com/openscilab/xnum"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/xnum"></a>
     <a href="https://discord.gg/h8T2F8WpFN"><img src="https://img.shields.io/discord/1064533716615049236.svg" alt="Discord Channel"></a>
 
