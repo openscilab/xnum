@@ -74,7 +74,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 १२३ and ٤٥۶
 ```
 
-ℹ️ `source` default value is `NumeralSystem.AUTO`
+ℹ️ By default, the `source` parameter is set to `NumeralSystem.AUTO`, which automatically detects the numeral system
 
 ## Supported numeral systems
 
