@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Tibetan numeral system
 - Gujarati numeral system
 - Odia numeral system
+### Changed
+- `README.md` updated
 ## [0.2] - 2025-07-28
 ### Added
 - Thai numeral system
