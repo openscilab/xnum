@@ -95,3 +95,12 @@ def test_hindi_to_odia1():
 def test_hindi_to_odia2():
     assert convert("abc ०१२३४५६७८९ abc", source=NumeralSystem.HINDI,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_hindi_to_telugu1():
+    assert convert("०१२३४५६७८९", source=NumeralSystem.HINDI, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_hindi_to_telugu2():
+    assert convert("abc ०१२३४५६७८९ abc", source=NumeralSystem.HINDI,
+                   target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
