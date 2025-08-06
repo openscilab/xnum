@@ -85,3 +85,11 @@ def test_gujarati_to_odia1():
 
 def test_gujarati_to_odia2():
     assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_gujarati_to_kannadi1():
+    assert convert("૦૧૨૩૪૫૬૭૮૯", source=NumeralSystem.GUJARATI, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_gujarati_to_kannadi2():
+    assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
