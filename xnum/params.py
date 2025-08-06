@@ -15,6 +15,7 @@ BURMESE_DIGITS = "၀၁၂၃၄၅၆၇၈၉"
 TIBETAN_DIGITS = "༠༡༢༣༤༥༦༧༨༩"
 GUJARATI_DIGITS = "૦૧૨૩૪૫૬૭૮૯"
 ODIA_DIGITS = "୦୧୨୩୪୫୬୭୮୯"
+KANNADA_DIGITS = "೦೧೨೩೪೫೬೭೮೯"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -28,6 +29,7 @@ NUMERAL_MAPS = {
     "tibetan": TIBETAN_DIGITS,
     "gujarati": GUJARATI_DIGITS,
     "odia": ODIA_DIGITS,
+    "kannada": KANNADA_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -50,6 +52,7 @@ class NumeralSystem(Enum):
     TIBETAN = "tibetan"
     GUJARATI = "gujarati"
     ODIA = "odia"
+    KANNADA = "kannada"
     AUTO = "auto"
 
 
