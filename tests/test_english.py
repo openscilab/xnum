@@ -95,3 +95,12 @@ def test_english_to_odia1():
 def test_english_to_odia2():
     assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_english_to_kannada1():
+    assert convert("0123456789", source=NumeralSystem.ENGLISH, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_english_to_kannada1():
+    assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
+                   target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
