@@ -95,3 +95,12 @@ def test_tibetan_to_odia1():
 def test_tibetan_to_odia2():
     assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_tibetan_to_kannada1():
+    assert convert("༠༡༢༣༤༥༦༧༨༩", source=NumeralSystem.TIBETAN, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_tibetan_to_kannada2():
+    assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
+                   target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
