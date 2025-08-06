@@ -95,3 +95,11 @@ def test_khmer_to_odia1():
 def test_khmer_to_odia2():
     assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_khmer_to_gurmukhi1():
+    assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_khmer_to_gurmukhi2():
+    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

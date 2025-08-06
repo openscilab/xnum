@@ -95,3 +95,11 @@ def test_thai_to_odia1():
 def test_thai_to_odia2():
     assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_thai_to_gurmukhi1():
+    assert convert("๐๑๒๓๔๕๖๗๘๙", source=NumeralSystem.THAI, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_thai_to_gurmukhi2():
+    assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
