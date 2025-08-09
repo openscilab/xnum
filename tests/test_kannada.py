@@ -88,6 +88,15 @@ def test_Kannada_to_gujarati2():
                    target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
 
 
+def test_Kannada_to_telugu1():
+    assert convert("೦೧೨೩೪೫೬೭೮೯", source=NumeralSystem.KANNADA, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_Kannada_to_telugu2():
+    assert convert("abc ೦೧೨೩೪೫೬೭೮೯ abc", source=NumeralSystem.KANNADA,
+                   target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+
 def test_Kannada_to_odia1():
     assert convert("೦೧೨೩೪೫೬೭೮೯", source=NumeralSystem.KANNADA, target=NumeralSystem.ODIA) == "୦୧୨୩୪୫୬୭୮୯"
 
@@ -95,3 +104,12 @@ def test_Kannada_to_odia1():
 def test_Kannada_to_odia2():
     assert convert("abc ೦೧೨೩೪೫೬೭೮೯ abc", source=NumeralSystem.KANNADA,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_Kannada_to_tibetan1():
+    assert convert("೦೧೨೩೪೫೬೭೮೯", source=NumeralSystem.KANNADA, target=NumeralSystem.TIBETAN) == "༠༡༢༣༤༥༦༧༨༩"
+
+
+def test_Kannada_to_tibetan2():
+    assert convert("abc ೦೧೨೩೪೫೬೭೮೯ abc", source=NumeralSystem.KANNADA,
+                   target=NumeralSystem.TIBETAN) == "abc ༠༡༢༣༤༥༦༧༨༩ abc"
