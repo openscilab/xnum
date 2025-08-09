@@ -44,6 +44,15 @@ def test_odia_to_bengali2():
                    target=NumeralSystem.BENGALI) == "abc ০১২৩৪৫৬৭৮৯ abc"
 
 
+def test_odia_to_persian1():
+    assert convert("๐๑๒๓๔๕๖๗๘๙", source=NumeralSystem.THAI, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
+
+
+def test_odia_to_persian2():
+    assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
+                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
+
+
 def test_odia_to_thai1():
     assert convert("୦୧୨୩୪୫୬୭୮୯", source=NumeralSystem.ODIA, target=NumeralSystem.THAI) == "๐๑๒๓๔๕๖๗๘๙"
 
