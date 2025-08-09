@@ -97,6 +97,15 @@ def test_khmer_to_odia2():
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
 
 
+def test_khmer_to_telugu1():
+    assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_khmer_to_telugu2():
+    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
+                   target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+    
 def test_khmer_to_kannadi1():
     assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
 

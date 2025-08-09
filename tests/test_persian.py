@@ -97,6 +97,15 @@ def test_persian_to_odia2():
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
 
 
+def test_persian_to_telugu1():
+    assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_persian_to_telugu2():
+    assert convert("abc ۰۱۲۳۴۵۶۷۸۹ abc", source=NumeralSystem.PERSIAN,
+                   target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+
 def test_persian_to_kannada1():
     assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
 
