@@ -72,3 +72,9 @@ def test_telugu_to_odia():
 
 def test_telugu_to_odia_mixed():
     assert convert(f"abc {TELUGU_DIGITS} abc", source=NumeralSystem.TELUGU, target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+def test_telugu_to_kannada():
+    assert convert(TELUGU_DIGITS, source=NumeralSystem.TELUGU, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+def test_telugu_to_kannada_mixed():
+    assert convert(f"abc {TELUGU_DIGITS} abc", source=NumeralSystem.TELUGU, target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
