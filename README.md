@@ -92,7 +92,6 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Telugu
 - Kannada
 
-
 ## Issues & bug reports
 
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [xnum@openscilab.com](mailto:xnum@openscilab.com "xnum@openscilab.com"). 

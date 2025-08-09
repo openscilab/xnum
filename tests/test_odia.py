@@ -105,4 +105,3 @@ def test_odia_to_kannadi1():
 def test_odia_to_kannada2():
     assert convert("abc ୦୧୨୩୪୫୬୭୮୯ abc", source=NumeralSystem.ODIA,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
-
