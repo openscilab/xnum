@@ -113,4 +113,3 @@ def test_thai_to_kannada1():
 def test_thai_to_kannada2():
     assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
-

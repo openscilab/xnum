@@ -113,4 +113,3 @@ def test_bengali_to_kannada1():
 def test_bengali_to_kannada2():
     assert convert("abc ০১২৩৪৫৬৭৮৯ abc", source=NumeralSystem.BENGALI,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
-
