@@ -1,7 +1,6 @@
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Telugu tests"
-
 TELUGU_DIGITS = "౦౧౨౩౪౫౬౭౮౯"
 
 def test_identity_conversion():

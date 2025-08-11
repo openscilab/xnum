@@ -16,6 +16,15 @@ def test_tibetan_to_english2():
                    target=NumeralSystem.ENGLISH) == "abc 0123456789 abc"
 
 
+def test_tibetan_to_persian1():
+    assert convert("༠༡༢༣༤༥༦༧༨༩", source=NumeralSystem.TIBETAN, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
+
+
+def test_tibetan_to_persian2():
+    assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
+                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
+
+
 def test_tibetan_to_hindi1():
     assert convert("༠༡༢༣༤༥༦༧༨༩", source=NumeralSystem.TIBETAN, target=NumeralSystem.HINDI) == "०१२३४५६७८९"
 
@@ -68,15 +77,6 @@ def test_tibetan_to_burmese1():
 def test_tibetan_to_burmese2():
     assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
                    target=NumeralSystem.BURMESE) == "abc ၀၁၂၃၄၅၆၇၈၉ abc"
-
-
-def test_tibetan_to_persian1():
-    assert convert("༠༡༢༣༤༥༦༧༨༩", source=NumeralSystem.TIBETAN, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
-
-
-def test_tibetan_to_persian2():
-    assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
-                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
 
 
 def test_tibetan_to_gujarati1():

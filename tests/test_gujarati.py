@@ -95,9 +95,9 @@ def test_gujarati_to_telugu2():
     assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
 
 
-def test_gujarati_to_kannadi1():
+def test_gujarati_to_kannada1():
     assert convert("૦૧૨૩૪૫૬૭૮૯", source=NumeralSystem.GUJARATI, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
 
 
-def test_gujarati_to_kannadi2():
+def test_gujarati_to_kannada2():
     assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
