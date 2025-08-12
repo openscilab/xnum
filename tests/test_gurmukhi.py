@@ -104,3 +104,21 @@ def test_gurmukhi_to_odia1():
 def test_gurmukhi_to_odia2():
     assert convert("abc ੦੧੨੩੪੫੬੭੮੯ abc", source=NumeralSystem.GURMUKHI,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_gurmukhi_to_telugu1():
+    assert convert("੦੧੨੩੪੫੬੭੮੯", source=NumeralSystem.GURMUKHI, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_gurmukhi_to_telugu2():
+    assert convert("abc ੦੧੨੩੪੫੬੭੮੯ abc", source=NumeralSystem.GURMUKHI,
+                   target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+
+def test_gurmukhi_to_kannada1():
+    assert convert("੦੧੨੩੪੫੬੭੮੯", source=NumeralSystem.GURMUKHI, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_gurmukhi_to_kannada2():
+    assert convert("abc ੦੧੨੩੪੫੬੭੮੯ abc", source=NumeralSystem.KANNADA,
+                   target=NumeralSystem.ODIA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
