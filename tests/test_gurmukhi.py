@@ -120,5 +120,5 @@ def test_gurmukhi_to_kannada1():
 
 
 def test_gurmukhi_to_kannada2():
-    assert convert("abc ੦੧੨੩੪੫੬੭੮੯ abc", source=NumeralSystem.KANNADA,
-                   target=NumeralSystem.ODIA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+    assert convert("abc ੦੧੨੩੪੫੬੭੮੯ abc", source=NumeralSystem.GURMUKHI,
+                   target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
