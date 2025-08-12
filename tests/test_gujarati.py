@@ -87,6 +87,22 @@ def test_gujarati_to_odia2():
     assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
 
 
+def test_gujarati_to_telugu1():
+    assert convert("૦૧૨૩૪૫૬૭૮૯", source=NumeralSystem.GUJARATI, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_gujarati_to_telugu2():
+    assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+
+def test_gujarati_to_kannada1():
+    assert convert("૦૧૨૩૪૫૬૭૮૯", source=NumeralSystem.GUJARATI, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_gujarati_to_kannada2():
+    assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
 def test_gujarati_to_gurmukhi1():
     assert convert("૦૧૨૩૪૫૬૭૮૯", source=NumeralSystem.GUJARATI, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
 

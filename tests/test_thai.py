@@ -16,6 +16,15 @@ def test_thai_to_english2():
                    target=NumeralSystem.ENGLISH) == "abc 0123456789 abc"
 
 
+def test_thai_to_persian1():
+    assert convert("๐๑๒๓๔๕๖๗๘๙", source=NumeralSystem.THAI, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
+
+
+def test_thai_to_persian2():
+    assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
+                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
+
+
 def test_thai_to_hindi1():
     assert convert("๐๑๒๓๔๕๖๗๘๙", source=NumeralSystem.THAI, target=NumeralSystem.HINDI) == "०१२३४५६७८९"
 
@@ -41,15 +50,6 @@ def test_thai_to_bengali1():
 def test_thai_to_bengali2():
     assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
                    target=NumeralSystem.BENGALI) == "abc ০১২৩৪৫৬৭৮৯ abc"
-
-
-def test_thai_to_persian1():
-    assert convert("๐๑๒๓๔๕๖๗๘๙", source=NumeralSystem.THAI, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
-
-
-def test_thai_to_persian2():
-    assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
-                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
 
 
 def test_thai_to_khmer1():
@@ -95,6 +95,24 @@ def test_thai_to_odia1():
 def test_thai_to_odia2():
     assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_thai_to_telugu1():
+    assert convert("๐๑๒๓๔๕๖๗๘๙", source=NumeralSystem.THAI, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_thai_to_telugu2():
+    assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
+                   target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+
+def test_thai_to_kannada1():
+    assert convert("๐๑๒๓๔๕๖๗๘๙", source=NumeralSystem.THAI, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_thai_to_kannada2():
+    assert convert("abc ๐๑๒๓๔๕๖๗๘๙ abc", source=NumeralSystem.THAI,
+                   target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
 
 
 def test_thai_to_gurmukhi1():

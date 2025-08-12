@@ -16,6 +16,15 @@ def test_burmese_to_english2():
                    target=NumeralSystem.ENGLISH) == "abc 0123456789 abc"
 
 
+def test_burmese_to_persian1():
+    assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
+
+
+def test_burmese_to_persian2():
+    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
+                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
+
+
 def test_burmese_to_hindi1():
     assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.HINDI) == "०१२३४५६७८९"
 
@@ -61,15 +70,6 @@ def test_burmese_to_khmer2():
                    target=NumeralSystem.KHMER) == "abc ០១២៣៤៥៦៧៨៩ abc"
 
 
-def test_burmese_to_persian1():
-    assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
-
-
-def test_burmese_to_persian2():
-    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
-                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
-
-
 def test_burmese_to_tibetan1():
     assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.TIBETAN) == "༠༡༢༣༤༥༦༧༨༩"
 
@@ -95,6 +95,24 @@ def test_burmese_to_odia1():
 def test_burmese_to_odia2():
     assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
+
+
+def test_burmese_to_telugu1():
+    assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.TELUGU) == "౦౧౨౩౪౫౬౭౮౯"
+
+
+def test_burmese_to_telugu2():
+    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
+                   target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+
+def test_burmese_to_kannada1():
+    assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_burmese_to_kannada2():
+    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
+                   target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
 
 
 def test_burmese_to_gurmukhi1():
