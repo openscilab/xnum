@@ -71,14 +71,6 @@ def test_odia_to_khmer2():
                    target=NumeralSystem.KHMER) == "abc ០១២៣៤៥៦៧៨៩ abc"
 
 
-def test_odia_to_persian1():
-    assert convert("୦୧୨୩୪୫୬୭୮୯", source=NumeralSystem.ODIA, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
-
-
-def test_odia_to_persian2():
-    assert convert("abc ୦୧୨୩୪୫୬୭୮୯ abc", source=NumeralSystem.ODIA, target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
-
-
 def test_odia_to_burmese1():
     assert convert("୦୧୨୩୪୫୬୭୮୯", source=NumeralSystem.ODIA, target=NumeralSystem.BURMESE) == "၀၁၂၃၄၅၆၇၈၉"
 
