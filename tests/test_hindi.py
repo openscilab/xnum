@@ -104,3 +104,12 @@ def test_hindi_to_telugu1():
 def test_hindi_to_telugu2():
     assert convert("abc ०१२३४५६७८९ abc", source=NumeralSystem.HINDI,
                    target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+
+def test_hindi_to_kannada1():
+    assert convert("०१२३४५६७८९", source=NumeralSystem.HINDI, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_hindi_to_kannada2():
+    assert convert("abc ०१२३४५६७८९ abc", source=NumeralSystem.HINDI,
+                   target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"

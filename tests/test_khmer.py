@@ -16,6 +16,14 @@ def test_khmer_to_english2():
                    target=NumeralSystem.ENGLISH) == "abc 0123456789 abc"
 
 
+def test_khmer_to_persian1():
+    assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
+
+
+def test_khmer_to_persian2():
+    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER, target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
+
+
 def test_khmer_to_hindi1():
     assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.HINDI) == "०१२३४५६७८९"
 
@@ -50,15 +58,6 @@ def test_khmer_to_thai1():
 def test_khmer_to_thai2():
     assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.THAI) == "abc ๐๑๒๓๔๕๖๗๘๙ abc"
-
-
-def test_khmer_to_persian1():
-    assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.PERSIAN) == "۰۱۲۳۴۵۶۷۸۹"
-
-
-def test_khmer_to_persian2():
-    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
-                   target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
 
 
 def test_khmer_to_burmese1():
@@ -104,3 +103,12 @@ def test_khmer_to_telugu1():
 def test_khmer_to_telugu2():
     assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
+
+    
+def test_khmer_to_kannada1():
+    assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
+
+
+def test_khmer_to_kannada2():
+    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
+                   target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
