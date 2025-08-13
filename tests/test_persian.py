@@ -113,3 +113,11 @@ def test_persian_to_kannada1():
 def test_persian_to_kannada2():
     assert convert("abc ۰۱۲۳۴۵۶۷۸۹ abc", source=NumeralSystem.PERSIAN,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_persian_to_gurmukhi1():
+    assert convert("۰۱۲۳۴۵۶۷۸۹", source=NumeralSystem.PERSIAN, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_persian_to_gurmukhi2():
+    assert convert("abc ۰۱۲۳۴۵۶۷۸۹ abc", source=NumeralSystem.PERSIAN, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

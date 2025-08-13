@@ -17,6 +17,7 @@ GUJARATI_DIGITS = "૦૧૨૩૪૫૬૭૮૯"
 ODIA_DIGITS = "୦୧୨୩୪୫୬୭୮୯"
 TELUGU_DIGITS = "౦౧౨౩౪౫౬౭౮౯"
 KANNADA_DIGITS = "೦೧೨೩೪೫೬೭೮೯"
+GURMUKHI_DIGITS = "੦੧੨੩੪੫੬੭੮੯"
 
 
 NUMERAL_MAPS = {
@@ -33,6 +34,7 @@ NUMERAL_MAPS = {
     "odia": ODIA_DIGITS,
     "telugu": TELUGU_DIGITS,
     "kannada": KANNADA_DIGITS,
+    "gurmukhi": GURMUKHI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -57,6 +59,7 @@ class NumeralSystem(Enum):
     ODIA = "odia"
     TELUGU = "telugu"
     KANNADA = "kannada"
+    GURMUKHI = "gurmukhi"
     AUTO = "auto"
 
 

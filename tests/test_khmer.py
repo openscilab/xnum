@@ -112,3 +112,11 @@ def test_khmer_to_kannada1():
 def test_khmer_to_kannada2():
     assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_khmer_to_gurmukhi1():
+    assert convert("០១២៣៤៥៦៧៨៩", source=NumeralSystem.KHMER, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_khmer_to_gurmukhi2():
+    assert convert("abc ០១២៣៤៥៦៧៨៩ abc", source=NumeralSystem.KHMER, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

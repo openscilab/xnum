@@ -101,3 +101,11 @@ def test_gujarati_to_kannada1():
 
 def test_gujarati_to_kannada2():
     assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_gujarati_to_gurmukhi1():
+    assert convert("૦૧૨૩૪૫૬૭૮૯", source=NumeralSystem.GUJARATI, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_gujarati_to_gurmukhi2():
+    assert convert("abc ૦૧૨૩૪૫૬૭૮૯ abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

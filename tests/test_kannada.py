@@ -80,6 +80,14 @@ def test_kannada_to_burmese2():
                    target=NumeralSystem.BURMESE) == "abc ၀၁၂၃၄၅၆၇၈၉ abc"
 
 
+def test_kannada_to_tibetan1():
+    assert convert(KANNADA_DIGITS, source=NumeralSystem.KANNADA, target=NumeralSystem.TIBETAN) == "༠༡༢༣༤༥༦༧༨༩"
+
+
+def test_kannada_to_tibetan2():
+    assert convert(f"abc {KANNADA_DIGITS} abc", source=NumeralSystem.KANNADA, target=NumeralSystem.TIBETAN) == "abc ༠༡༢༣༤༥༦༧༨༩ abc"
+
+
 def test_kannada_to_gujarati1():
     assert convert(KANNADA_DIGITS, source=NumeralSystem.KANNADA, target=NumeralSystem.GUJARATI) == "૦૧૨૩૪૫૬૭૮૯"
 
@@ -106,10 +114,9 @@ def test_kannada_to_telugu2():
     assert convert(f"abc {KANNADA_DIGITS} abc", source=NumeralSystem.KANNADA,
                    target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
 
+def test_kannada_to_gurmukhi1():
+    assert convert(KANNADA_DIGITS, source=NumeralSystem.KANNADA, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
 
-def test_kannada_to_tibetan1():
-    assert convert(KANNADA_DIGITS, source=NumeralSystem.KANNADA, target=NumeralSystem.TIBETAN) == "༠༡༢༣༤༥༦༧༨༩"
 
-
-def test_kannada_to_tibetan2():
-    assert convert(f"abc {KANNADA_DIGITS} abc", source=NumeralSystem.KANNADA, target=NumeralSystem.TIBETAN) == "abc ༠༡༢༣༤༥༦༧༨༩ abc"
+def test_kannada_to_gurmukhi2():
+    assert convert(f"abc {KANNADA_DIGITS} abc", source=NumeralSystem.KANNADA, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

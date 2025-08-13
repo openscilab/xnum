@@ -77,3 +77,9 @@ def test_telugu_to_kannada():
 
 def test_telugu_to_kannada_mixed():
     assert convert(f"abc {TELUGU_DIGITS} abc", source=NumeralSystem.TELUGU, target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+def test_telugu_to_gurmukhi():
+    assert convert(TELUGU_DIGITS, source=NumeralSystem.TELUGU, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+def test_telugu_to_gurmukhi_mixed():
+    assert convert(f"abc {TELUGU_DIGITS} abc", source=NumeralSystem.TELUGU, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

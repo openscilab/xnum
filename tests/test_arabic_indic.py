@@ -113,3 +113,11 @@ def test_arabic_indic_to_kannada1():
 def test_arabic_indic_to_kannada2():
     assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_arabic_indic_to_gurmukhi1():
+    assert convert("٠١٢٣٤٥٦٧٨٩", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_arabic_indic_to_gurmukhi2():
+    assert convert("abc ٠١٢٣٤٥٦٧٨٩ abc", source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

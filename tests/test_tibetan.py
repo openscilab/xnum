@@ -113,3 +113,11 @@ def test_tibetan_to_kannada1():
 def test_tibetan_to_kannada2():
     assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_tibetan_to_gurmukhi1():
+    assert convert("༠༡༢༣༤༥༦༧༨༩", source=NumeralSystem.TIBETAN, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_tibetan_to_gurmukhi2():
+    assert convert("abc ༠༡༢༣༤༥༦༧༨༩ abc", source=NumeralSystem.TIBETAN, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

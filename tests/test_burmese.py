@@ -113,3 +113,11 @@ def test_burmese_to_kannada1():
 def test_burmese_to_kannada2():
     assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_burmese_to_gurmukhi1():
+    assert convert("၀၁၂၃၄၅၆၇၈၉", source=NumeralSystem.BURMESE, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_burmese_to_gurmukhi2():
+    assert convert("abc ၀၁၂၃၄၅၆၇၈၉ abc", source=NumeralSystem.BURMESE, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

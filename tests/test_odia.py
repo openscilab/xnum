@@ -114,3 +114,11 @@ def test_odia_to_kannada1():
 def test_odia_to_kannada2():
     assert convert("abc ୦୧୨୩୪୫୬୭୮୯ abc", source=NumeralSystem.ODIA,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_odia_to_gurmukhi1():
+    assert convert("୦୧୨୩୪୫୬୭୮୯", source=NumeralSystem.ODIA, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_odia_to_gurmukhi2():
+    assert convert("abc ୦୧୨୩୪୫୬୭୮୯ abc", source=NumeralSystem.ODIA, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"

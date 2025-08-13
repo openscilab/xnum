@@ -113,3 +113,11 @@ def test_english_to_kannada1():
 def test_english_to_kannada1():
     assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
+
+
+def test_english_to_gurmukhi1():
+    assert convert("0123456789", source=NumeralSystem.ENGLISH, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+
+
+def test_english_to_gurmukhi2():
+    assert convert("abc 0123456789 abc", source=NumeralSystem.ENGLISH, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
