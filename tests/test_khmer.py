@@ -13,7 +13,7 @@ def test_khmer_to_english1():
 
 
 def test_khmer_to_english2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.ENGLISH) == "abc 0123456789 abc"
 
 
@@ -22,7 +22,7 @@ def test_khmer_to_persian1():
 
 
 def test_khmer_to_persian2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER, target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER, target=NumeralSystem.PERSIAN) == "abc ۰۱۲۳۴۵۶۷۸۹ abc"
 
 
 def test_khmer_to_hindi1():
@@ -30,7 +30,7 @@ def test_khmer_to_hindi1():
 
 
 def test_khmer_to_hindi2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.HINDI) == "abc ०१२३४५६७८९ abc"
 
 
@@ -39,7 +39,7 @@ def test_khmer_to_arabic_indic1():
 
 
 def test_khmer_to_arabic_indic2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.ARABIC_INDIC) == "abc ٠١٢٣٤٥٦٧٨٩ abc"
 
 
@@ -48,7 +48,7 @@ def test_khmer_to_bengali1():
 
 
 def test_khmer_to_bengali2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.BENGALI) == "abc ০১২৩৪৫৬৭৮৯ abc"
 
 
@@ -57,7 +57,7 @@ def test_khmer_to_thai1():
 
 
 def test_khmer_to_thai2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.THAI) == "abc ๐๑๒๓๔๕๖๗๘๙ abc"
 
 
@@ -66,7 +66,7 @@ def test_khmer_to_burmese1():
 
 
 def test_khmer_to_burmese2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.BURMESE) == "abc ၀၁၂၃၄၅၆၇၈၉ abc"
 
 
@@ -75,7 +75,7 @@ def test_khmer_to_tibetan1():
 
 
 def test_khmer_to_tibetan2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.TIBETAN) == "abc ༠༡༢༣༤༥༦༧༨༩ abc"
 
 
@@ -84,7 +84,7 @@ def test_khmer_to_gujarati1():
 
 
 def test_khmer_to_gujarati2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.GUJARATI) == "abc ૦૧૨૩૪૫૬૭૮૯ abc"
 
 
@@ -93,7 +93,7 @@ def test_khmer_to_odia1():
 
 
 def test_khmer_to_odia2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.ODIA) == "abc ୦୧୨୩୪୫୬୭୮୯ abc"
 
 
@@ -102,7 +102,7 @@ def test_khmer_to_telugu1():
 
 
 def test_khmer_to_telugu2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
 
 
@@ -111,7 +111,7 @@ def test_khmer_to_kannada1():
 
 
 def test_khmer_to_kannada2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
 
 
@@ -120,4 +120,4 @@ def test_khmer_to_gurmukhi1():
 
 
 def test_khmer_to_gurmukhi2():
-    assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
