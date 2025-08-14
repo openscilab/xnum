@@ -3,8 +3,10 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Arabic-Indic tests"
 ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
 
+
 def test_identity_conversion():
-    assert convert(ARABIC_INDIC_DIGITS, source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.ARABIC_INDIC) == ARABIC_INDIC_DIGITS
+    assert convert(ARABIC_INDIC_DIGITS, source=NumeralSystem.ARABIC_INDIC,
+                   target=NumeralSystem.ARABIC_INDIC) == ARABIC_INDIC_DIGITS
 
 
 def test_arabic_indic_to_english1():
@@ -80,7 +82,10 @@ def test_arabic_indic_to_tibetan2():
 
 
 def test_arabic_indic_to_gujarati1():
-    assert convert(ARABIC_INDIC_DIGITS, source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.GUJARATI) == "૦૧૨૩૪૫૬૭૮૯"
+    assert convert(
+        ARABIC_INDIC_DIGITS,
+        source=NumeralSystem.ARABIC_INDIC,
+        target=NumeralSystem.GUJARATI) == "૦૧૨૩૪૫૬૭૮૯"
 
 
 def test_arabic_indic_to_gujarati2():
@@ -116,7 +121,10 @@ def test_arabic_indic_to_kannada2():
 
 
 def test_arabic_indic_to_gurmukhi1():
-    assert convert(ARABIC_INDIC_DIGITS, source=NumeralSystem.ARABIC_INDIC, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
+    assert convert(
+        ARABIC_INDIC_DIGITS,
+        source=NumeralSystem.ARABIC_INDIC,
+        target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
 
 
 def test_arabic_indic_to_gurmukhi2():

@@ -114,6 +114,7 @@ def test_kannada_to_telugu2():
     assert convert(f"abc {KANNADA_DIGITS} abc", source=NumeralSystem.KANNADA,
                    target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
 
+
 def test_kannada_to_gurmukhi1():
     assert convert(KANNADA_DIGITS, source=NumeralSystem.KANNADA, target=NumeralSystem.GURMUKHI) == "੦੧੨੩੪੫੬੭੮੯"
 

@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Burmese tests"
 BURMESE_DIGITS = "၀၁၂၃၄၅၆၇၈၉"
 
+
 def test_identity_conversion():
     assert convert(BURMESE_DIGITS, source=NumeralSystem.BURMESE, target=NumeralSystem.BURMESE) == BURMESE_DIGITS
 

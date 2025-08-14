@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Khmer tests"
 KHMER_DIGITS = "០១២៣៤៥៦៧៨៩"
 
+
 def test_identity_conversion():
     assert convert(KHMER_DIGITS, source=NumeralSystem.KHMER, target=NumeralSystem.KHMER) == KHMER_DIGITS
 
@@ -104,7 +105,7 @@ def test_khmer_to_telugu2():
     assert convert(f"abc f{KHMER_DIGITS} abc", source=NumeralSystem.KHMER,
                    target=NumeralSystem.TELUGU) == "abc ౦౧౨౩౪౫౬౭౮౯ abc"
 
-    
+
 def test_khmer_to_kannada1():
     assert convert(KHMER_DIGITS, source=NumeralSystem.KHMER, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
 

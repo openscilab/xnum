@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Tibetan tests"
 TIBETAN_DIGITS = "༠༡༢༣༤༥༦༧༨༩"
 
+
 def test_identity_conversion():
     assert convert(TIBETAN_DIGITS, source=NumeralSystem.TIBETAN, target=NumeralSystem.TIBETAN) == TIBETAN_DIGITS
 

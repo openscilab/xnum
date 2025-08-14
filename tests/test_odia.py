@@ -4,6 +4,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Odia tests"
 ODIA_DIGITS = "୦୧୨୩୪୫୬୭୮୯"
 
+
 def test_identity_conversion():
     assert convert(ODIA_DIGITS, source=NumeralSystem.ODIA, target=NumeralSystem.ODIA) == ODIA_DIGITS
 

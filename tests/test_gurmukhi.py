@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Gurmukhi tests"
 GURMUKHI_DIGITS = "੦੧੨੩੪੫੬੭੮੯"
 
+
 def test_identity_conversion():
     assert convert(GURMUKHI_DIGITS, source=NumeralSystem.GURMUKHI, target=NumeralSystem.GURMUKHI) == GURMUKHI_DIGITS
 

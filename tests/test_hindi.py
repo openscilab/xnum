@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Hindi tests"
 HINDI_DIGITS = "०१२३४५६७८९"
 
+
 def test_identity_conversion():
     assert convert(HINDI_DIGITS, source=NumeralSystem.HINDI, target=NumeralSystem.HINDI) == HINDI_DIGITS
 

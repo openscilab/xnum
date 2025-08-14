@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Thai tests"
 THAI_DIGITS = "๐๑๒๓๔๕๖๗๘๙"
 
+
 def test_identity_conversion():
     assert convert(THAI_DIGITS, source=NumeralSystem.THAI, target=NumeralSystem.THAI) == THAI_DIGITS
 

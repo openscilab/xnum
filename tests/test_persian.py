@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "Persian tests"
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 
+
 def test_identity_conversion():
     assert convert(PERSIAN_DIGITS, source=NumeralSystem.PERSIAN, target=NumeralSystem.PERSIAN) == PERSIAN_DIGITS
 

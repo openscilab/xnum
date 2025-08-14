@@ -3,6 +3,7 @@ from xnum import convert, NumeralSystem
 TEST_CASE_NAME = "English tests"
 ENGLISH_DIGITS = "0123456789"
 
+
 def test_identity_conversion():
     assert convert(ENGLISH_DIGITS, source=NumeralSystem.ENGLISH, target=NumeralSystem.ENGLISH) == ENGLISH_DIGITS
 
