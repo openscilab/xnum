@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Kannada numeral system
 - Telugu numeral system
 ### Changed
+- Test system modified
+- `README.md` updated
 ## [0.3] - 2025-08-05
 ### Added
 - Tibetan numeral system
