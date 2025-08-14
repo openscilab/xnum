@@ -110,7 +110,7 @@ def test_english_to_kannada1():
     assert convert(ENGLISH_DIGITS, source=NumeralSystem.ENGLISH, target=NumeralSystem.KANNADA) == "೦೧೨೩೪೫೬೭೮೯"
 
 
-def test_english_to_kannada1():
+def test_english_to_kannada2():
     assert convert(f"abc {ENGLISH_DIGITS} abc", source=NumeralSystem.ENGLISH,
                    target=NumeralSystem.KANNADA) == "abc ೦೧೨೩೪೫೬೭೮೯ abc"
 
