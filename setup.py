@@ -34,14 +34,14 @@ setup(
     name='xnum',
     packages=[
         'xnum', ],
-    version='0.3',
+    version='0.4',
     description='XNum: Universal Numeral System Converter',
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='XNum Development Team',
     author_email='xnum@openscilab.com',
     url='https://github.com/openscilab/xnum',
-    download_url='https://github.com/openscilab/xnum/tarball/v0.3',
+    download_url='https://github.com/openscilab/xnum/tarball/v0.4',
     keywords="convert numeral number numeral-system digits",
     project_urls={
             'Source': 'https://github.com/openscilab/xnum',
