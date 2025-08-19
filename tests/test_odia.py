@@ -123,3 +123,11 @@ def test_odia_to_gurmukhi1():
 
 def test_odia_to_gurmukhi2():
     assert convert(f"abc {ODIA_DIGITS} abc", source=NumeralSystem.ODIA, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_odia_to_lao1():
+    assert convert(ODIA_DIGITS, source=NumeralSystem.ODIA, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_odia_to_lao2():
+    assert convert(f"abc {ODIA_DIGITS} abc", source=NumeralSystem.ODIA, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"

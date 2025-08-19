@@ -121,3 +121,11 @@ def test_khmer_to_gurmukhi1():
 
 def test_khmer_to_gurmukhi2():
     assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_khmer_to_lao1():
+    assert convert(KHMER_DIGITS, source=NumeralSystem.KHMER, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_khmer_to_lao2():
+    assert convert(f"abc {KHMER_DIGITS} abc", source=NumeralSystem.KHMER, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"

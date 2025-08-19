@@ -122,3 +122,11 @@ def test_persian_to_gurmukhi1():
 
 def test_persian_to_gurmukhi2():
     assert convert(f"abc {PERSIAN_DIGITS} abc", source=NumeralSystem.PERSIAN, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_persian_to_lao1():
+    assert convert(PERSIAN_DIGITS, source=NumeralSystem.PERSIAN, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_persian_to_lao2():
+    assert convert(f"abc {PERSIAN_DIGITS} abc", source=NumeralSystem.PERSIAN, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"

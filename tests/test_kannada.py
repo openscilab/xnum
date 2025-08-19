@@ -121,3 +121,11 @@ def test_kannada_to_gurmukhi1():
 
 def test_kannada_to_gurmukhi2():
     assert convert(f"abc {KANNADA_DIGITS} abc", source=NumeralSystem.KANNADA, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_kannada_to_lao1():
+    assert convert(KANNADA_DIGITS, source=NumeralSystem.KANNADA, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_kannada_to_lao2():
+    assert convert(f"abc {KANNADA_DIGITS} abc", source=NumeralSystem.KANNADA, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"

@@ -122,3 +122,11 @@ def test_hindi_to_gurmukhi1():
 
 def test_hindi_to_gurmukhi2():
     assert convert(f"abc {HINDI_DIGITS} abc", source=NumeralSystem.HINDI, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_hindi_to_lao1():
+    assert convert(HINDI_DIGITS, source=NumeralSystem.HINDI, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_hindi_to_lao2():
+    assert convert(f"abc {HINDI_DIGITS} abc", source=NumeralSystem.HINDI, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"
