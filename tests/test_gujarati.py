@@ -110,3 +110,11 @@ def test_gujarati_to_gurmukhi1():
 
 def test_gujarati_to_gurmukhi2():
     assert convert(f"abc {GUJARATI_DIGITS} abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_gujarati_to_lao1():
+    assert convert(GUJARATI_DIGITS, source=NumeralSystem.GUJARATI, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_gujarati_to_lao2():
+    assert convert(f"abc {GUJARATI_DIGITS} abc", source=NumeralSystem.GUJARATI, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"

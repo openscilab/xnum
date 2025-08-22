@@ -122,3 +122,11 @@ def test_tibetan_to_gurmukhi1():
 
 def test_tibetan_to_gurmukhi2():
     assert convert(f"abc {TIBETAN_DIGITS} abc", source=NumeralSystem.TIBETAN, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_tibetan_to_lao1():
+    assert convert(TIBETAN_DIGITS, source=NumeralSystem.TIBETAN, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_tibetan_to_lao2():
+    assert convert(f"abc {TIBETAN_DIGITS} abc", source=NumeralSystem.TIBETAN, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"

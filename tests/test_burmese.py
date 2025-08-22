@@ -122,3 +122,11 @@ def test_burmese_to_gurmukhi1():
 
 def test_burmese_to_gurmukhi2():
     assert convert(f"abc {BURMESE_DIGITS} abc", source=NumeralSystem.BURMESE, target=NumeralSystem.GURMUKHI) == "abc ੦੧੨੩੪੫੬੭੮੯ abc"
+
+
+def test_burmese_to_lao1():
+    assert convert(BURMESE_DIGITS, source=NumeralSystem.BURMESE, target=NumeralSystem.LAO) == "໐໑໒໓໔໕໖໗໘໙"
+
+
+def test_burmese_to_lao2():
+    assert convert(f"abc {BURMESE_DIGITS} abc", source=NumeralSystem.BURMESE, target=NumeralSystem.LAO) == "abc ໐໑໒໓໔໕໖໗໘໙ abc"
