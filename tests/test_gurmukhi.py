@@ -1,3 +1,4 @@
+import pytest
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Gurmukhi tests"
@@ -18,7 +19,7 @@ CONVERSION_CASES = {
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
-    NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
+    NumeralSystem.GURMUKHI: GURMUKHI_DIGITS,
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
 }
 

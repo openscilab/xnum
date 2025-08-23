@@ -9,7 +9,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH: "0123456789",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
-    NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
+    NumeralSystem.BENGALI: BENGALI_DIGITS,
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",

@@ -1,3 +1,4 @@
+import pytest
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Persian tests"
@@ -7,7 +8,7 @@ PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
-    NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
+    NumeralSystem.PERSIAN: PERSIAN_DIGITS,
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",

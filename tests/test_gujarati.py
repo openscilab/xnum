@@ -1,3 +1,4 @@
+import pytest
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Gujarati tests"
@@ -13,7 +14,7 @@ CONVERSION_CASES = {
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
-    NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
+    NumeralSystem.GUJARATI: GUJARATI_DIGITS,
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",

@@ -1,3 +1,4 @@
+import pytest
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Hindi tests"
@@ -7,7 +8,7 @@ CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
-    NumeralSystem.HINDI: "०१२३४५६७८९",
+    NumeralSystem.HINDI: HINDI_DIGITS,
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",

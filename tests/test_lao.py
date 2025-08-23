@@ -1,3 +1,4 @@
+import pytest
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Lao tests"
@@ -18,7 +19,7 @@ CONVERSION_CASES = {
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
-    NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
+    NumeralSystem.LAO: LAO_DIGITS,
 }
 
 
