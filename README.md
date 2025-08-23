@@ -53,6 +53,13 @@ It can automatically detect mixed numeral formats in a piece of text and convert
             </td>
     </tr>
 </table>
+<table>
+    <tr> 
+        <td align="center">Code Quality</td>
+        <td align="center"><a href="https://www.codefactor.io/repository/github/openscilab/xnum"><img src="https://www.codefactor.io/repository/github/openscilab/xnum/badge" alt="CodeFactor"></a></td>
+        <td align="center"><a href="https://app.codacy.com/gh/openscilab/xnum/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/bf656e2daeeb45569dcc0cae705bc69d"></a></td>
+    </tr>
+</table>
 
 
 ## Installation
