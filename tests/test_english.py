@@ -47,7 +47,7 @@ def test_english_to_other_systems(target, expected):
     ) == expected
 
     assert convert(
-        f"abc {ENGLISH_FULLWODTH_DIGITS} abc",
+        f"abc {ENGLISH_FULLWIDTH_DIGITS} abc",
     source = NumeralSystem.ENGLISH_FULLWIDTH,
              target = target,
     ) == f"abc {expected} abc"
