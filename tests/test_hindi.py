@@ -7,6 +7,7 @@ HINDI_DIGITS = "०१२३४५६७८९"
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
+    NumeralSystem.ENGLISH_FULLWIDTH: "０１２３４５６７８９",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: HINDI_DIGITS,
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
