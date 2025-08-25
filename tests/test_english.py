@@ -3,10 +3,12 @@ from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "English tests"
 ENGLISH_DIGITS = "0123456789"
+ENGLISH_FULLWIDTH_DIGITS = "０１２３４５６７８９"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: ENGLISH_DIGITS,
+    NumeralSystem.ENGLISH_FULLWIDTH: ENGLISH_FULLWIDTH_DIGITS,
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
@@ -36,4 +38,16 @@ def test_english_to_other_systems(target, expected):
         f"abc {ENGLISH_DIGITS} abc",
         source=NumeralSystem.ENGLISH,
         target=target,
+    ) == f"abc {expected} abc"
+
+    assert convert(
+        ENGLISH_FULLWIDTH_DIGITS,
+        source=NumeralSystem.ENGLISH_FULLWIDTH,
+        target=target,
+    ) == expected
+
+    assert convert(
+        f"abc {ENGLISH_FULLWODTH_DIGITS} abc",
+    source = NumeralSystem.ENGLISH_FULLWIDTH,
+             target = target,
     ) == f"abc {expected} abc"
