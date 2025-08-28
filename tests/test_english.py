@@ -61,9 +61,7 @@ def test_english_to_other_systems(target, expected):
     ) == expected
 
     assert convert(
-        f
-        "abc {ENGLISH_SUBSCRIPT_DIGITS} abc",
+        f"abc {ENGLISH_SUBSCRIPT_DIGITS} abc",
         source=NumeralSystem.ENGLISH_SUBSCRIPT,
         target=target,
-    ) == f
-    "abc {expected} abc"
+    ) == f"abc {expected} abc"
