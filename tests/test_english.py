@@ -75,6 +75,6 @@ def test_english_to_other_systems(target, expected):
     ) == expected
 
     assert convert(f"abc {ENGLISH_SUPERSCRIPT_DIGITS} abc",
-    source = NumeralSystem.ENGLISH_SUPERSCRIPT,
-             target = target,
-    ) == f"abc {expected} abc"
+                   source=NumeralSystem.ENGLISH_SUPERSCRIPT,
+                   target=target,
+                   ) == f"abc {expected} abc"
