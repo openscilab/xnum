@@ -9,6 +9,7 @@ CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
     NumeralSystem.ENGLISH_FULLWIDTH: "０１２３４５６７８９",
+    NumeralSystem.ENGLISH_SUBSCRIPT: "₀₁₂₃₄₅₆₇₈₉",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",

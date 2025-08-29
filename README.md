@@ -88,6 +88,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - English
 	- Standard
 	- Fullwidth
+	- Subscript
 - Persian
 - Hindi
 - Arabic-Indic
