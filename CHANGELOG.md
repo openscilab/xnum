@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Lao numeral system
 - English fullwidth mode
 - English subscript mode
+- English superscript mode
 ### Changed
 - Test system modified
 - `README.md` updated
