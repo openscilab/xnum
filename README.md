@@ -90,6 +90,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 	- Fullwidth
 	- Subscript
 	- Superscript
+	- Double-Struck
 - Persian
 - Hindi
 - Arabic-Indic
