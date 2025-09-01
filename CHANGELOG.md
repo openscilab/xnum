@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - English double-struck mode
+### Changed
+- `README.md` updated
 ## [0.5] - 2025-09-01
 ### Added
 - Lao numeral system
