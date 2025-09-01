@@ -6,6 +6,7 @@ ENGLISH_DIGITS = "0123456789"
 ENGLISH_FULLWIDTH_DIGITS = "０１２３４５６７８９"
 ENGLISH_SUBSCRIPT_DIGITS = "₀₁₂₃₄₅₆₇₈₉"
 ENGLISH_SUPERSCRIPT_DIGITS = "⁰¹²³⁴⁵⁶⁷⁸⁹"
+ENGLISH_DOUBLE_STRUCK_DIGITS = "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -13,6 +14,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_FULLWIDTH: ENGLISH_FULLWIDTH_DIGITS,
     NumeralSystem.ENGLISH_SUBSCRIPT: ENGLISH_SUBSCRIPT_DIGITS,
     NumeralSystem.ENGLISH_SUPERSCRIPT: ENGLISH_SUPERSCRIPT_DIGITS,
+    NumeralSystem.ENGLISH_DOUBLE_STRUCK: ENGLISH_DOUBLE_STRUCK_DIGITS,
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
@@ -78,3 +80,13 @@ def test_english_to_other_systems(target, expected):
                    source=NumeralSystem.ENGLISH_SUPERSCRIPT,
                    target=target,
                    ) == f"abc {expected} abc"
+
+    assert convert(
+        ENGLISH_DOUBLE_STRUCK_DIGITS,
+        source=NumeralSystem.ENGLISH_DOUBLE_STRUCK,
+        target=target,) == expected
+
+    assert convert(f
+    "abc {ENGLISH_DOUBLE_STRUCK_DIGITS} abc",
+    source = NumeralSystem.ENGLISH_DOUBLE_STRUCK,
+             target = target,) == f"abc {expected} abc"
