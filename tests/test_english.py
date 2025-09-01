@@ -87,6 +87,6 @@ def test_english_to_other_systems(target, expected):
         target=target,) == expected
 
     assert convert(f
-    "abc {ENGLISH_DOUBLE_STRUCK_DIGITS} abc",
-    source = NumeralSystem.ENGLISH_DOUBLE_STRUCK,
-             target = target,) == f"abc {expected} abc"
+                   "abc {ENGLISH_DOUBLE_STRUCK_DIGITS} abc",
+                   source=NumeralSystem.ENGLISH_DOUBLE_STRUCK,
+                   target=target,) == f"abc {expected} abc"
