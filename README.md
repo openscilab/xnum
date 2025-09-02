@@ -91,6 +91,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 	- Subscript
 	- Superscript
 	- Double-Struck
+	- Bold
 - Persian
 - Hindi
 - Arabic-Indic
