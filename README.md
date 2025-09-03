@@ -92,6 +92,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 	- Superscript
 	- Double-Struck
 	- Bold
+	- Monospace
     - Sans-Serif
 - Persian
 - Hindi
