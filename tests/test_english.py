@@ -112,9 +112,9 @@ def test_english_to_other_systems(target, expected):
     ) == expected
 
     assert convert(f"abc {ENGLISH_MONOSPACE_DIGITS} abc",
-    source = NumeralSystem.ENGLISH_MONOSPACE,
-             target = target,
-    ) == f"abc {expected} abc"
+                   source=NumeralSystem.ENGLISH_MONOSPACE,
+                   target=target,
+                   ) == f"abc {expected} abc"
 
     assert convert(
         ENGLISH_SANS_SERIF_DIGITS,
