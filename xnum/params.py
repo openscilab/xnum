@@ -10,6 +10,7 @@ ENGLISH_SUBSCRIPT_DIGITS = "₀₁₂₃₄₅₆₇₈₉"
 ENGLISH_SUPERSCRIPT_DIGITS = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 ENGLISH_DOUBLE_STRUCK_DIGITS = "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡"
 ENGLISH_BOLD_DIGITS = "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗"
+ENGLISH_SANS_SERIF_DIGITS = "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫"
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 HINDI_DIGITS = "०१२३४५६७८९"
 ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
@@ -33,6 +34,7 @@ NUMERAL_MAPS = {
     "english_superscript": ENGLISH_SUPERSCRIPT_DIGITS,
     "english_double_struck": ENGLISH_DOUBLE_STRUCK_DIGITS,
     "english_bold": ENGLISH_BOLD_DIGITS,
+    "english_sans_serif": ENGLISH_SANS_SERIF_DIGITS,
     "persian": PERSIAN_DIGITS,
     "hindi": HINDI_DIGITS,
     "arabic_indic": ARABIC_INDIC_DIGITS,
@@ -64,6 +66,7 @@ class NumeralSystem(Enum):
     ENGLISH_SUPERSCRIPT = "english_superscript"
     ENGLISH_DOUBLE_STRUCK = "english_double_struck"
     ENGLISH_BOLD = "english_bold"
+    ENGLISH_SANS_SERIF = "english_sans_serif"
     PERSIAN = "persian"
     HINDI = "hindi"
     ARABIC_INDIC = "arabic_indic"
