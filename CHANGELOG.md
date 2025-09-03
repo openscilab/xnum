@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - English double-struck mode
 - English bold mode
+- English sans-serif mode
 ### Changed
 - `README.md` updated
 - Test system modified
