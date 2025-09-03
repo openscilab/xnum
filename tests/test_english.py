@@ -102,7 +102,7 @@ def test_english_to_other_systems(target, expected):
 
     assert convert(
         f"abc {ENGLISH_BOLD_DIGITS} abc", source=NumeralSystem.ENGLISH_BOLD, target=target,) == f"abc {expected} abc"
-    
+
     assert convert(
         ENGLISH_SANS_SERIF_DIGITS,
         source=NumeralSystem.ENGLISH_SANS_SERIF,
