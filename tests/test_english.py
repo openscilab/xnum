@@ -8,6 +8,7 @@ ENGLISH_SUBSCRIPT_DIGITS = "₀₁₂₃₄₅₆₇₈₉"
 ENGLISH_SUPERSCRIPT_DIGITS = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 ENGLISH_DOUBLE_STRUCK_DIGITS = "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡"
 ENGLISH_BOLD_DIGITS = "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗"
+ENGLISH_MONOSPACE_DIGITS = "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿"
 ENGLISH_SANS_SERIF_DIGITS = "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫"
 
 CONVERSION_CASES = {
@@ -18,6 +19,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_SUPERSCRIPT: ENGLISH_SUPERSCRIPT_DIGITS,
     NumeralSystem.ENGLISH_DOUBLE_STRUCK: ENGLISH_DOUBLE_STRUCK_DIGITS,
     NumeralSystem.ENGLISH_BOLD: ENGLISH_BOLD_DIGITS,
+    NumeralSystem.ENGLISH_MONOSPACE: ENGLISH_MONOSPACE_DIGITS,
     NumeralSystem.ENGLISH_SANS_SERIF: ENGLISH_SANS_SERIF_DIGITS,
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
@@ -102,6 +104,17 @@ def test_english_to_other_systems(target, expected):
 
     assert convert(
         f"abc {ENGLISH_BOLD_DIGITS} abc", source=NumeralSystem.ENGLISH_BOLD, target=target,) == f"abc {expected} abc"
+
+    assert convert(
+        ENGLISH_MONOSPACE_DIGITS,
+        source=NumeralSystem.ENGLISH_MONOSPACE,
+        target=target,
+    ) == expected
+
+    assert convert(f"abc {ENGLISH_MONOSPACE_DIGITS} abc",
+                   source=NumeralSystem.ENGLISH_MONOSPACE,
+                   target=target,
+                   ) == f"abc {expected} abc"
 
     assert convert(
         ENGLISH_SANS_SERIF_DIGITS,
