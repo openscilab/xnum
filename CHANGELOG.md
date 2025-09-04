@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - English bold mode
 - English monospace mode
 - English sans-serif mode
+- English sans-serif bold mode
 ### Changed
 - `README.md` updated
 - Test system modified
