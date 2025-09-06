@@ -27,7 +27,7 @@ TELUGU_DIGITS = "౦౧౨౩౪౫౬౭౮౯"
 KANNADA_DIGITS = "೦೧೨೩೪೫೬೭೮೯"
 GURMUKHI_DIGITS = "੦੧੨੩੪੫੬੭੮੯"
 LAO_DIGITS = "໐໑໒໓໔໕໖໗໘໙"
-NKO_DIGITS = "߉߈߇߆߅߄߃߂߁߀"
+NKO_DIGITS = "߀߁߂߃߄߅߆߇߈߉"
 
 
 NUMERAL_MAPS = {

@@ -2,7 +2,7 @@ import pytest
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Nko tests"
-NKO_DIGITS = "߉߈߇߆߅߄߃߂߁߀"
+NKO_DIGITS = "߀߁߂߃߄߅߆߇߈߉"
 
 
 CONVERSION_CASES = {
