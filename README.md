@@ -109,6 +109,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Kannada
 - Gurmukhi
 - Lao
+- Nko
 
 ## Issues & bug reports
 
