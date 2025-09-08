@@ -28,7 +28,8 @@ CONVERSION_CASES = {
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: LAO_DIGITS,
-    NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉"
+    NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
+    NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
 }
 
 
