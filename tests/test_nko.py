@@ -1,9 +1,9 @@
 import pytest
 from xnum import convert, NumeralSystem
 
+TEST_CASE_NAME = "Nko tests"
+NKO_DIGITS = "߀߁߂߃߄߅߆߇߈߉"
 
-TEST_CASE_NAME = "Odia tests"
-ODIA_DIGITS = "୦୧୨୩୪୫୬୭୮୯"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -24,26 +24,26 @@ CONVERSION_CASES = {
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
-    NumeralSystem.ODIA: ODIA_DIGITS,
+    NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
-    NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉"
+    NumeralSystem.NKO: NKO_DIGITS
 }
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_odia_to_other_systems(target, expected):
+def test_nko_to_other_systems(target, expected):
 
     assert convert(
-        ODIA_DIGITS,
-        source=NumeralSystem.ODIA,
+        NKO_DIGITS,
+        source=NumeralSystem.NKO,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {ODIA_DIGITS} abc",
-        source=NumeralSystem.ODIA,
+        f"abc {NKO_DIGITS} abc",
+        source=NumeralSystem.NKO,
         target=target,
     ) == f"abc {expected} abc"

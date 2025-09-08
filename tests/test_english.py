@@ -36,6 +36,7 @@ CONVERSION_CASES = {
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
+    NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉"
 }
 
 

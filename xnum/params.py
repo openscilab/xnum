@@ -27,6 +27,7 @@ TELUGU_DIGITS = "౦౧౨౩౪౫౬౭౮౯"
 KANNADA_DIGITS = "೦೧೨೩೪೫೬೭೮೯"
 GURMUKHI_DIGITS = "੦੧੨੩੪੫੬੭੮੯"
 LAO_DIGITS = "໐໑໒໓໔໕໖໗໘໙"
+NKO_DIGITS = "߀߁߂߃߄߅߆߇߈߉"
 
 
 NUMERAL_MAPS = {
@@ -52,7 +53,8 @@ NUMERAL_MAPS = {
     "telugu": TELUGU_DIGITS,
     "kannada": KANNADA_DIGITS,
     "gurmukhi": GURMUKHI_DIGITS,
-    "lao": LAO_DIGITS
+    "lao": LAO_DIGITS,
+    "nko": NKO_DIGITS
 }
 
 ALL_DIGIT_MAPS = {}
@@ -87,6 +89,7 @@ class NumeralSystem(Enum):
     KANNADA = "kannada"
     GURMUKHI = "gurmukhi"
     LAO = "lao"
+    NKO = "nko"
     AUTO = "auto"
 
 
