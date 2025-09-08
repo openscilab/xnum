@@ -22,7 +22,7 @@ CONVERSION_CASES = {
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
-    NumeralSystem.TIBETAN: TIBETAN_DIGITS,
+    NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
@@ -30,7 +30,7 @@ CONVERSION_CASES = {
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
-    NumeralSystem.MONGOLIAN: MONGOLIAN_DIGITS
+    NumeralSystem.MONGOLIAN: MONGOLIAN_DIGITS,
 }
 
 
