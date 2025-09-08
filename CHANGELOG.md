@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Nko numeral system
+- Mongolian numeral system
 ## [0.6] - 2025-09-05
 ### Added
 - English double-struck mode
