@@ -27,7 +27,7 @@ TELUGU_DIGITS = "౦౧౨౩౪౫౬౭౮౯"
 KANNADA_DIGITS = "೦೧೨೩೪೫೬೭೮೯"
 GURMUKHI_DIGITS = "੦੧੨੩੪੫੬੭੮੯"
 LAO_DIGITS = "໐໑໒໓໔໕໖໗໘໙"
-NKO_DIGITS = "߀߁߂߃߄߅߆߇߈߉" #RTL
+NKO_DIGITS = "߀߁߂߃߄߅߆߇߈߉"  # RTL
 MONGOLIAN_DIGITS = "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙"
 SINHALA_LITH_DIGITS = "෦෧෨෩෪෫෬෭෮෯"
 
