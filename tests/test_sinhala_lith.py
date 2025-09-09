@@ -1,8 +1,9 @@
 import pytest
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Gujarati tests"
-GUJARATI_DIGITS = "૦૧૨૩૪૫૬૭૮૯"
+TEST_CASE_NAME = "Sinhala Lith tests"
+SINHALA_LITH_DIGITS = "෦෧෨෩෪෫෬෭෮෯"
+
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -22,7 +23,7 @@ CONVERSION_CASES = {
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
-    NumeralSystem.GUJARATI: GUJARATI_DIGITS,
+    NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
@@ -30,21 +31,21 @@ CONVERSION_CASES = {
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
-    NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
+    NumeralSystem.SINHALA_LITH: SINHALA_LITH_DIGITS,
 }
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_gujarati_to_other_systems(target, expected):
+def test_sinhala_lith_to_other_systems(target, expected):
 
     assert convert(
-        GUJARATI_DIGITS,
-        source=NumeralSystem.GUJARATI,
+        SINHALA_LITH_DIGITS,
+        source=NumeralSystem.SINHALA_LITH,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {GUJARATI_DIGITS} abc",
-        source=NumeralSystem.GUJARATI,
+        f"abc {SINHALA_LITH_DIGITS} abc",
+        source=NumeralSystem.SINHALA_LITH,
         target=target,
     ) == f"abc {expected} abc"

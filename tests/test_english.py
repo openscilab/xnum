@@ -38,6 +38,7 @@ CONVERSION_CASES = {
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
+    NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
 }
 
 

@@ -30,6 +30,7 @@ CONVERSION_CASES = {
     NumeralSystem.LAO: LAO_DIGITS,
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
+    NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
 }
 
 
