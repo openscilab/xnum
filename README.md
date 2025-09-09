@@ -110,6 +110,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Gurmukhi
 - Lao
 - Nko
+- Mongolian
 
 ## Issues & bug reports
 
