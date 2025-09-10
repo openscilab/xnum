@@ -32,6 +32,7 @@ CONVERSION_CASES = {
     NumeralSystem.NKO: NKO_DIGITS,
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
+    NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
 }
 
 

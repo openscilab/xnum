@@ -1,8 +1,8 @@
 import pytest
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Mongolian tests"
-MONGOLIAN_DIGITS = "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙"
+TEST_CASE_NAME = "Myanmar Shan tests"
+MYANMAR_SHAN_DIGITS = "႐႑႒႓႔႕႖႗႘႙"
 
 
 CONVERSION_CASES = {
@@ -30,23 +30,23 @@ CONVERSION_CASES = {
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
-    NumeralSystem.MONGOLIAN: MONGOLIAN_DIGITS,
+    NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
-    NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
+    NumeralSystem.MYANMAR_SHAN: MYANMAR_SHAN_DIGITS,
 }
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_mongolian_to_other_systems(target, expected):
+def test_myanmar_shan_to_other_systems(target, expected):
 
     assert convert(
-        MONGOLIAN_DIGITS,
-        source=NumeralSystem.MONGOLIAN,
+        MYANMAR_SHAN_DIGITS,
+        source=NumeralSystem.MYANMAR_SHAN,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {MONGOLIAN_DIGITS} abc",
-        source=NumeralSystem.MONGOLIAN,
+        f"abc {MYANMAR_SHAN_DIGITS} abc",
+        source=NumeralSystem.MYANMAR_SHAN,
         target=target,
     ) == f"abc {expected} abc"
