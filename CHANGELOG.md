@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Mongolian numeral system
 - Sinhala lith numeral system
 - Myanmar shan numeral system
+- Limbu numeral system
 ## [0.6] - 2025-09-05
 ### Added
 - English double-struck mode
