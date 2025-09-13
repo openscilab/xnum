@@ -33,6 +33,7 @@ CONVERSION_CASES = {
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
     NumeralSystem.MYANMAR_SHAN: MYANMAR_SHAN_DIGITS,
+    NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
 
 

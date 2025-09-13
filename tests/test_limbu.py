@@ -1,8 +1,9 @@
 import pytest
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Kannada tests"
-KANNADA_DIGITS = "೦೧೨೩೪೫೬೭೮೯"
+TEST_CASE_NAME = "Limbu tests"
+LIMBU_DIGITS = "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏"
+
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -25,28 +26,28 @@ CONVERSION_CASES = {
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
-    NumeralSystem.KANNADA: KANNADA_DIGITS,
+    NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
-    NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
+    NumeralSystem.LIMBU: LIMBU_DIGITS,
 }
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_kannada_to_other_systems(target, expected):
+def test_limbu_to_other_systems(target, expected):
 
     assert convert(
-        KANNADA_DIGITS,
-        source=NumeralSystem.KANNADA,
+        LIMBU_DIGITS,
+        source=NumeralSystem.LIMBU,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {KANNADA_DIGITS} abc",
-        source=NumeralSystem.KANNADA,
+        f"abc {LIMBU_DIGITS} abc",
+        source=NumeralSystem.LIMBU,
         target=target,
     ) == f"abc {expected} abc"
