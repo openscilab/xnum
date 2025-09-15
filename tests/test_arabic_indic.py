@@ -36,6 +36,7 @@ CONVERSION_CASES = {
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
 
+
 def test_arabic_indic_digits():
 
     assert ARABIC_INDIC_DIGITS == xnum.params.ARABIC_INDIC_DIGITS

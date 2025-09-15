@@ -37,6 +37,7 @@ CONVERSION_CASES = {
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
 
+
 def test_khmer_digits():
 
     assert KHMER_DIGITS == xnum.params.KHMER_DIGITS
