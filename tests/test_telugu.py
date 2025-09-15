@@ -1,4 +1,5 @@
 import pytest
+import xnum.params
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Telugu tests"
@@ -36,6 +37,10 @@ CONVERSION_CASES = {
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
 
+def test_telugu_digits():
+
+    assert TELUGU_DIGITS == xnum.params.TELUGU_DIGITS
+    assert list(map(int, TELUGU_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
 def test_telugu_to_other_systems(target, expected):
@@ -45,8 +50,6 @@ def test_telugu_to_other_systems(target, expected):
         source=NumeralSystem.TELUGU,
         target=target,
     ) == expected
-
-    assert list(map(int, expected)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     assert convert(
         f"abc {TELUGU_DIGITS} abc",

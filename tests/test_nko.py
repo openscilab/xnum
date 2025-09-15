@@ -1,4 +1,5 @@
 import pytest
+import xnum.params
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Nko tests"
@@ -37,6 +38,12 @@ CONVERSION_CASES = {
 }
 
 
+
+def test_nko_digits():
+
+    assert NKO_DIGITS == xnum.params.NKO_DIGITS
+    assert list(map(int, NKO_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
 def test_nko_to_other_systems(target, expected):
 
@@ -45,8 +52,6 @@ def test_nko_to_other_systems(target, expected):
         source=NumeralSystem.NKO,
         target=target,
     ) == expected
-
-    assert list(map(int, expected)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     assert convert(
         f"abc {NKO_DIGITS} abc",

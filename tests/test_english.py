@@ -1,4 +1,5 @@
 import pytest
+import xnum.params
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "English tests"
@@ -42,6 +43,30 @@ CONVERSION_CASES = {
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
+
+
+def test_english_digits():
+
+    assert ENGLISH_DIGITS == xnum.params.ENGLISH_DIGITS
+    assert list(map(int, ENGLISH_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    assert ENGLISH_FULLWIDTH_DIGITS == xnum.params.ENGLISH_FULLWIDTH_DIGITS
+    assert list(map(int, ENGLISH_FULLWIDTH_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    assert ENGLISH_DOUBLE_STRUCK_DIGITS == xnum.params.ENGLISH_DOUBLE_STRUCK_DIGITS
+    assert list(map(int, ENGLISH_DOUBLE_STRUCK_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    assert ENGLISH_BOLD == xnum.params.ENGLISH_BOLD
+    assert list(map(int, ENGLISH_BOLD)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    assert ENGLISH_MONOSPACE_DIGITS == xnum.params.ENGLISH_MONOSPACE_DIGITS
+    assert list(map(int, ENGLISH_MONOSPACE_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    assert ENGLISH_SANS_SERIF_DIGITS == xnum.params.ENGLISH_SANS_SERIF_DIGITS
+    assert list(map(int, ENGLISH_SANS_SERIF_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    assert ENGLISH_SANS_SERIF_BOLD_DIGITS == xnum.params.ENGLISH_SANS_SERIF_BOLD_DIGITS
+    assert list(map(int, ENGLISH_SANS_SERIF_BOLD_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())

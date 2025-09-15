@@ -1,4 +1,5 @@
 import pytest
+import xnum.params
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Mongolian tests"
@@ -36,6 +37,10 @@ CONVERSION_CASES = {
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
 
+def test_mongolian_digits():
+
+    assert MONGOLIAN_DIGITS == xnum.params.MONGOLIAN_DIGITS
+    assert list(map(int, MONGOLIAN_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
 def test_mongolian_to_other_systems(target, expected):
@@ -45,8 +50,6 @@ def test_mongolian_to_other_systems(target, expected):
         source=NumeralSystem.MONGOLIAN,
         target=target,
     ) == expected
-
-    assert list(map(int, expected)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     assert convert(
         f"abc {MONGOLIAN_DIGITS} abc",

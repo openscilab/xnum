@@ -1,4 +1,5 @@
 import pytest
+import xnum.params
 from xnum import convert, NumeralSystem
 
 
@@ -36,6 +37,10 @@ CONVERSION_CASES = {
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
 
+def test_odia_digits():
+
+    assert ODIA_DIGITS == xnum.params.ODIA_DIGITS
+    assert list(map(int, ODIA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
 def test_odia_to_other_systems(target, expected):

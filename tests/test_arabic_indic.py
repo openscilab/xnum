@@ -1,4 +1,5 @@
 import pytest
+import xnum.params
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Arabic-Indic tests"
@@ -35,6 +36,11 @@ CONVERSION_CASES = {
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
 
+def test_arabic_indic_digits():
+
+    assert ARABIC_INDIC_DIGITS == xnum.params.ARABIC_INDIC_DIGITS
+    assert list(map(int, ARABIC_INDIC_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
 def test_arabic_indic_to_other_systems(target, expected):
@@ -44,8 +50,6 @@ def test_arabic_indic_to_other_systems(target, expected):
         source=NumeralSystem.ARABIC_INDIC,
         target=target,
     ) == expected
-
-    assert list(map(int, expected)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     assert convert(
         f"abc {ARABIC_INDIC_DIGITS} abc",
