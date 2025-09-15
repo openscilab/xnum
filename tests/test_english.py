@@ -56,8 +56,8 @@ def test_english_digits():
     assert ENGLISH_DOUBLE_STRUCK_DIGITS == xnum.params.ENGLISH_DOUBLE_STRUCK_DIGITS
     assert list(map(int, ENGLISH_DOUBLE_STRUCK_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    assert ENGLISH_BOLD == xnum.params.ENGLISH_BOLD
-    assert list(map(int, ENGLISH_BOLD)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert ENGLISH_BOLD_DIGITS == xnum.params.ENGLISH_BOLD_DIGITS
+    assert list(map(int, ENGLISH_BOLD_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     assert ENGLISH_MONOSPACE_DIGITS == xnum.params.ENGLISH_MONOSPACE_DIGITS
     assert list(map(int, ENGLISH_MONOSPACE_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
