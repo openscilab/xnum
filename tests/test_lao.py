@@ -1,4 +1,5 @@
 import pytest
+import xnum.params
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Lao tests"
@@ -34,6 +35,12 @@ CONVERSION_CASES = {
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
 }
+
+
+def test_lao_digits():
+
+    assert LAO_DIGITS == xnum.params.LAO_DIGITS
+    assert list(map(int, LAO_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
