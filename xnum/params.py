@@ -64,7 +64,7 @@ NUMERAL_MAPS = {
     "sinhala_lith": SINHALA_LITH_DIGITS,
     "myanmar_shan": MYANMAR_SHAN_DIGITS,
     "limbu": LIMBU_DIGITS,
-    "vai": VAI_DIGITS
+    "vai": VAI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
