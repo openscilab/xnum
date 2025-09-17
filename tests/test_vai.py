@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Limbu tests"
-LIMBU_DIGITS = "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏"
+TEST_CASE_NAME = "Vai tests"
+VAI_DIGITS = "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩"
 
 
 CONVERSION_CASES = {
@@ -34,28 +34,28 @@ CONVERSION_CASES = {
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
-    NumeralSystem.LIMBU: LIMBU_DIGITS,
-    NumeralSystem.VAI: "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
+    NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
+    NumeralSystem.VAI: VAI_DIGITS,
 }
 
 
-def test_limbu_digits():
+def test_vai_digits():
 
-    assert LIMBU_DIGITS == xnum.params.LIMBU_DIGITS
-    assert list(map(int, LIMBU_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert VAI_DIGITS == xnum.params.VAI_DIGITS
+    assert list(map(int, VAI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_limbu_to_other_systems(target, expected):
+def test_vai_to_other_systems(target, expected):
 
     assert convert(
-        LIMBU_DIGITS,
-        source=NumeralSystem.LIMBU,
+        VAI_DIGITS,
+        source=NumeralSystem.VAI,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {LIMBU_DIGITS} abc",
-        source=NumeralSystem.LIMBU,
+        f"abc {VAI_DIGITS} abc",
+        source=NumeralSystem.VAI,
         target=target,
     ) == f"abc {expected} abc"

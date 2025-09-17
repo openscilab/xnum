@@ -35,6 +35,7 @@ CONVERSION_CASES = {
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
     NumeralSystem.MYANMAR_SHAN: MYANMAR_SHAN_DIGITS,
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
+    NumeralSystem.VAI: "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
 }
 
 
