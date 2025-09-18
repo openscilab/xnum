@@ -114,6 +114,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Sinhala Lith
 - Myanmar Shan
 - Limbu
+- Vai
 
 ## Issues & bug reports
 
