@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Vai numeral system
+- Ol Chiki numeral system
 ## [0.7] - 2025-09-17
 ### Added
 - Nko numeral system
