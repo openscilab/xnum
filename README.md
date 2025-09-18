@@ -115,6 +115,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Myanmar Shan
 - Limbu
 - Vai
+- Ol Chiki
 
 ## Issues & bug reports
 
