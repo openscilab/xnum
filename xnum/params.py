@@ -33,6 +33,7 @@ SINHALA_LITH_DIGITS = "෦෧෨෩෪෫෬෭෮෯"
 MYANMAR_SHAN_DIGITS = "႐႑႒႓႔႕႖႗႘႙"
 LIMBU_DIGITS = "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏"
 VAI_DIGITS = "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩"
+OL_CHIKI_DIGITS = "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙"
 
 
 NUMERAL_MAPS = {
@@ -65,6 +66,7 @@ NUMERAL_MAPS = {
     "myanmar_shan": MYANMAR_SHAN_DIGITS,
     "limbu": LIMBU_DIGITS,
     "vai": VAI_DIGITS,
+    "ol_chiki": OL_CHIKI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -105,6 +107,7 @@ class NumeralSystem(Enum):
     MYANMAR_SHAN = "myanmar_shan"
     LIMBU = "limbu"
     VAI = "vai"
+    OL_CHIKI = "ol_chiki"
     AUTO = "auto"
 
 

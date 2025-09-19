@@ -36,6 +36,7 @@ CONVERSION_CASES = {
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
     NumeralSystem.VAI: VAI_DIGITS,
+    NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
 }
 
 
