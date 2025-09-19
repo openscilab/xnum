@@ -34,6 +34,7 @@ MYANMAR_SHAN_DIGITS = "႐႑႒႓႔႕႖႗႘႙"
 LIMBU_DIGITS = "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏"
 VAI_DIGITS = "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩"
 OL_CHIKI_DIGITS = "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙"
+BALINESE_DIGITS = "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙"
 
 
 NUMERAL_MAPS = {
@@ -67,6 +68,7 @@ NUMERAL_MAPS = {
     "limbu": LIMBU_DIGITS,
     "vai": VAI_DIGITS,
     "ol_chiki": OL_CHIKI_DIGITS,
+    "balinese": BALINESE_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -108,6 +110,7 @@ class NumeralSystem(Enum):
     LIMBU = "limbu"
     VAI = "vai"
     OL_CHIKI = "ol_chiki"
+    BALINESE = "balinese"
     AUTO = "auto"
 
 
