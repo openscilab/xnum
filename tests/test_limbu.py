@@ -37,6 +37,7 @@ CONVERSION_CASES = {
     NumeralSystem.LIMBU: LIMBU_DIGITS,
     NumeralSystem.VAI: "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
     NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
+    NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
 }
 
 
