@@ -2,8 +2,9 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Bengali tests"
-BENGALI_DIGITS = "০১২৩৪৫৬৭৮৯"
+TEST_CASE_NAME = "New Tai Lue tests"
+NEW_TAI_LUE_DIGITS = "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙"
+
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -18,7 +19,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_SANS_SERIF_BOLD: "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
-    NumeralSystem.BENGALI: BENGALI_DIGITS,
+    NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
@@ -37,27 +38,27 @@ CONVERSION_CASES = {
     NumeralSystem.VAI: "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
     NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
     NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
-    NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
+    NumeralSystem.NEW_TAI_LUE: NEW_TAI_LUE_DIGITS,
 }
 
 
-def test_bengali_digits():
+def test_new_tai_lue_digits():
 
-    assert BENGALI_DIGITS == xnum.params.BENGALI_DIGITS
-    assert list(map(int, BENGALI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert NEW_TAI_LUE_DIGITS == xnum.params.NEW_TAI_LUE_DIGITS
+    assert list(map(int, NEW_TAI_LUE_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_bengali_to_other_systems(target, expected):
+def test_new_tai_lue_to_other_systems(target, expected):
 
     assert convert(
-        BENGALI_DIGITS,
-        source=NumeralSystem.BENGALI,
+        NEW_TAI_LUE_DIGITS,
+        source=NumeralSystem.NEW_TAI_LUE,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {BENGALI_DIGITS} abc",
-        source=NumeralSystem.BENGALI,
+        f"abc {NEW_TAI_LUE_DIGITS} abc",
+        source=NumeralSystem.NEW_TAI_LUE,
         target=target,
     ) == f"abc {expected} abc"
