@@ -117,6 +117,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Vai
 - Ol Chiki
 - Balinese
+- New Tai Lue
 
 ## Issues & bug reports
 
