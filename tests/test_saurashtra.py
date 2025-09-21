@@ -44,7 +44,7 @@ CONVERSION_CASES = {
 
 
 def test_saurashtra_digits():
-    
+
     assert SAURASHTRA_DIGITS == xnum.params.SAURASHTRA_DIGITS
     assert list(map(int, SAURASHTRA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
