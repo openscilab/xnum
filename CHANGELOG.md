@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Ol Chiki numeral system
 - Balinese numeral system
 - New Tai Lue numeral system
+- Saurashtra numeral system
 ## [0.7] - 2025-09-17
 ### Added
 - Nko numeral system
