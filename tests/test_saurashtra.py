@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Limbu tests"
-LIMBU_DIGITS = "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏"
+TEST_CASE_NAME = "Saurashtra tests"
+SAURASHTRA_DIGITS = "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙"
 
 
 CONVERSION_CASES = {
@@ -34,32 +34,32 @@ CONVERSION_CASES = {
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
-    NumeralSystem.LIMBU: LIMBU_DIGITS,
+    NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
     NumeralSystem.VAI: "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
     NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
     NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
     NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
-    NumeralSystem.SAURASHTRA: "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
+    NumeralSystem.SAURASHTRA: SAURASHTRA_DIGITS,
 }
 
 
-def test_limbu_digits():
-
-    assert LIMBU_DIGITS == xnum.params.LIMBU_DIGITS
-    assert list(map(int, LIMBU_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+def test_saurashtra_digits():
+    
+    assert SAURASHTRA_DIGITS == xnum.params.SAURASHTRA_DIGITS
+    assert list(map(int, SAURASHTRA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_limbu_to_other_systems(target, expected):
+def test_saurashtra_to_other_systems(target, expected):
 
     assert convert(
-        LIMBU_DIGITS,
-        source=NumeralSystem.LIMBU,
+        SAURASHTRA_DIGITS,
+        source=NumeralSystem.SAURASHTRA,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {LIMBU_DIGITS} abc",
-        source=NumeralSystem.LIMBU,
+        f"abc {SAURASHTRA_DIGITS} abc",
+        source=NumeralSystem.SAURASHTRA,
         target=target,
     ) == f"abc {expected} abc"
