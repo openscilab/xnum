@@ -39,6 +39,7 @@ CONVERSION_CASES = {
     NumeralSystem.OL_CHIKI: OL_CHIKI_DIGITS,
     NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
     NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
+    NumeralSystem.JAVANESE: "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
 }
 
 
