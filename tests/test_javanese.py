@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Mongolian tests"
-MONGOLIAN_DIGITS = "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙"
+TEST_CASE_NAME = "Javanese tests"
+JAVANESE_DIGITS = "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙"
 
 
 CONVERSION_CASES = {
@@ -31,7 +31,7 @@ CONVERSION_CASES = {
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
-    NumeralSystem.MONGOLIAN: MONGOLIAN_DIGITS,
+    NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
@@ -39,27 +39,27 @@ CONVERSION_CASES = {
     NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
     NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
     NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
-    NumeralSystem.JAVANESE: "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
+    NumeralSystem.JAVANESE: JAVANESE_DIGITS,
 }
 
 
-def test_mongolian_digits():
+def test_javanese_digits():
 
-    assert MONGOLIAN_DIGITS == xnum.params.MONGOLIAN_DIGITS
-    assert list(map(int, MONGOLIAN_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert JAVANESE_DIGITS == xnum.params.JAVANESE_DIGITS
+    assert list(map(int, JAVANESE_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_mongolian_to_other_systems(target, expected):
+def test_javanese_to_other_systems(target, expected):
 
     assert convert(
-        MONGOLIAN_DIGITS,
-        source=NumeralSystem.MONGOLIAN,
+        JAVANESE_DIGITS,
+        source=NumeralSystem.JAVANESE,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {MONGOLIAN_DIGITS} abc",
-        source=NumeralSystem.MONGOLIAN,
+        f"abc {JAVANESE_DIGITS} abc",
+        source=NumeralSystem.JAVANESE,
         target=target,
     ) == f"abc {expected} abc"
