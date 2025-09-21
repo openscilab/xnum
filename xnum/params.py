@@ -36,6 +36,7 @@ VAI_DIGITS = "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩"
 OL_CHIKI_DIGITS = "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙"
 BALINESE_DIGITS = "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙"
 NEW_TAI_LUE_DIGITS = "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙"
+SAURASHTRA_DIGITS = "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙"
 
 
 NUMERAL_MAPS = {
@@ -71,6 +72,7 @@ NUMERAL_MAPS = {
     "ol_chiki": OL_CHIKI_DIGITS,
     "balinese": BALINESE_DIGITS,
     "new_tai_lue": NEW_TAI_LUE_DIGITS,
+    "saurashtra": SAURASHTRA_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -114,6 +116,7 @@ class NumeralSystem(Enum):
     OL_CHIKI = "ol_chiki"
     BALINESE = "balinese"
     NEW_TAI_LUE = "new_tai_lue"
+    SAURASHTRA = "saurashtra"
     AUTO = "auto"
 
 
