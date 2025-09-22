@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Telugu tests"
-TELUGU_DIGITS = "౦౧౨౩౪౫౬౭౮౯"
+TEST_CASE_NAME = "Cham tests"
+CHAM_DIGITS = "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙"
 
 
 CONVERSION_CASES = {
@@ -26,7 +26,7 @@ CONVERSION_CASES = {
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
-    NumeralSystem.TELUGU: TELUGU_DIGITS,
+    NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
     NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
@@ -41,27 +41,27 @@ CONVERSION_CASES = {
     NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
     NumeralSystem.SAURASHTRA: "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
     NumeralSystem.JAVANESE: "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
-    NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
+    NumeralSystem.CHAM: CHAM_DIGITS,
 }
 
 
-def test_telugu_digits():
+def test_cham_digits():
 
-    assert TELUGU_DIGITS == xnum.params.TELUGU_DIGITS
-    assert list(map(int, TELUGU_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert CHAM_DIGITS == xnum.params.CHAM_DIGITS
+    assert list(map(int, CHAM_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_telugu_to_other_systems(target, expected):
+def test_cham_to_other_systems(target, expected):
 
     assert convert(
-        TELUGU_DIGITS,
-        source=NumeralSystem.TELUGU,
+        CHAM_DIGITS,
+        source=NumeralSystem.CHAM,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {TELUGU_DIGITS} abc",
-        source=NumeralSystem.TELUGU,
+        f"abc {CHAM_DIGITS} abc",
+        source=NumeralSystem.CHAM,
         target=target,
     ) == f"abc {expected} abc"
