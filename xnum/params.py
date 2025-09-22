@@ -38,6 +38,7 @@ BALINESE_DIGITS = "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙"
 NEW_TAI_LUE_DIGITS = "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙"
 SAURASHTRA_DIGITS = "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙"
 JAVANESE_DIGITS = "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙"
+CHAM_DIGITS = "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙"
 
 
 NUMERAL_MAPS = {
@@ -75,6 +76,7 @@ NUMERAL_MAPS = {
     "new_tai_lue": NEW_TAI_LUE_DIGITS,
     "saurashtra": SAURASHTRA_DIGITS,
     "javanese": JAVANESE_DIGITS,
+    "cham": CHAM_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -120,6 +122,7 @@ class NumeralSystem(Enum):
     NEW_TAI_LUE = "new_tai_lue"
     SAURASHTRA = "saurashtra"
     JAVANESE = "javanese"
+    CHAM = "cham"
     AUTO = "auto"
 
 
