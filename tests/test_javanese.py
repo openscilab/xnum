@@ -41,6 +41,7 @@ CONVERSION_CASES = {
     NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
     NumeralSystem.SAURASHTRA: "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
     NumeralSystem.JAVANESE: JAVANESE_DIGITS,
+    NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
 }
 
 
