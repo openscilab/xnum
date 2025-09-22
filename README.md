@@ -120,6 +120,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - New Tai Lue
 - Saurashtra
 - Javanese
+- Cham
 
 ## Issues & bug reports
 
