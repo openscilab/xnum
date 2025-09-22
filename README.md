@@ -118,6 +118,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Ol Chiki
 - Balinese
 - New Tai Lue
+- Saurashtra
 - Javanese
 
 ## Issues & bug reports
