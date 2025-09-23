@@ -121,6 +121,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Saurashtra
 - Javanese
 - Cham
+- Lepcha
 
 ## Issues & bug reports
 
