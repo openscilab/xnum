@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Khmer tests"
-KHMER_DIGITS = "០១២៣៤៥៦៧៨៩"
+TEST_CASE_NAME = "Lepcha tests"
+LEPCHA_DIGITS = "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉"
 
 
 CONVERSION_CASES = {
@@ -21,7 +21,7 @@ CONVERSION_CASES = {
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
-    NumeralSystem.KHMER: KHMER_DIGITS,
+    NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
@@ -42,27 +42,27 @@ CONVERSION_CASES = {
     NumeralSystem.SAURASHTRA: "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
     NumeralSystem.JAVANESE: "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
     NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
-    NumeralSystem.LEPCHA: "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
+    NumeralSystem.LEPCHA: LEPCHA_DIGITS,
 }
 
 
-def test_khmer_digits():
+def test_lepcha_digits():
 
-    assert KHMER_DIGITS == xnum.params.KHMER_DIGITS
-    assert list(map(int, KHMER_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert LEPCHA_DIGITS == xnum.params.LEPCHA_DIGITS
+    assert list(map(int, LEPCHA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_khmer_to_other_systems(target, expected):
+def test_lepcha_to_other_systems(target, expected):
 
     assert convert(
-        KHMER_DIGITS,
-        source=NumeralSystem.KHMER,
+        LEPCHA_DIGITS,
+        source=NumeralSystem.LEPCHA,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {KHMER_DIGITS} abc",
-        source=NumeralSystem.KHMER,
+        f"abc {LEPCHA_DIGITS} abc",
+        source=NumeralSystem.LEPCHA,
         target=target,
     ) == f"abc {expected} abc"

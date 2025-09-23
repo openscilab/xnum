@@ -42,6 +42,7 @@ CONVERSION_CASES = {
     NumeralSystem.SAURASHTRA: "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
     NumeralSystem.JAVANESE: JAVANESE_DIGITS,
     NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
+    NumeralSystem.LEPCHA: "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
 }
 
 
