@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Saurashtra numeral system
 - Javanese numeral system
 - Cham numeral system
+- Lepcha numeral system
 ## [0.7] - 2025-09-17
 ### Added
 - Nko numeral system
