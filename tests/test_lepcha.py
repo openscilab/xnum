@@ -43,6 +43,7 @@ CONVERSION_CASES = {
     NumeralSystem.JAVANESE: "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
     NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
     NumeralSystem.LEPCHA: LEPCHA_DIGITS,
+    NumeralSystem.SUNDANESE: "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
 }
 
 
