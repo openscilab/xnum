@@ -39,6 +39,7 @@ NEW_TAI_LUE_DIGITS = "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙"
 SAURASHTRA_DIGITS = "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙"
 JAVANESE_DIGITS = "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙"
 CHAM_DIGITS = "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙"
+LEPCHA_DIGITS = "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉"
 
 
 NUMERAL_MAPS = {
@@ -77,6 +78,7 @@ NUMERAL_MAPS = {
     "saurashtra": SAURASHTRA_DIGITS,
     "javanese": JAVANESE_DIGITS,
     "cham": CHAM_DIGITS,
+    "lepcha": LEPCHA_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -123,6 +125,7 @@ class NumeralSystem(Enum):
     SAURASHTRA = "saurashtra"
     JAVANESE = "javanese"
     CHAM = "cham"
+    LEPCHA = "lepcha"
     AUTO = "auto"
 
 
