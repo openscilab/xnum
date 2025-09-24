@@ -46,7 +46,7 @@ CONVERSION_CASES = {
 }
 
 
-def test_bengali_digits():
+def test_sundanese_digits():
 
     assert SUNDANESE_DIGITS == xnum.params.SUNDANESE_DIGITS
     assert list(map(int, SUNDANESE_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
