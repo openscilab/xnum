@@ -2,11 +2,11 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Arabic-Indic tests"
-ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
+TEST_CASE_NAME = "Sundanese tests"
+SUNDANESE_DIGITS = "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹"
 
 CONVERSION_CASES = {
-    NumeralSystem.ARABIC_INDIC: ARABIC_INDIC_DIGITS,
+    NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
     NumeralSystem.ENGLISH_FULLWIDTH: "０１２３４５６７８９",
     NumeralSystem.ENGLISH_SUBSCRIPT: "₀₁₂₃₄₅₆₇₈₉",
@@ -42,27 +42,27 @@ CONVERSION_CASES = {
     NumeralSystem.JAVANESE: "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
     NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
     NumeralSystem.LEPCHA: "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
-    NumeralSystem.SUNDANESE: "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
+    NumeralSystem.SUNDANESE: SUNDANESE_DIGITS,
 }
 
 
-def test_arabic_indic_digits():
+def test_sundanese_digits():
 
-    assert ARABIC_INDIC_DIGITS == xnum.params.ARABIC_INDIC_DIGITS
-    assert list(map(int, ARABIC_INDIC_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert SUNDANESE_DIGITS == xnum.params.SUNDANESE_DIGITS
+    assert list(map(int, SUNDANESE_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_arabic_indic_to_other_systems(target, expected):
+def test_sundanese_to_other_systems(target, expected):
 
     assert convert(
-        ARABIC_INDIC_DIGITS,
-        source=NumeralSystem.ARABIC_INDIC,
+        SUNDANESE_DIGITS,
+        source=NumeralSystem.SUNDANESE,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {ARABIC_INDIC_DIGITS} abc",
-        source=NumeralSystem.ARABIC_INDIC,
+        f"abc {SUNDANESE_DIGITS} abc",
+        source=NumeralSystem.SUNDANESE,
         target=target,
     ) == f"abc {expected} abc"
