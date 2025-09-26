@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Cham numeral system
 - Lepcha numeral system
 - Sundanese numeral system
+### Changed
+- Test system modified
 ## [0.7] - 2025-09-17
 ### Added
 - Nko numeral system
