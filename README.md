@@ -123,6 +123,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Cham
 - Lepcha
 - Sundanese
+- Dives Akuru
 
 ## Issues & bug reports
 
