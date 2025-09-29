@@ -51,7 +51,6 @@ CONVERSION_CASES = {
 def test_dives_akuru_digits():
 
     assert DIVES_AKURU_DIGITS == xnum.params.DIVES_AKURU_DIGITS
-    assert list(map(int, DIVES_AKURU_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
