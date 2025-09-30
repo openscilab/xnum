@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Gurmukhi tests"
-GURMUKHI_DIGITS = "੦੧੨੩੪੫੬੭੮੯"
+TEST_CASE_NAME = "Dives Akuru tests"
+DIVES_AKURU_DIGITS = "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙"
 
 
 CONVERSION_CASES = {
@@ -28,7 +28,7 @@ CONVERSION_CASES = {
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
     NumeralSystem.TELUGU: "౦౧౨౩౪౫౬౭౮౯",
     NumeralSystem.KANNADA: "೦೧೨೩೪೫೬೭೮೯",
-    NumeralSystem.GURMUKHI: GURMUKHI_DIGITS,
+    NumeralSystem.GURMUKHI: "੦੧੨੩੪੫੬੭੮੯",
     NumeralSystem.LAO: "໐໑໒໓໔໕໖໗໘໙",
     NumeralSystem.NKO: "߀߁߂߃߄߅߆߇߈߉",
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
@@ -44,27 +44,26 @@ CONVERSION_CASES = {
     NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
     NumeralSystem.LEPCHA: "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
     NumeralSystem.SUNDANESE: "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
-    NumeralSystem.DIVES_AKURU: "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙",
+    NumeralSystem.DIVES_AKURU: DIVES_AKURU_DIGITS,
 }
 
 
-def test_gurmukhi_digits():
+def test_dives_akuru_digits():
 
-    assert GURMUKHI_DIGITS == xnum.params.GURMUKHI_DIGITS
-    assert list(map(int, GURMUKHI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert DIVES_AKURU_DIGITS == xnum.params.DIVES_AKURU_DIGITS
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_gurmukhi_to_other_systems(target, expected):
+def test_dives_akuru_to_other_systems(target, expected):
 
     assert convert(
-        GURMUKHI_DIGITS,
-        source=NumeralSystem.GURMUKHI,
+        DIVES_AKURU_DIGITS,
+        source=NumeralSystem.DIVES_AKURU,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {GURMUKHI_DIGITS} abc",
-        source=NumeralSystem.GURMUKHI,
+        f"abc {DIVES_AKURU_DIGITS} abc",
+        source=NumeralSystem.DIVES_AKURU,
         target=target,
     ) == f"abc {expected} abc"
