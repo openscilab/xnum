@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Saurashtra tests"
-SAURASHTRA_DIGITS = "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙"
+TEST_CASE_NAME = "Modi tests"
+MODI_DIGITS = "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙"
 
 
 CONVERSION_CASES = {
@@ -39,33 +39,33 @@ CONVERSION_CASES = {
     NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
     NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
     NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
-    NumeralSystem.SAURASHTRA: SAURASHTRA_DIGITS,
+    NumeralSystem.SAURASHTRA: "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
     NumeralSystem.JAVANESE: "꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙",
     NumeralSystem.CHAM: "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙",
     NumeralSystem.LEPCHA: "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉",
     NumeralSystem.SUNDANESE: "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
     NumeralSystem.DIVES_AKURU: "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙",
-    NumeralSystem.MODI: "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙",
+    NumeralSystem.MODI: MODI_DIGITS,
 }
 
 
-def test_saurashtra_digits():
+def test_modi_digits():
 
-    assert SAURASHTRA_DIGITS == xnum.params.SAURASHTRA_DIGITS
-    assert list(map(int, SAURASHTRA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert MODI_DIGITS == xnum.params.MODI_DIGITS
+    assert list(map(int, MODI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_saurashtra_to_other_systems(target, expected):
+def test_modi_to_other_systems(target, expected):
 
     assert convert(
-        SAURASHTRA_DIGITS,
-        source=NumeralSystem.SAURASHTRA,
+        MODI_DIGITS,
+        source=NumeralSystem.MODI,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {SAURASHTRA_DIGITS} abc",
-        source=NumeralSystem.SAURASHTRA,
+        f"abc {MODI_DIGITS} abc",
+        source=NumeralSystem.MODI,
         target=target,
     ) == f"abc {expected} abc"
