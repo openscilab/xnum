@@ -124,6 +124,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Lepcha
 - Sundanese
 - Dives Akuru
+- Modi
 
 ## Issues & bug reports
 
