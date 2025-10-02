@@ -46,6 +46,7 @@ CONVERSION_CASES = {
     NumeralSystem.SUNDANESE: "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
     NumeralSystem.DIVES_AKURU: DIVES_AKURU_DIGITS,
     NumeralSystem.MODI: "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙",
+    NumeralSystem.TAKRI: "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉",
 }
 
 
