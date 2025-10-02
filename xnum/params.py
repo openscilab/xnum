@@ -42,6 +42,7 @@ CHAM_DIGITS = "꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙"
 LEPCHA_DIGITS = "᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉"
 SUNDANESE_DIGITS = "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹"
 DIVES_AKURU_DIGITS = "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙"
+MODI_DIGITS = "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -82,6 +83,7 @@ NUMERAL_MAPS = {
     "lepcha": LEPCHA_DIGITS,
     "sundanese": SUNDANESE_DIGITS,
     "dives_akuru": DIVES_AKURU_DIGITS,
+    "modi": MODI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -131,6 +133,7 @@ class NumeralSystem(Enum):
     LEPCHA = "lepcha"
     SUNDANESE = "sundanese"
     DIVES_AKURU = "dives_akuru"
+    MODI = "modi"
     AUTO = "auto"
 
 
