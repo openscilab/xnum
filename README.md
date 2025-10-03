@@ -126,6 +126,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Dives Akuru
 - Modi
 - Takri
+- Newa
 
 ## Issues & bug reports
 

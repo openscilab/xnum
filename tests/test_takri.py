@@ -46,6 +46,7 @@ CONVERSION_CASES = {
     NumeralSystem.DIVES_AKURU: "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙",
     NumeralSystem.MODI: "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙",
     NumeralSystem.TAKRI: TAKRI_DIGITS,
+    NumeralSystem.NEWA: "𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙",
 }
 
 
