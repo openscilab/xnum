@@ -53,7 +53,7 @@ CONVERSION_CASES = {
 
 
 def test_tirhuta_digits():
-    
+
     assert TIRHUTA_DIGITS == xnum.params.TIRHUTA_DIGITS
     assert list(map(int, TIRHUTA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
