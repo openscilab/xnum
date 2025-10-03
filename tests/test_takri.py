@@ -2,9 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Persian tests"
-PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
-
+TEST_CASE_NAME = "Takri tests"
+TAKRI_DIGITS = "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -17,7 +16,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_MONOSPACE: "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿",
     NumeralSystem.ENGLISH_SANS_SERIF: "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫",
     NumeralSystem.ENGLISH_SANS_SERIF_BOLD: "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
-    NumeralSystem.PERSIAN: PERSIAN_DIGITS,
+    NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
@@ -46,27 +45,27 @@ CONVERSION_CASES = {
     NumeralSystem.SUNDANESE: "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
     NumeralSystem.DIVES_AKURU: "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙",
     NumeralSystem.MODI: "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙",
-    NumeralSystem.TAKRI: "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉",
+    NumeralSystem.TAKRI: TAKRI_DIGITS,
 }
 
 
-def test_persian_digits():
+def test_takri_digits():
 
-    assert PERSIAN_DIGITS == xnum.params.PERSIAN_DIGITS
-    assert list(map(int, PERSIAN_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert TAKRI_DIGITS == xnum.params.TAKRI_DIGITS
+    assert list(map(int, TAKRI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_persian_to_other_systems(target, expected):
+def test_takri_to_other_systems(target, expected):
 
     assert convert(
-        PERSIAN_DIGITS,
-        source=NumeralSystem.PERSIAN,
+        TAKRI_DIGITS,
+        source=NumeralSystem.TAKRI,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {PERSIAN_DIGITS} abc",
-        source=NumeralSystem.PERSIAN,
+        f"abc {TAKRI_DIGITS} abc",
+        source=NumeralSystem.TAKRI,
         target=target,
     ) == f"abc {expected} abc"

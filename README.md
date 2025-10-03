@@ -125,6 +125,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Sundanese
 - Dives Akuru
 - Modi
+- Takri
 
 ## Issues & bug reports
 
