@@ -2,8 +2,9 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Burmese tests"
-BURMESE_DIGITS = "၀၁၂၃၄၅၆၇၈၉"
+TEST_CASE_NAME = "Sharada tests"
+SHARADA_DIGITS = "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙"
+
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -21,7 +22,7 @@ CONVERSION_CASES = {
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
-    NumeralSystem.BURMESE: BURMESE_DIGITS,
+    NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
@@ -48,27 +49,27 @@ CONVERSION_CASES = {
     NumeralSystem.TAKRI: "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉",
     NumeralSystem.NEWA: "𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙",
     NumeralSystem.TIRHUTA: "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙",
-    NumeralSystem.SHARADA: "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙",
+    NumeralSystem.SHARADA: SHARADA_DIGITS,
 }
 
 
-def test_burmese_digits():
+def test_sharada_digits():
 
-    assert BURMESE_DIGITS == xnum.params.BURMESE_DIGITS
-    assert list(map(int, BURMESE_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert SHARADA_DIGITS == xnum.params.SHARADA_DIGITS
+    assert list(map(int, SHARADA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_burmese_to_other_systems(target, expected):
+def test_sharada_to_other_systems(target, expected):
 
     assert convert(
-        BURMESE_DIGITS,
-        source=NumeralSystem.BURMESE,
+        SHARADA_DIGITS,
+        source=NumeralSystem.SHARADA,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {BURMESE_DIGITS} abc",
-        source=NumeralSystem.BURMESE,
+        f"abc {SHARADA_DIGITS} abc",
+        source=NumeralSystem.SHARADA,
         target=target,
     ) == f"abc {expected} abc"
