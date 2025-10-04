@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Modi numeral system
 - Takri numeral system
 - Newa numeral system
+- Tirhuta numeral system
 ## [0.8] - 2025-09-28
 ### Added
 - Vai numeral system

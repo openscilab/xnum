@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Khmer tests"
-KHMER_DIGITS = "០១២៣៤៥៦៧៨៩"
+TEST_CASE_NAME = "Tirhuta tests"
+TIRHUTA_DIGITS = "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙"
 
 
 CONVERSION_CASES = {
@@ -21,7 +21,7 @@ CONVERSION_CASES = {
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
-    NumeralSystem.KHMER: KHMER_DIGITS,
+    NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
@@ -48,27 +48,27 @@ CONVERSION_CASES = {
     NumeralSystem.MODI: "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙",
     NumeralSystem.TAKRI: "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉",
     NumeralSystem.NEWA: "𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙",
-    NumeralSystem.TIRHUTA: "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙",
+    NumeralSystem.TIRHUTA: TIRHUTA_DIGITS,
 }
 
 
-def test_khmer_digits():
+def test_tirhuta_digits():
 
-    assert KHMER_DIGITS == xnum.params.KHMER_DIGITS
-    assert list(map(int, KHMER_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert TIRHUTA_DIGITS == xnum.params.TIRHUTA_DIGITS
+    assert list(map(int, TIRHUTA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_khmer_to_other_systems(target, expected):
+def test_tirhuta_to_other_systems(target, expected):
 
     assert convert(
-        KHMER_DIGITS,
-        source=NumeralSystem.KHMER,
+        TIRHUTA_DIGITS,
+        source=NumeralSystem.TIRHUTA,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {KHMER_DIGITS} abc",
-        source=NumeralSystem.KHMER,
+        f"abc {TIRHUTA_DIGITS} abc",
+        source=NumeralSystem.TIRHUTA,
         target=target,
     ) == f"abc {expected} abc"
