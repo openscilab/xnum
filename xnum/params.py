@@ -47,6 +47,7 @@ TAKRI_DIGITS = "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉"
 NEWA_DIGITS = "𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙"
 TIRHUTA_DIGITS = "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙"
 SHARADA_DIGITS = "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙"
+KHUDAWADI_DIGITS = "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -92,6 +93,7 @@ NUMERAL_MAPS = {
     "newa": NEWA_DIGITS,
     "tirhuta": TIRHUTA_DIGITS,
     "sharada": SHARADA_DIGITS,
+    "khudawadi": KHUDAWADI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -146,6 +148,7 @@ class NumeralSystem(Enum):
     NEWA = "newa"
     TIRHUTA = "tirhuta"
     SHARADA = "sharada"
+    KHUDAWADI = "khudawadi"
     AUTO = "auto"
 
 
