@@ -129,6 +129,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Newa
 - Tirhuta
 - Sharada
+- Khudawadi
 
 ## Issues & bug reports
 

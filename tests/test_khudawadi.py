@@ -2,8 +2,9 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Takri tests"
-TAKRI_DIGITS = "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉"
+TEST_CASE_NAME = "Khudawadi tests"
+KHUDAWADI_DIGITS = "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹"
+
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -45,31 +46,31 @@ CONVERSION_CASES = {
     NumeralSystem.SUNDANESE: "᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹",
     NumeralSystem.DIVES_AKURU: "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙",
     NumeralSystem.MODI: "𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙",
-    NumeralSystem.TAKRI: TAKRI_DIGITS,
+    NumeralSystem.TAKRI: "𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉",
     NumeralSystem.NEWA: "𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙",
     NumeralSystem.TIRHUTA: "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙",
     NumeralSystem.SHARADA: "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙",
-    NumeralSystem.KHUDAWADI: "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹",
+    NumeralSystem.KHUDAWADI: KHUDAWADI_DIGITS,
 }
 
 
-def test_takri_digits():
+def test_khudawadi_digits():
 
-    assert TAKRI_DIGITS == xnum.params.TAKRI_DIGITS
-    assert list(map(int, TAKRI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert KHUDAWADI_DIGITS == xnum.params.KHUDAWADI_DIGITS
+    assert list(map(int, KHUDAWADI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_takri_to_other_systems(target, expected):
+def test_khudawadi_to_other_systems(target, expected):
 
     assert convert(
-        TAKRI_DIGITS,
-        source=NumeralSystem.TAKRI,
+        KHUDAWADI_DIGITS,
+        source=NumeralSystem.KHUDAWADI,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {TAKRI_DIGITS} abc",
-        source=NumeralSystem.TAKRI,
+        f"abc {KHUDAWADI_DIGITS} abc",
+        source=NumeralSystem.KHUDAWADI,
         target=target,
     ) == f"abc {expected} abc"
