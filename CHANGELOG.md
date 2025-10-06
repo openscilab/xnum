@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Tirhuta numeral system
 - Sharada numeral system
 - Khudawadi numeral system
+- Chakma numeral system
 ## [0.8] - 2025-09-28
 ### Added
 - Vai numeral system
