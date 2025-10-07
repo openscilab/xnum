@@ -2,8 +2,9 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Hindi tests"
-HINDI_DIGITS = "०१२३४५६७८९"
+TEST_CASE_NAME = "Chakma tests"
+CHAKMA_DIGITS = "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿"
+
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -17,7 +18,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_SANS_SERIF: "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫",
     NumeralSystem.ENGLISH_SANS_SERIF_BOLD: "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
-    NumeralSystem.HINDI: HINDI_DIGITS,
+    NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
@@ -50,27 +51,27 @@ CONVERSION_CASES = {
     NumeralSystem.TIRHUTA: "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙",
     NumeralSystem.SHARADA: "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙",
     NumeralSystem.KHUDAWADI: "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹",
-    NumeralSystem.CHAKMA: "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿",
+    NumeralSystem.CHAKMA: CHAKMA_DIGITS,
 }
 
 
-def test_hindi_digits():
+def test_chakma_digits():
 
-    assert HINDI_DIGITS == xnum.params.HINDI_DIGITS
-    assert list(map(int, HINDI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert CHAKMA_DIGITS == xnum.params.CHAKMA_DIGITS
+    assert list(map(int, CHAKMA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_hindi_to_other_systems(target, expected):
+def test_chakma_to_other_systems(target, expected):
 
     assert convert(
-        HINDI_DIGITS,
-        source=NumeralSystem.HINDI,
+        CHAKMA_DIGITS,
+        source=NumeralSystem.CHAKMA,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {HINDI_DIGITS} abc",
-        source=NumeralSystem.HINDI,
+        f"abc {CHAKMA_DIGITS} abc",
+        source=NumeralSystem.CHAKMA,
         target=target,
     ) == f"abc {expected} abc"
