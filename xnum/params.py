@@ -49,6 +49,7 @@ TIRHUTA_DIGITS = "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙"
 SHARADA_DIGITS = "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙"
 KHUDAWADI_DIGITS = "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹"
 CHAKMA_DIGITS = "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿"
+SORA_SOMPENG_DIGITS = "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -96,6 +97,7 @@ NUMERAL_MAPS = {
     "sharada": SHARADA_DIGITS,
     "khudawadi": KHUDAWADI_DIGITS,
     "chakma": CHAKMA_DIGITS,
+    "sora_sompeng": SORA_SOMPENG_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -152,6 +154,7 @@ class NumeralSystem(Enum):
     SHARADA = "sharada"
     KHUDAWADI = "khudawadi"
     CHAKMA = "chakma"
+    SORA_SOMPENG = "sora_sompeng"
     AUTO = "auto"
 
 
