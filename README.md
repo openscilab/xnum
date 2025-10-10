@@ -132,6 +132,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Khudawadi
 - Chakma
 - Sora Sompeng
+- Hanifi Rohingya
 
 ## Issues & bug reports
 
