@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Thai tests"
-THAI_DIGITS = "๐๑๒๓๔๕๖๗๘๙"
+TEST_CASE_NAME = "Sora Sompeng tests"
+SORA_SOMPENG_DIGITS = "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹"
 
 
 CONVERSION_CASES = {
@@ -20,7 +20,7 @@ CONVERSION_CASES = {
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
-    NumeralSystem.THAI: THAI_DIGITS,
+    NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
     NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
@@ -52,27 +52,27 @@ CONVERSION_CASES = {
     NumeralSystem.SHARADA: "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙",
     NumeralSystem.KHUDAWADI: "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹",
     NumeralSystem.CHAKMA: "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿",
-    NumeralSystem.SORA_SOMPENG: "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹",
+    NumeralSystem.SORA_SOMPENG: SORA_SOMPENG_DIGITS,
 }
 
 
-def test_thai_digits():
+def test_sora_sompeng_digits():
 
-    assert THAI_DIGITS == xnum.params.THAI_DIGITS
-    assert list(map(int, THAI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert SORA_SOMPENG_DIGITS == xnum.params.SORA_SOMPENG_DIGITS
+    assert list(map(int, SORA_SOMPENG_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_thai_to_other_systems(target, expected):
+def test_sora_sompeng_to_other_systems(target, expected):
 
     assert convert(
-        THAI_DIGITS,
-        source=NumeralSystem.THAI,
+        SORA_SOMPENG_DIGITS,
+        source=NumeralSystem.SORA_SOMPENG,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {THAI_DIGITS} abc",
-        source=NumeralSystem.THAI,
+        f"abc {SORA_SOMPENG_DIGITS} abc",
+        source=NumeralSystem.SORA_SOMPENG,
         target=target,
     ) == f"abc {expected} abc"
