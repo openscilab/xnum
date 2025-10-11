@@ -2,11 +2,12 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Arabic-Indic tests"
-ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
+TEST_CASE_NAME = "Hanifi Rohingya tests"
+HANIFI_ROHINGYA_DIGITS = "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹"
+
 
 CONVERSION_CASES = {
-    NumeralSystem.ARABIC_INDIC: ARABIC_INDIC_DIGITS,
+    NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
     NumeralSystem.ENGLISH_FULLWIDTH: "０１２３４５６７８９",
     NumeralSystem.ENGLISH_SUBSCRIPT: "₀₁₂₃₄₅₆₇₈₉",
@@ -52,27 +53,27 @@ CONVERSION_CASES = {
     NumeralSystem.KHUDAWADI: "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹",
     NumeralSystem.CHAKMA: "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿",
     NumeralSystem.SORA_SOMPENG: "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹",
-    NumeralSystem.HANIFI_ROHINGYA: "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹",
+    NumeralSystem.HANIFI_ROHINGYA: HANIFI_ROHINGYA_DIGITS,
 }
 
 
-def test_arabic_indic_digits():
+def test_hanifi_rohingya_digits():
 
-    assert ARABIC_INDIC_DIGITS == xnum.params.ARABIC_INDIC_DIGITS
-    assert list(map(int, ARABIC_INDIC_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert HANIFI_ROHINGYA_DIGITS == xnum.params.HANIFI_ROHINGYA_DIGITS
+    assert list(map(int, HANIFI_ROHINGYA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_arabic_indic_to_other_systems(target, expected):
+def test_hanifi_rohingya_to_other_systems(target, expected):
 
     assert convert(
-        ARABIC_INDIC_DIGITS,
-        source=NumeralSystem.ARABIC_INDIC,
+        HANIFI_ROHINGYA_DIGITS,
+        source=NumeralSystem.HANIFI_ROHINGYA,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {ARABIC_INDIC_DIGITS} abc",
-        source=NumeralSystem.ARABIC_INDIC,
+        f"abc {HANIFI_ROHINGYA_DIGITS} abc",
+        source=NumeralSystem.HANIFI_ROHINGYA,
         target=target,
     ) == f"abc {expected} abc"
