@@ -133,6 +133,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Chakma
 - Sora Sompeng
 - Hanifi Rohingya
+- Osmanya
 
 ## Issues & bug reports
 

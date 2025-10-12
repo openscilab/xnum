@@ -54,6 +54,7 @@ CONVERSION_CASES = {
     NumeralSystem.CHAKMA: "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿",
     NumeralSystem.SORA_SOMPENG: "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹",
     NumeralSystem.HANIFI_ROHINGYA: HANIFI_ROHINGYA_DIGITS,
+    NumeralSystem.OSMANYA: "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩",
 }
 
 
