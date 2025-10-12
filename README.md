@@ -135,6 +135,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Hanifi Rohingya
 - Osmanya
 - Meetei Mayek
+- Kayah Li
 
 ## Issues & bug reports
 
