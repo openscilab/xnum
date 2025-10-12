@@ -56,6 +56,7 @@ CONVERSION_CASES = {
     NumeralSystem.HANIFI_ROHINGYA: HANIFI_ROHINGYA_DIGITS,
     NumeralSystem.OSMANYA: "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩",
     NumeralSystem.MEETEI_MAYEK: "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹",
+    NumeralSystem.KAYAH_LI: "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉",
 }
 
 

@@ -53,6 +53,7 @@ SORA_SOMPENG_DIGITS = "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹"
 HANIFI_ROHINGYA_DIGITS = "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹"
 OSMANYA_DIGITS = "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩"
 MEETEI_MAYEK_DIGITS = "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
+KAYAH_LI_DIGITS = "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -104,6 +105,7 @@ NUMERAL_MAPS = {
     "hanifi_rohingya": HANIFI_ROHINGYA_DIGITS,
     "osmanya": OSMANYA_DIGITS,
     "meetei_mayek": MEETEI_MAYEK_DIGITS,
+    "kayah_li": KAYAH_LI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -164,6 +166,7 @@ class NumeralSystem(Enum):
     HANIFI_ROHINGYA = "hanifi_rohingya"
     OSMANYA = "osmanya"
     MEETEI_MAYEK = "meetei_mayek"
+    KAYAH_LI = "kayah_li"
     AUTO = "auto"
 
 
