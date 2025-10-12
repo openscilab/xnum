@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Sora Sompeng numeral system
 - Hanifi Rohingya numeral system
 - Osmanya numeral system
+- Meetei Mayek numeral system
 ## [0.9] - 2025-10-10
 ### Added
 - Dives Akuru numeral system

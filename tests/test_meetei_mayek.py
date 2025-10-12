@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Ol Chiki tests"
-OL_CHIKI_DIGITS = "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙"
+TEST_CASE_NAME = "Meetei Mayek tests"
+MEETEI_MAYEK_DIGITS = "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
 
 
 CONVERSION_CASES = {
@@ -36,7 +36,7 @@ CONVERSION_CASES = {
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
     NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
     NumeralSystem.VAI: "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
-    NumeralSystem.OL_CHIKI: OL_CHIKI_DIGITS,
+    NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
     NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
     NumeralSystem.NEW_TAI_LUE: "᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙",
     NumeralSystem.SAURASHTRA: "꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙",
@@ -55,27 +55,27 @@ CONVERSION_CASES = {
     NumeralSystem.SORA_SOMPENG: "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹",
     NumeralSystem.HANIFI_ROHINGYA: "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹",
     NumeralSystem.OSMANYA: "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩",
-    NumeralSystem.MEETEI_MAYEK: "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹",
+    NumeralSystem.MEETEI_MAYEK: MEETEI_MAYEK_DIGITS,
 }
 
 
-def test_ol_chiki_digits():
+def test_meetei_mayek_digits():
 
-    assert OL_CHIKI_DIGITS == xnum.params.OL_CHIKI_DIGITS
-    assert list(map(int, OL_CHIKI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert MEETEI_MAYEK_DIGITS == xnum.params.MEETEI_MAYEK_DIGITS
+    assert list(map(int, MEETEI_MAYEK_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_ol_chiki_to_other_systems(target, expected):
+def test_meetei_mayek_to_other_systems(target, expected):
 
     assert convert(
-        OL_CHIKI_DIGITS,
-        source=NumeralSystem.OL_CHIKI,
+        MEETEI_MAYEK_DIGITS,
+        source=NumeralSystem.MEETEI_MAYEK,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {OL_CHIKI_DIGITS} abc",
-        source=NumeralSystem.OL_CHIKI,
+        f"abc {MEETEI_MAYEK_DIGITS} abc",
+        source=NumeralSystem.MEETEI_MAYEK,
         target=target,
     ) == f"abc {expected} abc"
