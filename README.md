@@ -137,6 +137,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Meetei Mayek
 - Kayah Li
 - Gunjala Gondi
+- Masaram Gondi
 
 ## Issues & bug reports
 
