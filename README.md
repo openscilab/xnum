@@ -138,6 +138,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Kayah Li
 - Gunjala Gondi
 - Masaram Gondi
+- Mro
 
 ## Issues & bug reports
 
