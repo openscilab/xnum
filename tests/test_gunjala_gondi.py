@@ -58,6 +58,7 @@ CONVERSION_CASES = {
     NumeralSystem.MEETEI_MAYEK: "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹",
     NumeralSystem.KAYAH_LI: "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉",
     NumeralSystem.GUNJALA_GONDI: GUNJALA_GONDI_DIGITS,
+    NumeralSystem.MASARAM_GONDI: "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙",
 }
 
 
