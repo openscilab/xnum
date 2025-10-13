@@ -56,6 +56,7 @@ MEETEI_MAYEK_DIGITS = "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
 KAYAH_LI_DIGITS = "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉"
 GUNJALA_GONDI_DIGITS = "𑶠𑶡𑶢𑶣𑶤𑶥𑶦𑶧𑶨𑶩"
 MASARAM_GONDI_DIGITS = "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙"
+MRO_DIGITS = "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -110,6 +111,7 @@ NUMERAL_MAPS = {
     "kayah_li": KAYAH_LI_DIGITS,
     "gunjala_gondi": GUNJALA_GONDI_DIGITS,
     "masaram_gondi": MASARAM_GONDI_DIGITS,
+    "mro": MRO_DIGITS,
 
 }
 
@@ -174,6 +176,7 @@ class NumeralSystem(Enum):
     KAYAH_LI = "kayah_li"
     GUNJALA_GONDI = "gunjala_gondi"
     MASARAM_GONDI = "masaram_gondi"
+    MRO = "mro"
     AUTO = "auto"
 
 
