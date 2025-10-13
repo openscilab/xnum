@@ -54,6 +54,7 @@ HANIFI_ROHINGYA_DIGITS = "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹"
 OSMANYA_DIGITS = "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩"
 MEETEI_MAYEK_DIGITS = "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹"
 KAYAH_LI_DIGITS = "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉"
+GUNJALA_GONDI_DIGITS = "𑶠𑶡𑶢𑶣𑶤𑶥𑶦𑶧𑶨𑶩"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -106,6 +107,7 @@ NUMERAL_MAPS = {
     "osmanya": OSMANYA_DIGITS,
     "meetei_mayek": MEETEI_MAYEK_DIGITS,
     "kayah_li": KAYAH_LI_DIGITS,
+    "gunjala_gondi": GUNJALA_GONDI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -167,6 +169,7 @@ class NumeralSystem(Enum):
     OSMANYA = "osmanya"
     MEETEI_MAYEK = "meetei_mayek"
     KAYAH_LI = "kayah_li"
+    GUNJALA_GONDI = "gunjala_gondi"
     AUTO = "auto"
 
 
