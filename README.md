@@ -139,6 +139,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Gunjala Gondi
 - Masaram Gondi
 - Mro
+- Wancho
 
 ## Issues & bug reports
 

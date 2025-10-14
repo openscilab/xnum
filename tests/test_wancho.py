@@ -1,9 +1,8 @@
 import pytest
-import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Limbu tests"
-LIMBU_DIGITS = "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏"
+TEST_CASE_NAME = "Wancho tests"
+WANCHO_DIGITS = "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹"
 
 
 CONVERSION_CASES = {
@@ -34,7 +33,7 @@ CONVERSION_CASES = {
     NumeralSystem.MONGOLIAN: "᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙",
     NumeralSystem.SINHALA_LITH: "෦෧෨෩෪෫෬෭෮෯",
     NumeralSystem.MYANMAR_SHAN: "႐႑႒႓႔႕႖႗႘႙",
-    NumeralSystem.LIMBU: LIMBU_DIGITS,
+    NumeralSystem.LIMBU: "᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏",
     NumeralSystem.VAI: "꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩",
     NumeralSystem.OL_CHIKI: "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙",
     NumeralSystem.BALINESE: "᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙",
@@ -60,27 +59,21 @@ CONVERSION_CASES = {
     NumeralSystem.GUNJALA_GONDI: "𑶠𑶡𑶢𑶣𑶤𑶥𑶦𑶧𑶨𑶩",
     NumeralSystem.MASARAM_GONDI: "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙",
     NumeralSystem.MRO: "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩",
-    NumeralSystem.WANCHO: "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹",
+    NumeralSystem.WANCHO: WANCHO_DIGITS,
 }
 
 
-def test_limbu_digits():
-
-    assert LIMBU_DIGITS == xnum.params.LIMBU_DIGITS
-    assert list(map(int, LIMBU_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_limbu_to_other_systems(target, expected):
+def test_wancho_to_other_systems(target, expected):
 
     assert convert(
-        LIMBU_DIGITS,
-        source=NumeralSystem.LIMBU,
+        WANCHO_DIGITS,
+        source=NumeralSystem.WANCHO,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {LIMBU_DIGITS} abc",
-        source=NumeralSystem.LIMBU,
+        f"abc {WANCHO_DIGITS} abc",
+        source=NumeralSystem.WANCHO,
         target=target,
     ) == f"abc {expected} abc"
