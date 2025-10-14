@@ -2,9 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Kayah Li tests"
-KAYAH_LI_DIGITS = "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉"
-
+TEST_CASE_NAME = "MRO tests"
+MRO_DIGITS = "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -56,30 +55,30 @@ CONVERSION_CASES = {
     NumeralSystem.HANIFI_ROHINGYA: "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹",
     NumeralSystem.OSMANYA: "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩",
     NumeralSystem.MEETEI_MAYEK: "꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹",
-    NumeralSystem.KAYAH_LI: KAYAH_LI_DIGITS,
+    NumeralSystem.KAYAH_LI: "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉",
     NumeralSystem.GUNJALA_GONDI: "𑶠𑶡𑶢𑶣𑶤𑶥𑶦𑶧𑶨𑶩",
     NumeralSystem.MASARAM_GONDI: "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙",
-    NumeralSystem.MRO: "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩",
+    NumeralSystem.MRO: MRO_DIGITS,
 }
 
 
-def test_kayah_li_digits():
+def test_mro_digits():
 
-    assert KAYAH_LI_DIGITS == xnum.params.KAYAH_LI_DIGITS
-    assert list(map(int, KAYAH_LI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert MRO_DIGITS == xnum.params.MRO_DIGITS
+    assert list(map(int, MRO_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_kayah_li_to_other_systems(target, expected):
+def test_mro_to_other_systems(target, expected):
 
     assert convert(
-        KAYAH_LI_DIGITS,
-        source=NumeralSystem.KAYAH_LI,
+        MRO_DIGITS,
+        source=NumeralSystem.MRO,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {KAYAH_LI_DIGITS} abc",
-        source=NumeralSystem.KAYAH_LI,
+        f"abc {MRO_DIGITS} abc",
+        source=NumeralSystem.MRO,
         target=target,
     ) == f"abc {expected} abc"
