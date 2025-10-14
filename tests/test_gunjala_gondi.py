@@ -60,6 +60,7 @@ CONVERSION_CASES = {
     NumeralSystem.GUNJALA_GONDI: GUNJALA_GONDI_DIGITS,
     NumeralSystem.MASARAM_GONDI: "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙",
     NumeralSystem.MRO: "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩",
+    NumeralSystem.WANCHO: "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹",
 }
 
 
