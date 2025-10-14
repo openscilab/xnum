@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Masaram Gondi numeral system
 - Mro numeral system
 - Wancho numeral system
+- Adlam numeral system
 ## [0.9] - 2025-10-10
 ### Added
 - Dives Akuru numeral system
