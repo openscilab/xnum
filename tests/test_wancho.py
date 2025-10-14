@@ -1,5 +1,4 @@
 import pytest
-import xnum.params
 from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Wancho tests"
