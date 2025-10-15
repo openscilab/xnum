@@ -2,8 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Khudawadi tests"
-KHUDAWADI_DIGITS = "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹"
+TEST_CASE_NAME = "Adlam tests"
+ADLAM_DIGITS = "𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙"
 
 
 CONVERSION_CASES = {
@@ -50,7 +50,7 @@ CONVERSION_CASES = {
     NumeralSystem.NEWA: "𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙",
     NumeralSystem.TIRHUTA: "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙",
     NumeralSystem.SHARADA: "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙",
-    NumeralSystem.KHUDAWADI: KHUDAWADI_DIGITS,
+    NumeralSystem.KHUDAWADI: "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹",
     NumeralSystem.CHAKMA: "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿",
     NumeralSystem.SORA_SOMPENG: "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹",
     NumeralSystem.HANIFI_ROHINGYA: "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹",
@@ -61,27 +61,27 @@ CONVERSION_CASES = {
     NumeralSystem.MASARAM_GONDI: "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙",
     NumeralSystem.MRO: "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩",
     NumeralSystem.WANCHO: "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹",
-    NumeralSystem.ADLAM: "𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙",
+    NumeralSystem.ADLAM: ADLAM_DIGITS,
 }
 
 
-def test_khudawadi_digits():
+def test_adlam_digits():
 
-    assert KHUDAWADI_DIGITS == xnum.params.KHUDAWADI_DIGITS
-    assert list(map(int, KHUDAWADI_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert ADLAM_DIGITS == xnum.params.ADLAM_DIGITS
+    assert list(map(int, ADLAM_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_khudawadi_to_other_systems(target, expected):
+def test_adlam_to_other_systems(target, expected):
 
     assert convert(
-        KHUDAWADI_DIGITS,
-        source=NumeralSystem.KHUDAWADI,
+        ADLAM_DIGITS,
+        source=NumeralSystem.ADLAM,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {KHUDAWADI_DIGITS} abc",
-        source=NumeralSystem.KHUDAWADI,
+        f"abc {ADLAM_DIGITS} abc",
+        source=NumeralSystem.ADLAM,
         target=target,
     ) == f"abc {expected} abc"

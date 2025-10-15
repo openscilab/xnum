@@ -58,6 +58,7 @@ GUNJALA_GONDI_DIGITS = "𑶠𑶡𑶢𑶣𑶤𑶥𑶦𑶧𑶨𑶩"
 MASARAM_GONDI_DIGITS = "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙"
 MRO_DIGITS = "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩"
 WANCHO_DIGITS = "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹"
+ADLAM_DIGITS = "𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙"  # RTL
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -114,7 +115,7 @@ NUMERAL_MAPS = {
     "masaram_gondi": MASARAM_GONDI_DIGITS,
     "mro": MRO_DIGITS,
     "wancho": WANCHO_DIGITS,
-
+    "adlam": ADLAM_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -180,6 +181,7 @@ class NumeralSystem(Enum):
     MASARAM_GONDI = "masaram_gondi"
     MRO = "mro"
     WANCHO = "wancho"
+    ADLAM = "adlam"
     AUTO = "auto"
 
 
