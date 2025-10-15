@@ -75,7 +75,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 
 ```pycon
 >>> from xnum import convert, NumeralSystem
->>> print(convert("۱۲۳ apples & ٤٥۶ cars", target=NumeralSystem.ENGLISH))
+>>> print(convert("෧෨෩ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH))
 123 apples & 456 cars
 >>> print(convert("۱۲۳ and ٤٥٦", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
 १२३ and ٤٥۶
