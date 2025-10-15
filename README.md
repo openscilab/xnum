@@ -154,6 +154,11 @@ You can also join our discord server
   <img src="https://img.shields.io/discord/1064533716615049236.svg?style=for-the-badge" alt="Discord Channel">
 </a>
 
+## References
+
+<blockquote>1- <a href="https://www.compart.com/en/unicode">Unicode - Compart</a></blockquote>
+
+<blockquote>2- <a href="https://symbl.cc">SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, Hieroglyphs and the entire Unicode</a></blockquote>
 
 ## Show your support
 
