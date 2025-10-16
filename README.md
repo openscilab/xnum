@@ -77,8 +77,8 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 >>> from xnum import convert, NumeralSystem
 >>> print(convert("۱۲۳ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH))
 123 apples & 456 cars
->>> print(convert("۱۲۳ and ٤٥٦", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
-१२३ and ٤٥۶
+>>> print(convert("۱۲۳ and 456", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
+१२३ and 456
 ```
 
 ℹ️ By default, the `source` parameter is set to `NumeralSystem.AUTO`, which automatically detects the numeral system
