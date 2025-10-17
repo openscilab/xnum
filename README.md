@@ -75,10 +75,10 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 
 ```pycon
 >>> from xnum import convert, NumeralSystem
->>> print(convert("۱۲۳ apples & ٤٥۶ cars", target=NumeralSystem.ENGLISH))
+>>> print(convert("۱۲۳ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH))
 123 apples & 456 cars
->>> print(convert("۱۲۳ and ٤٥٦", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
-१२३ and ٤٥۶
+>>> print(convert("۱۲۳ and 456", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
+१२३ and 456
 ```
 
 ℹ️ By default, the `source` parameter is set to `NumeralSystem.AUTO`, which automatically detects the numeral system
@@ -154,6 +154,11 @@ You can also join our discord server
   <img src="https://img.shields.io/discord/1064533716615049236.svg?style=for-the-badge" alt="Discord Channel">
 </a>
 
+## References
+
+<blockquote>1- <a href="https://www.compart.com/en/unicode">Unicode - Compart</a></blockquote>
+
+<blockquote>2- <a href="https://symbl.cc">SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, Hieroglyphs and the entire Unicode</a></blockquote>
 
 ## Show your support
 
