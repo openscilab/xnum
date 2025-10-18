@@ -86,6 +86,7 @@ body:
       label: XNum version
       description: Which version of XNum are you using?
       options:
+        - XNum 1.0
         - XNum 0.9
         - XNum 0.8
         - XNum 0.7
