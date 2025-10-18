@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Adlam numeral system
 ### Changed
 - `README.md` updated
+- `Python 3.14` added to `test.yml`
 ## [0.9] - 2025-10-10
 ### Added
 - Dives Akuru numeral system
