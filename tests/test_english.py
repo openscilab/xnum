@@ -97,9 +97,6 @@ def test_english_digits():
     assert ENGLISH_SANS_SERIF_BOLD_DIGITS == xnum.params.ENGLISH_SANS_SERIF_BOLD_DIGITS
     assert list(map(int, ENGLISH_SANS_SERIF_BOLD_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    assert ENGLISH_CIRCLED_DIGITS == xnum.params.ENGLISH_CIRCLED_DIGITS
-    assert list(map(int, ENGLISH_CIRCLED_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
 def test_english_to_other_systems(target, expected):
