@@ -12,6 +12,7 @@ ENGLISH_BOLD_DIGITS = "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗"
 ENGLISH_MONOSPACE_DIGITS = "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿"
 ENGLISH_SANS_SERIF_DIGITS = "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫"
 ENGLISH_SANS_SERIF_BOLD_DIGITS = "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"
+ENGLISH_CIRCLED_DIGITS = "⓪①②③④⑤⑥⑦⑧⑨"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -24,6 +25,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_MONOSPACE: ENGLISH_MONOSPACE_DIGITS,
     NumeralSystem.ENGLISH_SANS_SERIF: ENGLISH_SANS_SERIF_DIGITS,
     NumeralSystem.ENGLISH_SANS_SERIF_BOLD: ENGLISH_SANS_SERIF_BOLD_DIGITS,
+    NumeralSystem.ENGLISH_CIRCLED: ENGLISH_CIRCLED_DIGITS,
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
@@ -94,6 +96,9 @@ def test_english_digits():
 
     assert ENGLISH_SANS_SERIF_BOLD_DIGITS == xnum.params.ENGLISH_SANS_SERIF_BOLD_DIGITS
     assert list(map(int, ENGLISH_SANS_SERIF_BOLD_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    assert ENGLISH_CIRCLED_DIGITS == xnum.params.ENGLISH_CIRCLED_DIGITS
+    assert list(map(int, ENGLISH_CIRCLED_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
@@ -196,5 +201,17 @@ def test_english_to_other_systems(target, expected):
     assert convert(
         f"abc {ENGLISH_SANS_SERIF_BOLD_DIGITS} abc",
         source=NumeralSystem.ENGLISH_SANS_SERIF_BOLD,
+        target=target,
+    ) == f"abc {expected} abc"
+
+    assert convert(
+        ENGLISH_CIRCLED_DIGITS,
+        source=NumeralSystem.ENGLISH_CIRCLED,
+        target=target,
+    ) == expected
+
+    assert convert(
+        f"abc {ENGLISH_CIRCLED_DIGITS} abc",
+        source=NumeralSystem.ENGLISH_CIRCLED,
         target=target,
     ) == f"abc {expected} abc"
