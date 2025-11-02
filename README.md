@@ -95,6 +95,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 	- Monospace
     - Sans-Serif
     - Sans-Serif Bold
+    - Circled
 - Persian
 - Hindi
 - Arabic-Indic
