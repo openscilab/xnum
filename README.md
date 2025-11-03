@@ -96,6 +96,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
     - Sans-Serif
     - Sans-Serif Bold
     - Circled
+    - Dingbat Circled Sans-Serif
 - Persian
 - Hindi
 - Arabic-Indic
