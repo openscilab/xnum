@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - English circled mode
+- English dingbat circled sans-serif
 ## [1.0] - 2025-10-20
 ### Added
 - Sora Sompeng numeral system
