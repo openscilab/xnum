@@ -13,6 +13,7 @@ ENGLISH_MONOSPACE_DIGITS = "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿"
 ENGLISH_SANS_SERIF_DIGITS = "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫"
 ENGLISH_SANS_SERIF_BOLD_DIGITS = "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"
 ENGLISH_CIRCLED_DIGITS = "⓪①②③④⑤⑥⑦⑧⑨"
+ENGLISH_DINGBAT_CIRCLED_SANS_SERIF_DIGITS = "🄋➀➁➂➃➄➅➆➇➈"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -26,6 +27,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_SANS_SERIF: ENGLISH_SANS_SERIF_DIGITS,
     NumeralSystem.ENGLISH_SANS_SERIF_BOLD: ENGLISH_SANS_SERIF_BOLD_DIGITS,
     NumeralSystem.ENGLISH_CIRCLED: ENGLISH_CIRCLED_DIGITS,
+    NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF: ENGLISH_DINGBAT_CIRCLED_SANS_SERIF_DIGITS,
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
@@ -210,5 +212,17 @@ def test_english_to_other_systems(target, expected):
     assert convert(
         f"abc {ENGLISH_CIRCLED_DIGITS} abc",
         source=NumeralSystem.ENGLISH_CIRCLED,
+        target=target,
+    ) == f"abc {expected} abc"
+
+    assert convert(
+        ENGLISH_DINGBAT_CIRCLED_SANS_SERIF_DIGITS,
+        source=NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF,
+        target=target,
+    ) == expected
+
+    assert convert(
+        f"abc {ENGLISH_DINGBAT_CIRCLED_SANS_SERIF_DIGITS} abc",
+        source=NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF,
         target=target,
     ) == f"abc {expected} abc"
