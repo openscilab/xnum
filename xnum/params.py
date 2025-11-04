@@ -61,7 +61,7 @@ MASARAM_GONDI_DIGITS = "𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙"
 MRO_DIGITS = "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩"
 WANCHO_DIGITS = "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹"
 ADLAM_DIGITS = "𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙"  # RTL
-TAI_THAM_HORA = "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉"
+TAI_THAM_HORA_DIGITS = "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -121,7 +121,7 @@ NUMERAL_MAPS = {
     "mro": MRO_DIGITS,
     "wancho": WANCHO_DIGITS,
     "adlam": ADLAM_DIGITS,
-    "tai_tham_hora": TAI_THAM_HORA,
+    "tai_tham_hora": TAI_THAM_HORA_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
