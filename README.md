@@ -143,6 +143,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Mro
 - Wancho
 - Adlam
+- Tai Tham Hora
 
 ## Issues & bug reports
 
