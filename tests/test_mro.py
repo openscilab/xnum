@@ -18,6 +18,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_SANS_SERIF_BOLD: "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
     NumeralSystem.ENGLISH_CIRCLED: "⓪①②③④⑤⑥⑦⑧⑨",
     NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF: "🄋➀➁➂➃➄➅➆➇➈",
+    NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF: "🄌➊➋➌➍➎➏➐➑➒",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
