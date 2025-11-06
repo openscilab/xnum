@@ -63,6 +63,7 @@ MRO_DIGITS = "𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩"
 WANCHO_DIGITS = "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹"
 ADLAM_DIGITS = "𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙"  # RTL
 TAI_THAM_HORA_DIGITS = "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉"
+TAI_THAM_THAM_DIGITS = "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙"
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -124,6 +125,7 @@ NUMERAL_MAPS = {
     "wancho": WANCHO_DIGITS,
     "adlam": ADLAM_DIGITS,
     "tai_tham_hora": TAI_THAM_HORA_DIGITS,
+    "tai_tham_tham": TAI_THAM_THAM_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -194,6 +196,7 @@ class NumeralSystem(Enum):
     WANCHO = "wancho"
     ADLAM = "adlam"
     TAI_THAM_HORA = "tai_tham_hora"
+    TAI_THAM_THAM = "tai_tham_tham"
     AUTO = "auto"
 
 
