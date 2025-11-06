@@ -145,6 +145,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Wancho
 - Adlam
 - Tai Tham Hora
+- Tai Tham Tham
 
 ## Issues & bug reports
 
