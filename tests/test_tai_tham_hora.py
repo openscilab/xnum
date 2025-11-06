@@ -65,6 +65,7 @@ CONVERSION_CASES = {
     NumeralSystem.WANCHO: "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹",
     NumeralSystem.ADLAM: "𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙",
     NumeralSystem.TAI_THAM_HORA: TAI_THAM_HORA_DIGITS,
+    NumeralSystem.TAI_THAM_THAM: "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙",
 }
 
 
