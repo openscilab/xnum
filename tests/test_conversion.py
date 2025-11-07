@@ -2,11 +2,10 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Arabic-Indic tests"
-ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
+TEST_CASE_NAME = "Conversion tests"
 
 CONVERSION_CASES = {
-    NumeralSystem.ARABIC_INDIC: ARABIC_INDIC_DIGITS,
+    NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
     NumeralSystem.ENGLISH_FULLWIDTH: "０１２３４５６７８９",
     NumeralSystem.ENGLISH_SUBSCRIPT: "₀₁₂₃₄₅₆₇₈₉",
@@ -69,23 +68,18 @@ CONVERSION_CASES = {
 }
 
 
-def test_arabic_indic_digits():
+def test_numeral_system_digits():
+    for system, digits in CONVERSION_CASES.items():
+        attr_name = system.name + "_DIGITS"
+        assert getattr(xnum.params, attr_name) == digits
+        assert list(map(int, digits)) == list(range(10))
 
-    assert ARABIC_INDIC_DIGITS == xnum.params.ARABIC_INDIC_DIGITS
-    assert list(map(int, ARABIC_INDIC_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+@pytest.mark.parametrize("source,source_digits", CONVERSION_CASES.items())
+@pytest.mark.parametrize("target,target_digits", CONVERSION_CASES.items())
+def test_conversion_between_systems(source, source_digits, target, target_digits):
+    assert convert(source_digits, source=source, target=target) == target_digits
+    text = "abc {source_digits} abc".format(source_digits=source_digits)
+    expected = "abc {target_digits} abc".format(target_digits=target_digits)
+    assert convert(text, source=source, target=target) == expected
 
-@pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_arabic_indic_to_other_systems(target, expected):
-
-    assert convert(
-        ARABIC_INDIC_DIGITS,
-        source=NumeralSystem.ARABIC_INDIC,
-        target=target,
-    ) == expected
-
-    assert convert(
-        f"abc {ARABIC_INDIC_DIGITS} abc",
-        source=NumeralSystem.ARABIC_INDIC,
-        target=target,
-    ) == f"abc {expected} abc"
