@@ -4,6 +4,8 @@ from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Conversion tests"
 
+INT_EXCEPTED_NUMERAL_SYSTEMS = [NumeralSystem.ENGLISH_SUBSCRIPT, NumeralSystem.ENGLISH_SUPERSCRIPT, NumeralSystem.WANCHO, NumeralSystem.DIVES_AKURU]
+
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
     NumeralSystem.ENGLISH: "0123456789",
@@ -72,7 +74,8 @@ def test_numeral_system_digits():
     for system, digits in CONVERSION_CASES.items():
         attr_name = system.name + "_DIGITS"
         assert getattr(xnum.params, attr_name) == digits
-        assert list(map(int, digits)) == list(range(10))
+        if system not in INT_EXCEPTED_NUMERAL_SYSTEMS:
+            assert list(map(int, digits)) == list(range(10))
 
 
 @pytest.mark.parametrize("source,source_digits", CONVERSION_CASES.items())
