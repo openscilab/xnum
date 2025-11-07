@@ -7,6 +7,9 @@ TEST_CASE_NAME = "Conversion tests"
 INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.ENGLISH_SUBSCRIPT,
     NumeralSystem.ENGLISH_SUPERSCRIPT,
+    NumeralSystem.ENGLISH_CIRCLED,
+    NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF,
+    NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF,
     NumeralSystem.WANCHO,
     NumeralSystem.DIVES_AKURU]
 
