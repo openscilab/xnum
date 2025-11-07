@@ -2,9 +2,16 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Chakma tests"
-CHAKMA_DIGITS = "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿"
+TEST_CASE_NAME = "Conversion tests"
 
+INT_EXCEPTED_NUMERAL_SYSTEMS = [
+    NumeralSystem.ENGLISH_SUBSCRIPT,
+    NumeralSystem.ENGLISH_SUPERSCRIPT,
+    NumeralSystem.ENGLISH_CIRCLED,
+    NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF,
+    NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF,
+    NumeralSystem.WANCHO,
+    NumeralSystem.DIVES_AKURU]
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -54,7 +61,7 @@ CONVERSION_CASES = {
     NumeralSystem.TIRHUTA: "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙",
     NumeralSystem.SHARADA: "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙",
     NumeralSystem.KHUDAWADI: "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹",
-    NumeralSystem.CHAKMA: CHAKMA_DIGITS,
+    NumeralSystem.CHAKMA: "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿",
     NumeralSystem.SORA_SOMPENG: "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹",
     NumeralSystem.HANIFI_ROHINGYA: "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹",
     NumeralSystem.OSMANYA: "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩",
@@ -70,23 +77,18 @@ CONVERSION_CASES = {
 }
 
 
-def test_chakma_digits():
+def test_numeral_system_digits():
+    for system, digits in CONVERSION_CASES.items():
+        attr_name = system.name + "_DIGITS"
+        assert getattr(xnum.params, attr_name) == digits
+        if system not in INT_EXCEPTED_NUMERAL_SYSTEMS:
+            assert list(map(int, digits)) == list(range(10))
 
-    assert CHAKMA_DIGITS == xnum.params.CHAKMA_DIGITS
-    assert list(map(int, CHAKMA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-
-@pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_chakma_to_other_systems(target, expected):
-
-    assert convert(
-        CHAKMA_DIGITS,
-        source=NumeralSystem.CHAKMA,
-        target=target,
-    ) == expected
-
-    assert convert(
-        f"abc {CHAKMA_DIGITS} abc",
-        source=NumeralSystem.CHAKMA,
-        target=target,
-    ) == f"abc {expected} abc"
+@pytest.mark.parametrize("source,source_digits", CONVERSION_CASES.items())
+@pytest.mark.parametrize("target,target_digits", CONVERSION_CASES.items())
+def test_conversion_between_systems(source, source_digits, target, target_digits):
+    assert convert(source_digits, source=source, target=target) == target_digits
+    text = "abc {source_digits} abc".format(source_digits=source_digits)
+    expected = "abc {target_digits} abc".format(target_digits=target_digits)
+    assert convert(text, source=source, target=target) == expected
