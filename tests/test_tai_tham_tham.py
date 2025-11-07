@@ -2,9 +2,8 @@ import pytest
 import xnum.params
 from xnum import convert, NumeralSystem
 
-TEST_CASE_NAME = "Chakma tests"
-CHAKMA_DIGITS = "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿"
-
+TEST_CASE_NAME = "Tai Tham Tham tests"
+TAI_THAM_THAM_DIGITS = "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙"
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -54,7 +53,7 @@ CONVERSION_CASES = {
     NumeralSystem.TIRHUTA: "𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙",
     NumeralSystem.SHARADA: "𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙",
     NumeralSystem.KHUDAWADI: "𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹",
-    NumeralSystem.CHAKMA: CHAKMA_DIGITS,
+    NumeralSystem.CHAKMA: "𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿",
     NumeralSystem.SORA_SOMPENG: "𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹",
     NumeralSystem.HANIFI_ROHINGYA: "𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹",
     NumeralSystem.OSMANYA: "𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩",
@@ -66,27 +65,27 @@ CONVERSION_CASES = {
     NumeralSystem.WANCHO: "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹",
     NumeralSystem.ADLAM: "𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙",
     NumeralSystem.TAI_THAM_HORA: "᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉",
-    NumeralSystem.TAI_THAM_THAM: "᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙",
+    NumeralSystem.TAI_THAM_THAM: TAI_THAM_THAM_DIGITS,
 }
 
 
-def test_chakma_digits():
+def test_tai_tham_tham_digits():
 
-    assert CHAKMA_DIGITS == xnum.params.CHAKMA_DIGITS
-    assert list(map(int, CHAKMA_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    assert TAI_THAM_THAM_DIGITS == xnum.params.TAI_THAM_THAM_DIGITS
+    assert list(map(int, TAI_THAM_THAM_DIGITS)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 @pytest.mark.parametrize("target,expected", CONVERSION_CASES.items())
-def test_chakma_to_other_systems(target, expected):
+def test_tai_tham_tham_to_other_systems(target, expected):
 
     assert convert(
-        CHAKMA_DIGITS,
-        source=NumeralSystem.CHAKMA,
+        TAI_THAM_THAM_DIGITS,
+        source=NumeralSystem.TAI_THAM_THAM,
         target=target,
     ) == expected
 
     assert convert(
-        f"abc {CHAKMA_DIGITS} abc",
-        source=NumeralSystem.CHAKMA,
+        f"abc {TAI_THAM_THAM_DIGITS} abc",
+        source=NumeralSystem.TAI_THAM_THAM,
         target=target,
     ) == f"abc {expected} abc"
