@@ -4,7 +4,11 @@ from xnum import convert, NumeralSystem
 
 TEST_CASE_NAME = "Conversion tests"
 
-INT_EXCEPTED_NUMERAL_SYSTEMS = [NumeralSystem.ENGLISH_SUBSCRIPT, NumeralSystem.ENGLISH_SUPERSCRIPT, NumeralSystem.WANCHO, NumeralSystem.DIVES_AKURU]
+INT_EXCEPTED_NUMERAL_SYSTEMS = [
+    NumeralSystem.ENGLISH_SUBSCRIPT,
+    NumeralSystem.ENGLISH_SUPERSCRIPT,
+    NumeralSystem.WANCHO,
+    NumeralSystem.DIVES_AKURU]
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -85,4 +89,3 @@ def test_conversion_between_systems(source, source_digits, target, target_digits
     text = "abc {source_digits} abc".format(source_digits=source_digits)
     expected = "abc {target_digits} abc".format(target_digits=target_digits)
     assert convert(text, source=source, target=target) == expected
-
