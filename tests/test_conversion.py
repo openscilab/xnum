@@ -11,7 +11,8 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF,
     NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF,
     NumeralSystem.WANCHO,
-    NumeralSystem.DIVES_AKURU]
+    NumeralSystem.DIVES_AKURU,
+    NumeralSystem.NYIAKENG_PUACHUE_HMONG]
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
