@@ -66,9 +66,9 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 
 ### PyPI
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)
-- Run `pip install xnum==1.0`
+- Run `pip install xnum==1.1`
 ### Source code
-- Download [Version 1.0](https://github.com/openscilab/xnum/archive/v1.0.zip) or [Latest Source](https://github.com/openscilab/xnum/archive/dev.zip)
+- Download [Version 1.1](https://github.com/openscilab/xnum/archive/v1.1.zip) or [Latest Source](https://github.com/openscilab/xnum/archive/dev.zip)
 - Run `pip install .`
 
 ## Usage
