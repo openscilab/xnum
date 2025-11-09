@@ -146,6 +146,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Adlam
 - Tai Tham Hora
 - Tai Tham Tham
+- Nyiakeng Puachue Hmong
 
 ## Issues & bug reports
 
