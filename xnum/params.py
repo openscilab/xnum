@@ -16,6 +16,7 @@ ENGLISH_SANS_SERIF_BOLD_DIGITS = "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"
 ENGLISH_CIRCLED_DIGITS = "⓪①②③④⑤⑥⑦⑧⑨"
 ENGLISH_DINGBAT_CIRCLED_SANS_SERIF_DIGITS = "🄋➀➁➂➃➄➅➆➇➈"
 ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF_DIGITS = "🄌➊➋➌➍➎➏➐➑➒"
+ENGLISH_KEYCAP_DIGITS = "0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣"
 PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹"
 HINDI_DIGITS = "०१२३४५६७८९"
 ARABIC_INDIC_DIGITS = "٠١٢٣٤٥٦٧٨٩"
@@ -79,6 +80,7 @@ NUMERAL_MAPS = {
     "english_circled": ENGLISH_CIRCLED_DIGITS,
     "english_dingbat_circled_sans_serif": ENGLISH_DINGBAT_CIRCLED_SANS_SERIF_DIGITS,
     "english_dingbat_negative_circled_sans_serif": ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF_DIGITS,
+    "english_keycap": ENGLISH_KEYCAP_DIGITS,
     "persian": PERSIAN_DIGITS,
     "hindi": HINDI_DIGITS,
     "arabic_indic": ARABIC_INDIC_DIGITS,
@@ -151,6 +153,7 @@ class NumeralSystem(Enum):
     ENGLISH_CIRCLED = "english_circled"
     ENGLISH_DINGBAT_CIRCLED_SANS_SERIF = "english_dingbat_circled_sans_serif"
     ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF = "english_dingbat_negative_circled_sans_serif"
+    ENGLISH_KEYCAP = "english_keycap"
     PERSIAN = "persian"
     HINDI = "hindi"
     ARABIC_INDIC = "arabic_indic"
