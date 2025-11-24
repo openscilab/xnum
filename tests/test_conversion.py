@@ -29,7 +29,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_CIRCLED: "⓪①②③④⑤⑥⑦⑧⑨",
     NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF: "🄋➀➁➂➃➄➅➆➇➈",
     NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF: "🄌➊➋➌➍➎➏➐➑➒",
-    NumeralSystem.ENGLISH_KEYCAP: "0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣",
+    NumeralSystem.ENGLISH_KEYCAP: ["0️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣"],
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
