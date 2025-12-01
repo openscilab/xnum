@@ -48,11 +48,11 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
         raise ValueError(INVALID_TARGET_MESSAGE2)
     if not isinstance(source, NumeralSystem):
         raise ValueError(INVALID_SOURCE_MESSAGE)
-    
+
     all_digits = list(ALL_DIGIT_MAPS.keys())
     all_digits.sort(key=len, reverse=True)
     pattern = r"(?:{})".format("|".join(re.escape(digit) for digit in all_digits))
-    
+
     def convert_match(match: Match[str]):
         """
         Provide a substitution string based on a regex match object, for use with re.sub.
