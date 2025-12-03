@@ -4,7 +4,7 @@ from enum import Enum
 
 XNUM_VERSION = "1.1"
 
-ENGLISH_DIGITS = "0123456789"
+ENGLISH_DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 ENGLISH_FULLWIDTH_DIGITS = "０１２３４５６７８９"
 ENGLISH_SUBSCRIPT_DIGITS = "₀₁₂₃₄₅₆₇₈₉"
 ENGLISH_SUPERSCRIPT_DIGITS = "⁰¹²³⁴⁵⁶⁷⁸⁹"
