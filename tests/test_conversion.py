@@ -10,6 +10,7 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.ENGLISH_CIRCLED,
     NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF,
     NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF,
+    NumeralSystem.ENGLISH_KEYCAP,
     NumeralSystem.WANCHO,
     NumeralSystem.DIVES_AKURU,
     NumeralSystem.NYIAKENG_PUACHUE_HMONG]
@@ -28,6 +29,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_CIRCLED: "⓪①②③④⑤⑥⑦⑧⑨",
     NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF: "🄋➀➁➂➃➄➅➆➇➈",
     NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF: "🄌➊➋➌➍➎➏➐➑➒",
+    NumeralSystem.ENGLISH_KEYCAP: "0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
@@ -82,7 +84,7 @@ CONVERSION_CASES = {
 def test_numeral_system_digits():
     for system, digits in CONVERSION_CASES.items():
         attr_name = system.name + "_DIGITS"
-        assert getattr(xnum.params, attr_name) == list(digits)
+        assert "".join(getattr(xnum.params, attr_name)) == digits
         if system not in INT_EXCEPTED_NUMERAL_SYSTEMS:
             assert list(map(int, digits)) == list(range(10))
 
