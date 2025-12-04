@@ -84,7 +84,7 @@ CONVERSION_CASES = {
 def test_numeral_system_digits():
     for system, digits in CONVERSION_CASES.items():
         attr_name = system.name + "_DIGITS"
-        assert getattr(xnum.params, attr_name) == list(digits)
+        assert "".join(getattr(xnum.params, attr_name)) == digits
         if system not in INT_EXCEPTED_NUMERAL_SYSTEMS:
             assert list(map(int, digits)) == list(range(10))
 
