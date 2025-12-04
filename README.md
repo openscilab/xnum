@@ -166,6 +166,8 @@ You can also join our discord server
 
 <blockquote>2- <a href="https://symbl.cc">SYMBL (◕‿◕) Symbols, Emojis, Characters, Scripts, Alphabets, Hieroglyphs and the entire Unicode</a></blockquote>
 
+<blockquote>3- <a href="https://emojipedia.org/">📙 Emojipedia — 😃 Home of Emoji Meanings 💁👌🎍😍</a></blockquote>
+
 ## Show your support
 
 
