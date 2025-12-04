@@ -98,6 +98,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
     - Circled
     - Dingbat Circled Sans-Serif
     - Dingbat Negative Circled Sans-Serif
+    - Keycap
 - Persian
 - Hindi
 - Arabic-Indic
