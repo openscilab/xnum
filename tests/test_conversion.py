@@ -31,7 +31,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_DINGBAT_CIRCLED_SANS_SERIF: "🄋➀➁➂➃➄➅➆➇➈",
     NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF: "🄌➊➋➌➍➎➏➐➑➒",
     NumeralSystem.ENGLISH_KEYCAP: "0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣",
-    NumeralSystem.ENGLISH_EMOJI: "0️1️2️3️4️5️6️7️8️9️"
+    NumeralSystem.ENGLISH_EMOJI: "0️1️2️3️4️5️6️7️8️9️",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
