@@ -99,6 +99,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
     - Dingbat Circled Sans-Serif
     - Dingbat Negative Circled Sans-Serif
     - Keycap
+    - Emoji
 - Persian
 - Hindi
 - Arabic-Indic
