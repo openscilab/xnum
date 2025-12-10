@@ -53,7 +53,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
     all_digits.sort(key=len, reverse=True)
     pattern = r"(?:{})".format("|".join(re.escape(digit) for digit in all_digits))
 
-    def convert_match(match: Match[str]):
+    def convert_match(match: Match[str]) -> str:
         """
         Provide a substitution string based on a regex match object, for use with re.sub.
 
