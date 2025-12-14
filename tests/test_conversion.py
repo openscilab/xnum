@@ -12,7 +12,7 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF,
     NumeralSystem.ENGLISH_KEYCAP,
     NumeralSystem.ENGLISH_EMOJI,
-    NumeralSystem.ENGLISH_FULL_STOP
+    NumeralSystem.ENGLISH_FULL_STOP,
     NumeralSystem.WANCHO,
     NumeralSystem.DIVES_AKURU,
     NumeralSystem.NYIAKENG_PUACHUE_HMONG]
