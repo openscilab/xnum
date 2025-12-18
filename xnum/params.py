@@ -19,6 +19,7 @@ ENGLISH_DINGBAT_NEGATIVE_CIRCLED_SANS_SERIF_DIGITS = ['🄌', '➊', '➋', '➌
 ENGLISH_KEYCAP_DIGITS = ['0️⃣', '1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣']
 ENGLISH_EMOJI_DIGITS = ['0️', '1️', '2️', '3️', '4️', '5️', '6️', '7️', '8️', '9️']
 ENGLISH_FULL_STOP_DIGITS = ['🄀', '⒈', '⒉', '⒊', '⒋', '⒌', '⒍', '⒎', '⒏', '⒐']
+ENGLISH_COMMA_DIGITS = ['🄁', '🄂', '🄃', '🄄', '🄅', '🄆', '🄇', '🄈', '🄉', '🄊']
 PERSIAN_DIGITS = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']
 HINDI_DIGITS = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९']
 ARABIC_INDIC_DIGITS = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩']
@@ -85,6 +86,7 @@ NUMERAL_MAPS = {
     "english_keycap": ENGLISH_KEYCAP_DIGITS,
     "english_emoji": ENGLISH_EMOJI_DIGITS,
     "english_full_stop": ENGLISH_FULL_STOP_DIGITS,
+    "english_comma": ENGLISH_COMMA_DIGITS,
     "persian": PERSIAN_DIGITS,
     "hindi": HINDI_DIGITS,
     "arabic_indic": ARABIC_INDIC_DIGITS,
@@ -160,6 +162,7 @@ class NumeralSystem(Enum):
     ENGLISH_KEYCAP = "english_keycap"
     ENGLISH_EMOJI = "english_emoji"
     ENGLISH_FULL_STOP = "english_full_stop"
+    ENGLISH_COMMA = "english_comma"
     PERSIAN = "persian"
     HINDI = "hindi"
     ARABIC_INDIC = "arabic_indic"

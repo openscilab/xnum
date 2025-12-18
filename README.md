@@ -101,6 +101,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
     - Keycap
     - Emoji
     - Full Stop
+    - Comma
 - Persian
 - Hindi
 - Arabic-Indic
