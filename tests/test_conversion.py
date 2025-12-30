@@ -14,6 +14,7 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.ENGLISH_EMOJI,
     NumeralSystem.ENGLISH_FULL_STOP,
     NumeralSystem.ENGLISH_COMMA,
+    NumeralSystem.ENGLISH_SEGMENTED,
     NumeralSystem.WANCHO,
     NumeralSystem.DIVES_AKURU,
     NumeralSystem.NYIAKENG_PUACHUE_HMONG]
@@ -36,6 +37,7 @@ CONVERSION_CASES = {
     NumeralSystem.ENGLISH_EMOJI: "0️1️2️3️4️5️6️7️8️9️",
     NumeralSystem.ENGLISH_FULL_STOP: "🄀⒈⒉⒊⒋⒌⒍⒎⒏⒐",
     NumeralSystem.ENGLISH_COMMA: "🄁🄂🄃🄄🄅🄆🄇🄈🄉🄊",
+    NumeralSystem.ENGLISH_SEGMENTED: "🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹",
     NumeralSystem.PERSIAN: "۰۱۲۳۴۵۶۷۸۹",
     NumeralSystem.HINDI: "०१२३४५६७८९",
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",

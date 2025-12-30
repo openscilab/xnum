@@ -102,6 +102,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
     - Emoji
     - Full Stop
     - Comma
+    - Segmented
 - Persian
 - Hindi
 - Arabic-Indic
