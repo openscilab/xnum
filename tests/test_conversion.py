@@ -14,6 +14,7 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.ENGLISH_EMOJI,
     NumeralSystem.ENGLISH_FULL_STOP,
     NumeralSystem.ENGLISH_COMMA,
+    NumeralSystem.ENGLISH_SEGMENTED,
     NumeralSystem.WANCHO,
     NumeralSystem.DIVES_AKURU,
     NumeralSystem.NYIAKENG_PUACHUE_HMONG]
