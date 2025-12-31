@@ -120,6 +120,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Nko
 - Mongolian
 - Sinhala Lith
+- Myanmar
 - Myanmar Shan
 - Limbu
 - Vai
