@@ -109,7 +109,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Bengali
 - Thai
 - Khmer
-- Burmese
+- Myanmar
 - Tibetan
 - Gujarati
 - Odia
@@ -120,7 +120,6 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Nko
 - Mongolian
 - Sinhala Lith
-- Myanmar
 - Myanmar Shan
 - Limbu
 - Vai

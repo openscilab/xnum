@@ -27,7 +27,7 @@ ARABIC_INDIC_DIGITS = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩
 BENGALI_DIGITS = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯']
 THAI_DIGITS = ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙']
 KHMER_DIGITS = ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩']
-BURMESE_DIGITS = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉']
+MYANMAR_DIGITS = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉']
 TIBETAN_DIGITS = ['༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩']
 GUJARATI_DIGITS = ['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯']
 ODIA_DIGITS = ['୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯']
@@ -38,7 +38,6 @@ LAO_DIGITS = ['໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '�
 NKO_DIGITS = ['߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉']  # RTL
 MONGOLIAN_DIGITS = ['᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙']
 SINHALA_LITH_DIGITS = ['෦', '෧', '෨', '෩', '෪', '෫', '෬', '෭', '෮', '෯']
-MYANMAR_DIGITS = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉']
 MYANMAR_SHAN_DIGITS = ['႐', '႑', '႒', '႓', '႔', '႕', '႖', '႗', '႘', '႙']
 LIMBU_DIGITS = ['᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏']
 VAI_DIGITS = ['꘠', '꘡', '꘢', '꘣', '꘤', '꘥', '꘦', '꘧', '꘨', '꘩']
@@ -97,7 +96,7 @@ NUMERAL_MAPS = {
     "bengali": BENGALI_DIGITS,
     "thai": THAI_DIGITS,
     "khmer": KHMER_DIGITS,
-    "burmese": BURMESE_DIGITS,
+    "myanmar": MYANMAR_DIGITS,
     "tibetan": TIBETAN_DIGITS,
     "gujarati": GUJARATI_DIGITS,
     "odia": ODIA_DIGITS,
@@ -108,7 +107,6 @@ NUMERAL_MAPS = {
     "nko": NKO_DIGITS,
     "mongolian": MONGOLIAN_DIGITS,
     "sinhala_lith": SINHALA_LITH_DIGITS,
-    "myanmar": MYANMAR_DIGITS,
     "myanmar_shan": MYANMAR_SHAN_DIGITS,
     "limbu": LIMBU_DIGITS,
     "vai": VAI_DIGITS,
@@ -176,7 +174,7 @@ class NumeralSystem(Enum):
     BENGALI = "bengali"
     THAI = "thai"
     KHMER = "khmer"
-    BURMESE = "burmese"
+    MYANMAR = "myanmar"
     TIBETAN = "tibetan"
     GUJARATI = "gujarati"
     ODIA = "odia"
@@ -187,7 +185,6 @@ class NumeralSystem(Enum):
     NKO = "nko"
     MONGOLIAN = "mongolian"
     SINHALA_LITH = "sinhala_lith"
-    MYANMAR = "myanmar"
     MYANMAR_SHAN = "myanmar_shan"
     LIMBU = "limbu"
     VAI = "vai"
