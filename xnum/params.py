@@ -38,6 +38,7 @@ LAO_DIGITS = ['໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '�
 NKO_DIGITS = ['߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉']  # RTL
 MONGOLIAN_DIGITS = ['᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙']
 SINHALA_LITH_DIGITS = ['෦', '෧', '෨', '෩', '෪', '෫', '෬', '෭', '෮', '෯']
+MYANMAR_DIGITS = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉']
 MYANMAR_SHAN_DIGITS = ['႐', '႑', '႒', '႓', '႔', '႕', '႖', '႗', '႘', '႙']
 LIMBU_DIGITS = ['᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏']
 VAI_DIGITS = ['꘠', '꘡', '꘢', '꘣', '꘤', '꘥', '꘦', '꘧', '꘨', '꘩']
@@ -107,6 +108,7 @@ NUMERAL_MAPS = {
     "nko": NKO_DIGITS,
     "mongolian": MONGOLIAN_DIGITS,
     "sinhala_lith": SINHALA_LITH_DIGITS,
+    "myanmar": MYANMAR_DIGITS,
     "myanmar_shan": MYANMAR_SHAN_DIGITS,
     "limbu": LIMBU_DIGITS,
     "vai": VAI_DIGITS,
@@ -185,6 +187,7 @@ class NumeralSystem(Enum):
     NKO = "nko"
     MONGOLIAN = "mongolian"
     SINHALA_LITH = "sinhala_lith"
+    MYANMAR = "myanmar"
     MYANMAR_SHAN = "myanmar_shan"
     LIMBU = "limbu"
     VAI = "vai"
