@@ -27,7 +27,7 @@ ARABIC_INDIC_DIGITS = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩
 BENGALI_DIGITS = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯']
 THAI_DIGITS = ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙']
 KHMER_DIGITS = ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩']
-BURMESE_DIGITS = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉']
+MYANMAR_DIGITS = ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉']
 TIBETAN_DIGITS = ['༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩']
 GUJARATI_DIGITS = ['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯']
 ODIA_DIGITS = ['୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯']
@@ -96,7 +96,7 @@ NUMERAL_MAPS = {
     "bengali": BENGALI_DIGITS,
     "thai": THAI_DIGITS,
     "khmer": KHMER_DIGITS,
-    "burmese": BURMESE_DIGITS,
+    "myanmar": MYANMAR_DIGITS,
     "tibetan": TIBETAN_DIGITS,
     "gujarati": GUJARATI_DIGITS,
     "odia": ODIA_DIGITS,
@@ -174,7 +174,7 @@ class NumeralSystem(Enum):
     BENGALI = "bengali"
     THAI = "thai"
     KHMER = "khmer"
-    BURMESE = "burmese"
+    MYANMAR = "myanmar"
     TIBETAN = "tibetan"
     GUJARATI = "gujarati"
     ODIA = "odia"

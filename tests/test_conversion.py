@@ -43,7 +43,7 @@ CONVERSION_CASES = {
     NumeralSystem.BENGALI: "০১২৩৪৫৬৭৮৯",
     NumeralSystem.THAI: "๐๑๒๓๔๕๖๗๘๙",
     NumeralSystem.KHMER: "០១២៣៤៥៦៧៨៩",
-    NumeralSystem.BURMESE: "၀၁၂၃၄၅၆၇၈၉",
+    NumeralSystem.MYANMAR: "၀၁၂၃၄၅၆၇၈၉",
     NumeralSystem.TIBETAN: "༠༡༢༣༤༥༦༧༨༩",
     NumeralSystem.GUJARATI: "૦૧૨૩૪૫૬૭૮૯",
     NumeralSystem.ODIA: "୦୧୨୩୪୫୬୭୮୯",
