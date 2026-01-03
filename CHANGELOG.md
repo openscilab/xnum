@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - English comma mode
 - English segmented mode
 - Malayalam numeral system
+- Brahmi numeral system
 ### Changed
 - Burmese numeral system renamed to Myanmar
 ## [1.2] - 2025-12-11
