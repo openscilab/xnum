@@ -153,6 +153,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Tai Tham Tham
 - Nyiakeng Puachue Hmong
 - Malayalam
+- Brahmi
 
 ## Issues & bug reports
 
