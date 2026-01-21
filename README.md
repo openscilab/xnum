@@ -154,6 +154,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Nyiakeng Puachue Hmong
 - Malayalam
 - Brahmi
+- Myanmar Tai Laing
 
 ## Issues & bug reports
 
