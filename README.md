@@ -155,6 +155,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Malayalam
 - Brahmi
 - Myanmar Tai Laing
+- Ahom
 
 ## Issues & bug reports
 
