@@ -89,6 +89,7 @@ CONVERSION_CASES = {
     NumeralSystem.MALAYALAM: "൦൧൨൩൪൫൬൭൮൯",
     NumeralSystem.BRAHMI: "𑁦𑁧𑁨𑁩𑁪𑁫𑁬𑁭𑁮𑁯",
     NumeralSystem.MYANMAR_TAI_LAING: "꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹",
+    NumeralSystem.AHOM: "𑜰𑜱𑜲𑜳𑜴𑜵𑜶𑜷𑜸𑜹",
 }
 
 
