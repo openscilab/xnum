@@ -156,6 +156,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Brahmi
 - Myanmar Tai Laing
 - Ahom
+- Warang Citi
 
 ## Issues & bug reports
 
