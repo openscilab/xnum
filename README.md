@@ -157,6 +157,10 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Myanmar Tai Laing
 - Ahom
 - Warang Citi
+- Tamil
+
+> [!NOTE]
+> XNum performs digit-by-digit conversion using positional notation. Traditional numeral forms with special symbols for 10, 100, or 1000 (e.g., Tamil ௰, ௱, ௲) are not covered. For most modern use cases, positional digit conversion is the expected behavior.
 
 ## Issues & bug reports
 
