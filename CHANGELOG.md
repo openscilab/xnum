@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Ahom numeral system
 - Warang Citi numeral system
+- Tamil numeral system
 ## [1.3] - 2026-01-28
 ### Added
 - English full stop mode
