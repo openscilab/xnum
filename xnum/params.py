@@ -75,6 +75,7 @@ BRAHMI_DIGITS = ['𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭',
 MYANMAR_TAI_LAING_DIGITS = ['꧰', '꧱', '꧲', '꧳', '꧴', '꧵', '꧶', '꧷', '꧸', '꧹']
 AHOM_DIGITS = ['𑜰', '𑜱', '𑜲', '𑜳', '𑜴', '𑜵', '𑜶', '𑜷', '𑜸', '𑜹']
 WARANG_CITI_DIGITS = ['𑣠', '𑣡', '𑣢', '𑣣', '𑣤', '𑣥', '𑣦', '𑣧', '𑣨', '𑣩']
+BHAIKSUKI_DIGITS = ['𑱐', '𑱑', '𑱒', '𑱓', '𑱔', '𑱕', '𑱖', '𑱗', '𑱘', '𑱙']
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -148,6 +149,7 @@ NUMERAL_MAPS = {
     "myanmar_tai_laing": MYANMAR_TAI_LAING_DIGITS,
     "ahom": AHOM_DIGITS,
     "warang_citi": WARANG_CITI_DIGITS,
+    "bhaiksuki": BHAIKSUKI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -230,6 +232,7 @@ class NumeralSystem(Enum):
     MYANMAR_TAI_LAING = "myanmar_tai_laing"
     AHOM = "ahom"
     WARANG_CITI = "warang_citi"
+    BHAIKSUKI = "bhaiksuki"
     AUTO = "auto"
 
 
