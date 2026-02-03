@@ -157,6 +157,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Myanmar Tai Laing
 - Ahom
 - Warang Citi
+- Bhaiksuki
 - Tamil
 
 > [!NOTE]
