@@ -91,6 +91,7 @@ CONVERSION_CASES = {
     NumeralSystem.MYANMAR_TAI_LAING: "꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹",
     NumeralSystem.AHOM: "𑜰𑜱𑜲𑜳𑜴𑜵𑜶𑜷𑜸𑜹",
     NumeralSystem.WARANG_CITI: "𑣠𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩",
+    NumeralSystem.BHAIKSUKI: "𑱐𑱑𑱒𑱓𑱔𑱕𑱖𑱗𑱘𑱙",
 }
 
 
