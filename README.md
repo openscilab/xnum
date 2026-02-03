@@ -160,7 +160,9 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Tamil
 
 > [!NOTE]
-> XNum performs digit-by-digit conversion using positional notation. Traditional numeral forms with special symbols for 10, 100, or 1000 (e.g., Tamil ௰, ௱, ௲) are not covered. For most modern use cases, positional digit conversion is the expected behavior.
+> XNum performs digit-by-digit conversion using positional notation.
+> While most supported systems are positional, a small subset are non-positional and follow different numeric conventions.
+> For them, XNum converts only individual digit symbols and does not interpret or generate non-positional number forms.
 
 ## Issues & bug reports
 
