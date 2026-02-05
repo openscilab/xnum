@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Warang Citi numeral system
 - Bhaiksuki numeral system
 - Tamil numeral system
+### Changed
+- `README.md` updated
 ## [1.3] - 2026-01-28
 ### Added
 - English full stop mode
