@@ -158,6 +158,12 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Ahom
 - Warang Citi
 - Bhaiksuki
+- Tamil
+
+> [!NOTE]
+> XNum performs digit-by-digit conversion using positional notation.
+> While most supported systems are positional, a small subset are non-positional and follow different numeric conventions.
+> For them, XNum converts only individual digit symbols and does not interpret or generate non-positional number forms.
 
 ## Issues & bug reports
 
