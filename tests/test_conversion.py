@@ -93,6 +93,7 @@ CONVERSION_CASES = {
     NumeralSystem.WARANG_CITI: "𑣠𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩",
     NumeralSystem.BHAIKSUKI: "𑱐𑱑𑱒𑱓𑱔𑱕𑱖𑱗𑱘𑱙",
     NumeralSystem.TAMIL: "௦௧௨௩௪௫௬௭௮௯",
+    NumeralSystem.PAHAWH_HMONG: "𖭐𖭑𖭒𖭓𖭔𖭕𖭖𖭗𖭘𖭙",
 }
 
 

@@ -159,6 +159,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Warang Citi
 - Bhaiksuki
 - Tamil
+- Pahawh Hmong
 
 > [!NOTE]
 > XNum performs digit-by-digit conversion using positional notation.
