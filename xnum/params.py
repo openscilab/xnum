@@ -77,6 +77,7 @@ AHOM_DIGITS = ['𑜰', '𑜱', '𑜲', '𑜳', '𑜴', '𑜵', '𑜶', '𑜷', '
 WARANG_CITI_DIGITS = ['𑣠', '𑣡', '𑣢', '𑣣', '𑣤', '𑣥', '𑣦', '𑣧', '𑣨', '𑣩']
 BHAIKSUKI_DIGITS = ['𑱐', '𑱑', '𑱒', '𑱓', '𑱔', '𑱕', '𑱖', '𑱗', '𑱘', '𑱙']
 TAMIL_DIGITS = ['௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯']
+PAHAWH_HMONG_DIGITS = ['𖭐', '𖭑', '𖭒', '𖭓', '𖭔', '𖭕', '𖭖', '𖭗', '𖭘', '𖭙']
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -152,6 +153,7 @@ NUMERAL_MAPS = {
     "warang_citi": WARANG_CITI_DIGITS,
     "bhaiksuki": BHAIKSUKI_DIGITS,
     "tamil": TAMIL_DIGITS,
+    "pahawh_hmong": PAHAWH_HMONG_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -236,6 +238,7 @@ class NumeralSystem(Enum):
     WARANG_CITI = "warang_citi"
     BHAIKSUKI = "bhaiksuki"
     TAMIL = "tamil"
+    PAHAWH_HMONG = "pahawh_hmong"
     AUTO = "auto"
 
 
