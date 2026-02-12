@@ -96,6 +96,10 @@ CONVERSION_CASES = {
     NumeralSystem.PAHAWH_HMONG: "𖭐𖭑𖭒𖭓𖭔𖭕𖭖𖭗𖭘𖭙",
 }
 
+def test_numeral_system_length():
+    for digits in xnum.params.NUMERAL_MAPS.values():
+        assert len(digits) == 10
+
 
 def test_numeral_system_digits():
     for system, digits in CONVERSION_CASES.items():
