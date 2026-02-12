@@ -119,7 +119,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Lao
 - Nko
 - Mongolian
-- Sinhala Lith
+- Sinhala Lith ★
 - Myanmar Shan
 - Limbu
 - Vai
@@ -153,13 +153,15 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Tai Tham Tham
 - Nyiakeng Puachue Hmong
 - Malayalam
-- Brahmi
+- Brahmi ★
 - Myanmar Tai Laing
 - Ahom
 - Warang Citi
 - Bhaiksuki
-- Tamil
+- Tamil ★
 - Pahawh Hmong
+
+> ★ Non-positional numeral system
 
 > [!NOTE]
 > XNum performs digit-by-digit conversion using positional notation.

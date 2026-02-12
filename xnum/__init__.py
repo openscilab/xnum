@@ -4,3 +4,5 @@ from .params import XNUM_VERSION, NumeralSystem
 from .functions import convert
 
 __version__ = XNUM_VERSION
+
+__all__ = ["NumeralSystem", "convert"]
