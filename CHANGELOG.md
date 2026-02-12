@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Pahawh Hmong numeral system
 ### Changed
 - `README.md` updated
+- Test system modified
 ## [1.3] - 2026-01-28
 ### Added
 - English full stop mode
