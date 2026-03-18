@@ -17,6 +17,7 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.ENGLISH_SEGMENTED,
     NumeralSystem.WANCHO,
     NumeralSystem.DIVES_AKURU,
+    NumeralSystem.GARAY,
     NumeralSystem.NYIAKENG_PUACHUE_HMONG]
 
 CONVERSION_CASES = {
