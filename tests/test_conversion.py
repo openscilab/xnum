@@ -94,6 +94,7 @@ CONVERSION_CASES = {
     NumeralSystem.BHAIKSUKI: "𑱐𑱑𑱒𑱓𑱔𑱕𑱖𑱗𑱘𑱙",
     NumeralSystem.TAMIL: "௦௧௨௩௪௫௬௭௮௯",
     NumeralSystem.PAHAWH_HMONG: "𖭐𖭑𖭒𖭓𖭔𖭕𖭖𖭗𖭘𖭙",
+    NumeralSystem.GARAY: '\U00010d40\U00010d41\U00010d42\U00010d43\U00010d44\U00010d45\U00010d46\U00010d47\U00010d48\U00010d49',
 }
 
 def test_numeral_system_length():
