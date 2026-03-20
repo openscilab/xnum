@@ -160,6 +160,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Bhaiksuki
 - Tamil ★
 - Pahawh Hmong
+- Garay
 
 > ★ Non-positional numeral system
 
