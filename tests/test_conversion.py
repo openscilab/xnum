@@ -18,7 +18,9 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.WANCHO,
     NumeralSystem.DIVES_AKURU,
     NumeralSystem.GARAY,
-    NumeralSystem.NYIAKENG_PUACHUE_HMONG]
+    NumeralSystem.NYIAKENG_PUACHUE_HMONG,
+    NumeralSystem.MEDEFAIDRIN,
+]
 
 CONVERSION_CASES = {
     NumeralSystem.ARABIC_INDIC: "٠١٢٣٤٥٦٧٨٩",
@@ -96,6 +98,7 @@ CONVERSION_CASES = {
     NumeralSystem.TAMIL: "௦௧௨௩௪௫௬௭௮௯",
     NumeralSystem.PAHAWH_HMONG: "𖭐𖭑𖭒𖭓𖭔𖭕𖭖𖭗𖭘𖭙",
     NumeralSystem.GARAY: "𐵀𐵁𐵂𐵃𐵄𐵅𐵆𐵇𐵈𐵉",
+    NumeralSystem.MEDEFAIDRIN: "𖺀𖺁𖺂𖺃𖺄𖺅𖺆𖺇𖺈𖺉",
 }
 
 def test_numeral_system_length():
