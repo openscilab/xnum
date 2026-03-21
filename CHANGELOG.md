@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Garay numeral system
+- Medefaidrin numeral system
 ## [1.4] - 2026-02-16
 ### Added
 - Ahom numeral system

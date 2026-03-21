@@ -161,6 +161,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Tamil ★
 - Pahawh Hmong
 - Garay
+- Medefaidrin
 
 > ★ Non-positional numeral system
 
