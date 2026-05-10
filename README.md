@@ -162,6 +162,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 - Pahawh Hmong
 - Garay
 - Medefaidrin
+- Nag Mundari
 
 > ★ Non-positional numeral system
 
