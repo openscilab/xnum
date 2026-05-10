@@ -20,6 +20,7 @@ INT_EXCEPTED_NUMERAL_SYSTEMS = [
     NumeralSystem.GARAY,
     NumeralSystem.NYIAKENG_PUACHUE_HMONG,
     NumeralSystem.MEDEFAIDRIN,
+    NumeralSystem.NAG_MUNDARI,
 ]
 
 CONVERSION_CASES = {
