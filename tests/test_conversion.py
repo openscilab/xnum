@@ -99,6 +99,7 @@ CONVERSION_CASES = {
     NumeralSystem.PAHAWH_HMONG: "𖭐𖭑𖭒𖭓𖭔𖭕𖭖𖭗𖭘𖭙",
     NumeralSystem.GARAY: "𐵀𐵁𐵂𐵃𐵄𐵅𐵆𐵇𐵈𐵉",
     NumeralSystem.MEDEFAIDRIN: "𖺀𖺁𖺂𖺃𖺄𖺅𖺆𖺇𖺈𖺉",
+    NumeralSystem.NAG_MUNDARI: "𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹",
 }
 
 def test_numeral_system_length():
