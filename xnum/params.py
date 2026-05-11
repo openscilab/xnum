@@ -80,6 +80,7 @@ TAMIL_DIGITS = ['௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '
 PAHAWH_HMONG_DIGITS = ['𖭐', '𖭑', '𖭒', '𖭓', '𖭔', '𖭕', '𖭖', '𖭗', '𖭘', '𖭙']
 GARAY_DIGITS = ['𐵀', '𐵁', '𐵂', '𐵃', '𐵄', '𐵅', '𐵆', '𐵇', '𐵈', '𐵉']
 MEDEFAIDRIN_DIGITS = ['𖺀', '𖺁', '𖺂', '𖺃', '𖺄', '𖺅', '𖺆', '𖺇', '𖺈', '𖺉']
+NAG_MUNDARI_DIGITS = ['𞓰', '𞓱', '𞓲', '𞓳', '𞓴', '𞓵', '𞓶', '𞓷', '𞓸', '𞓹']
 
 NUMERAL_MAPS = {
     "english": ENGLISH_DIGITS,
@@ -158,6 +159,7 @@ NUMERAL_MAPS = {
     "pahawh_hmong": PAHAWH_HMONG_DIGITS,
     "garay": GARAY_DIGITS,
     "medefaidrin": MEDEFAIDRIN_DIGITS,
+    "nag_mundari": NAG_MUNDARI_DIGITS,
 }
 
 ALL_DIGIT_MAPS = {}
@@ -245,6 +247,7 @@ class NumeralSystem(Enum):
     PAHAWH_HMONG = "pahawh_hmong"
     GARAY = "garay"
     MEDEFAIDRIN = "medefaidrin"
+    NAG_MUNDARI = "nag_mundari"
     AUTO = "auto"
 
 
