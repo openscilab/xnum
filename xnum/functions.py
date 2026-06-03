@@ -70,6 +70,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
     result = re.sub(pattern, convert_match, text)
     return result
 
+
 def available_systems() -> List[str]:
     """Return all supported numeral systems."""
     return sorted(NUMERAL_MAPS.keys())
