@@ -73,6 +73,8 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 
 ## Usage
 
+### Converting
+
 ```pycon
 >>> from xnum import convert, NumeralSystem
 >>> print(convert("۱۲۳ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH))
@@ -82,6 +84,17 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 ```
 
 ℹ️ By default, the `source` parameter is set to `NumeralSystem.AUTO`, which automatically detects the numeral system
+
+### Available systems
+
+```pycon
+>>> from xnum import available_systems
+>>> print(available_systems())
+['adlam', 'ahom', 'arabic_indic', ..., 'wancho', 'warang_citi']
+```
+
+ℹ️ Use `available_systems()` to get the list of all supported numeral systems programmatically.
+
 
 ## Supported numeral systems
 
