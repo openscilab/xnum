@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """XNum functions."""
 import re
-from typing import Match
+from typing import Match, List
 from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
@@ -69,3 +69,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
 
     result = re.sub(pattern, convert_match, text)
     return result
+
+def available_systems() -> List[str]:
+    """Return all supported numeral systems."""
+    return sorted(NUMERAL_MAPS.keys())
