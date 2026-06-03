@@ -205,4 +205,4 @@ def test_available_systems():
         'vai',
         'wancho',
         'warang_citi']
-    assert len(available_systems) == 77
+    assert len(available_systems()) == 77
