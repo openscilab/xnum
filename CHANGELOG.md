@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Nag Mundari numeral system
+- `available_systems` function
 ### Changed
 - `README.md` updated
+- Test system modified
 ## [1.5] - 2026-04-10
 ### Added
 - Garay numeral system

@@ -1,6 +1,6 @@
 import pytest
 import xnum.params
-from xnum import convert, NumeralSystem
+from xnum import convert, NumeralSystem, available_systems
 
 TEST_CASE_NAME = "Conversion tests"
 
@@ -103,6 +103,7 @@ CONVERSION_CASES = {
     NumeralSystem.NAG_MUNDARI: "𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹",
 }
 
+
 def test_numeral_system_length():
     for digits in xnum.params.NUMERAL_MAPS.values():
         assert len(digits) == 10
@@ -123,3 +124,85 @@ def test_conversion_between_systems(source, source_digits, target, target_digits
     text = "abc {source_digits} abc".format(source_digits=source_digits)
     expected = "abc {target_digits} abc".format(target_digits=target_digits)
     assert convert(text, source=source, target=target) == expected
+
+
+def test_available_systems():
+    assert available_systems() == [
+        'adlam',
+        'ahom',
+        'arabic_indic',
+        'balinese',
+        'bengali',
+        'bhaiksuki',
+        'brahmi',
+        'chakma',
+        'cham',
+        'dives_akuru',
+        'english',
+        'english_bold',
+        'english_circled',
+        'english_comma',
+        'english_dingbat_circled_sans_serif',
+        'english_dingbat_negative_circled_sans_serif',
+        'english_double_struck',
+        'english_emoji',
+        'english_full_stop',
+        'english_fullwidth',
+        'english_keycap',
+        'english_monospace',
+        'english_sans_serif',
+        'english_sans_serif_bold',
+        'english_segmented',
+        'english_subscript',
+        'english_superscript',
+        'garay',
+        'gujarati',
+        'gunjala_gondi',
+        'gurmukhi',
+        'hanifi_rohingya',
+        'hindi',
+        'javanese',
+        'kannada',
+        'kayah_li',
+        'khmer',
+        'khudawadi',
+        'lao',
+        'lepcha',
+        'limbu',
+        'malayalam',
+        'masaram_gondi',
+        'medefaidrin',
+        'meetei_mayek',
+        'modi',
+        'mongolian',
+        'mro',
+        'myanmar',
+        'myanmar_shan',
+        'myanmar_tai_laing',
+        'nag_mundari',
+        'new_tai_lue',
+        'newa',
+        'nko',
+        'nyiakeng_puachue_hmong',
+        'odia',
+        'ol_chiki',
+        'osmanya',
+        'pahawh_hmong',
+        'persian',
+        'saurashtra',
+        'sharada',
+        'sinhala_lith',
+        'sora_sompeng',
+        'sundanese',
+        'tai_tham_hora',
+        'tai_tham_tham',
+        'takri',
+        'tamil',
+        'telugu',
+        'thai',
+        'tibetan',
+        'tirhuta',
+        'vai',
+        'wancho',
+        'warang_citi']
+    assert len(available_systems()) == 77
