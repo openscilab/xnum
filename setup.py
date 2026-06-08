@@ -5,13 +5,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-
-def get_requires() -> list:
-    """Read requirements.txt."""
-    requirements = open("requirements.txt", "r").read()
-    return list(filter(lambda x: x != "", requirements.split()))
-
-
 def read_description() -> str:
     """Read README.md and CHANGELOG.md."""
     try:
@@ -32,8 +25,7 @@ def read_description() -> str:
 
 setup(
     name='xnum',
-    packages=[
-        'xnum', ],
+    packages=['xnum'],
     version='1.5',
     description='XNum: Universal Numeral System Converter',
     long_description=read_description(),
@@ -42,11 +34,11 @@ setup(
     author_email='xnum@openscilab.com',
     url='https://github.com/openscilab/xnum',
     download_url='https://github.com/openscilab/xnum/tarball/v1.5',
-    keywords="convert numeral number numeral-system digits",
+    keywords='convert numeral number numeral-system digits',
     project_urls={
             'Source': 'https://github.com/openscilab/xnum',
     },
-    install_requires=get_requires(),
+    install_requires=[],
     python_requires='>=3.7',
     classifiers=[
         'Development Status :: 5 - Production/Stable',

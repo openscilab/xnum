@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `README.md` updated
 - Test system modified
+- Dependencies structure modified
 ## [1.5] - 2026-04-10
 ### Added
 - Garay numeral system
