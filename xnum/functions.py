@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """XNum functions."""
 import re
-from typing import Match, List
+from typing import Match, List, Any
 from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
