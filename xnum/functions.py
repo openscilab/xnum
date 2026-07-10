@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """XNum functions."""
 import re
-from typing import Match, List
+from typing import Match, List, Any
 from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
@@ -32,9 +32,9 @@ def translate_digit(char: str, target: NumeralSystem) -> str:
     return char
 
 
-def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSystem.AUTO) -> str:
+def _validate_convert(text: Any, target: Any, source: Any) -> bool:
     """
-    Convert function.
+    Validate convert inputs.
 
     :param text: input text
     :param target: target numeral system
@@ -48,7 +48,18 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
         raise ValueError(INVALID_TARGET_MESSAGE2)
     if not isinstance(source, NumeralSystem):
         raise ValueError(INVALID_SOURCE_MESSAGE)
+    return True
 
+
+def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSystem.AUTO) -> str:
+    """
+    Convert function.
+
+    :param text: input text
+    :param target: target numeral system
+    :param source: source numeral system
+    """
+    _validate_convert(text=text, target=target, source=source)
     all_digits = list(ALL_DIGIT_MAPS.keys())
     all_digits.sort(key=len, reverse=True)
     pattern = r"(?:{})".format("|".join(re.escape(digit) for digit in all_digits))
