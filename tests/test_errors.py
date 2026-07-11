@@ -7,7 +7,7 @@ TEST_CASE_NAME = "Errors tests"
 
 def test_error_inheritance():
     assert issubclass(XNumError, Exception)
-    assert issubclass(XNumValidationError, PixoraError)
+    assert issubclass(XNumValidationError, XNumError)
     assert issubclass(XNumValidationError, ValueError)
 
 
