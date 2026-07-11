@@ -5,5 +5,6 @@
 class XNumError(Exception):
     """Base exception for all XNum errors."""
 
+
 class XNumValidationError(XNumError, ValueError):
     """Raised when input validation fails."""
