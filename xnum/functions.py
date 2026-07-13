@@ -20,17 +20,17 @@ def _detect_digit_system(digit: str) -> NumeralSystem:
     return NumeralSystem.ENGLISH
 
 
-def translate_digit(char: str, target: NumeralSystem) -> str:
+def _translate_digit(digit: str, target: NumeralSystem) -> str:
     """
     Translate digit.
 
-    :param char: character
+    :param digit: input digit
     :param target: target numeral system
     """
-    if char in ALL_DIGIT_MAPS:
-        standard = ALL_DIGIT_MAPS[char]
+    if digit in ALL_DIGIT_MAPS:
+        standard = ALL_DIGIT_MAPS[digit]
         return NUMERAL_MAPS[target.value][int(standard)]
-    return char
+    return digit
 
 
 def _validate_convert(text: Any, target: Any, source: Any) -> bool:
@@ -74,9 +74,9 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
         token = match.group()
         detected = _detect_digit_system(token)
         if source == NumeralSystem.AUTO:
-            return translate_digit(token, target)
+            return _translate_digit(token, target)
         elif detected == source:
-            return translate_digit(token, target)
+            return _translate_digit(token, target)
         return token
 
     result = re.sub(pattern, convert_match, text)

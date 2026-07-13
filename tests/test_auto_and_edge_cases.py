@@ -1,5 +1,5 @@
 from xnum import convert, NumeralSystem
-from xnum.functions import _detect_digit_system, translate_digit
+from xnum.functions import _detect_digit_system, _translate_digit
 
 TEST_CASE_NAME = "Auto-detect & edge tests"
 
@@ -43,4 +43,4 @@ def test_detect_digit_system_default():
 
 
 def test_translate_digit_pass():
-    assert translate_digit(" ", NumeralSystem.ENGLISH) == " "
+    assert _translate_digit(" ", NumeralSystem.ENGLISH) == " "
