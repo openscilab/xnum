@@ -8,14 +8,14 @@ from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
 
 
-def detect_system(char: str) -> NumeralSystem:
+def _detect_digit_system(digit: str) -> NumeralSystem:
     """
-    Detect numeral system.
+    Detect a digit numeral system.
 
-    :param char: character
+    :param digit: input digit
     """
     for system, digits in NUMERAL_MAPS.items():
-        if char in digits:
+        if digit in digits:
             return NumeralSystem(system)
     return NumeralSystem.ENGLISH
 
@@ -72,7 +72,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
         :param match: a regular expression match object
         """
         token = match.group()
-        detected = detect_system(token)
+        detected = _detect_digit_system(token)
         if source == NumeralSystem.AUTO:
             return translate_digit(token, target)
         elif detected == source:

@@ -1,5 +1,5 @@
 from xnum import convert, NumeralSystem
-from xnum.functions import detect_system, translate_digit
+from xnum.functions import _detect_digit_system, translate_digit
 
 TEST_CASE_NAME = "Auto-detect & edge tests"
 
@@ -38,8 +38,8 @@ def test_mixed_language_context3():
     assert convert(text, source=NumeralSystem.GUJARATI, target=NumeralSystem.ENGLISH_CIRCLED) == expected
 
 
-def test_detect_system_default():
-    assert detect_system(" ") == NumeralSystem.ENGLISH
+def test_detect_digit_system_default():
+    assert _detect_digit_system(" ") == NumeralSystem.ENGLISH
 
 
 def test_translate_digit_pass():
