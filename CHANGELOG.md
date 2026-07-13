@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Nag Mundari numeral system
 - `available_systems` function
 - `_validate_convert` function
+- `detect_system` function renamed to `_detect_digit_system`
+- `translate_digit` function renamed to `_translate_digit`
 ### Changed
 - `README.md` updated
 - Test system modified
