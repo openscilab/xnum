@@ -162,13 +162,6 @@ NUMERAL_MAPS = {
     "nag_mundari": NAG_MUNDARI_DIGITS,
 }
 
-ALL_DIGIT_MAPS = {}
-DIGIT_SYSTEM_MAP = {}
-for system, digits in NUMERAL_MAPS.items():
-    for index, digit in enumerate(digits):
-        ALL_DIGIT_MAPS[digit] = str(index)
-        DIGIT_SYSTEM_MAP[digit] = NumeralSystem(system)
-
 
 class NumeralSystem(Enum):
     """Numeral System enum."""
@@ -251,6 +244,14 @@ class NumeralSystem(Enum):
     MEDEFAIDRIN = "medefaidrin"
     NAG_MUNDARI = "nag_mundari"
     AUTO = "auto"
+
+
+ALL_DIGIT_MAPS = {}
+DIGIT_SYSTEM_MAP = {}
+for system, digits in NUMERAL_MAPS.items():
+    for index, digit in enumerate(digits):
+        ALL_DIGIT_MAPS[digit] = str(index)
+        DIGIT_SYSTEM_MAP[digit] = NumeralSystem(system)
 
 
 INVALID_SOURCE_MESSAGE = "Invalid value. `source` must be an instance of NumeralSystem enum."
