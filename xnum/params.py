@@ -164,8 +164,8 @@ NUMERAL_MAPS = {
 
 ALL_DIGIT_MAPS = {}
 for system, digits in NUMERAL_MAPS.items():
-    for index, char in enumerate(digits):
-        ALL_DIGIT_MAPS[char] = str(index)
+    for index, digit in enumerate(digits):
+        ALL_DIGIT_MAPS[digit] = str(index)
 
 
 class NumeralSystem(Enum):
