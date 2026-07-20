@@ -3,7 +3,7 @@
 import re
 from typing import Match, List, Any
 from .errors import XNumValidationError
-from .params import NumeralSystem, SYSTEM_TO_DIGITS_MAP, ALL_DIGIT_MAPS, DIGIT_SYSTEM_MAP
+from .params import NumeralSystem, SYSTEM_TO_DIGITS_MAP, DIGIT_TO_VALUE_MAP, DIGIT_SYSTEM_MAP
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
 
@@ -24,8 +24,8 @@ def _translate_digit(digit: str, target: NumeralSystem) -> str:
     :param digit: input digit
     :param target: target numeral system
     """
-    if digit in ALL_DIGIT_MAPS:
-        standard = ALL_DIGIT_MAPS[digit]
+    if digit in DIGIT_TO_VALUE_MAP:
+        standard = DIGIT_TO_VALUE_MAP[digit]
         return SYSTEM_TO_DIGITS_MAP[target.value][int(standard)]
     return digit
 
@@ -58,7 +58,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
     :param source: source numeral system
     """
     _validate_convert(text=text, target=target, source=source)
-    all_digits = list(ALL_DIGIT_MAPS.keys())
+    all_digits = list(DIGIT_TO_VALUE_MAP.keys())
     all_digits.sort(key=len, reverse=True)
     pattern = r"(?:{})".format("|".join(re.escape(digit) for digit in all_digits))
 
