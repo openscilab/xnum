@@ -3,7 +3,7 @@
 import re
 from typing import Match, List, Any
 from .errors import XNumValidationError
-from .params import NumeralSystem, SYSTEM_TO_DIGITS_MAP, DIGIT_TO_VALUE_MAP, DIGIT_SYSTEM_MAP
+from .params import NumeralSystem, SYSTEM_TO_DIGITS_MAP, DIGIT_TO_VALUE_MAP, DIGIT_TO_SYSTEM_MAP
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
 
@@ -14,7 +14,7 @@ def _detect_digit_system(digit: str) -> NumeralSystem:
 
     :param digit: input digit
     """
-    return DIGIT_SYSTEM_MAP.get(digit, NumeralSystem.ENGLISH)
+    return DIGIT_TO_SYSTEM_MAP.get(digit, NumeralSystem.ENGLISH)
 
 
 def _translate_digit(digit: str, target: NumeralSystem) -> str:

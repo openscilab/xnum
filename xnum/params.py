@@ -247,11 +247,11 @@ class NumeralSystem(Enum):
 
 
 DIGIT_TO_VALUE_MAP = {}
-DIGIT_SYSTEM_MAP = {}
+DIGIT_TO_SYSTEM_MAP = {}
 for system, digits in SYSTEM_TO_DIGITS_MAP.items():
     for index, digit in enumerate(digits):
         DIGIT_TO_VALUE_MAP[digit] = str(index)
-        DIGIT_SYSTEM_MAP[digit] = NumeralSystem(system)
+        DIGIT_TO_SYSTEM_MAP[digit] = NumeralSystem(system)
 
 
 INVALID_SOURCE_MESSAGE = "Invalid value. `source` must be an instance of NumeralSystem enum."
