@@ -3,7 +3,7 @@
 import re
 from typing import Match, List, Any
 from .errors import XNumValidationError
-from .params import NumeralSystem, NUMERAL_MAPS, ALL_DIGIT_MAPS, DIGIT_SYSTEM_MAP
+from .params import NumeralSystem, SYSTEM_TO_DIGITS_MAP, ALL_DIGIT_MAPS, DIGIT_SYSTEM_MAP
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
 
@@ -26,7 +26,7 @@ def _translate_digit(digit: str, target: NumeralSystem) -> str:
     """
     if digit in ALL_DIGIT_MAPS:
         standard = ALL_DIGIT_MAPS[digit]
-        return NUMERAL_MAPS[target.value][int(standard)]
+        return SYSTEM_TO_DIGITS_MAP[target.value][int(standard)]
     return digit
 
 
@@ -82,4 +82,4 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
 
 def available_systems() -> List[str]:
     """Return all supported numeral systems."""
-    return sorted(NUMERAL_MAPS.keys())
+    return sorted(SYSTEM_TO_DIGITS_MAP.keys())

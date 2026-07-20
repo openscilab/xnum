@@ -105,7 +105,7 @@ CONVERSION_CASES = {
 
 
 def test_numeral_system_length():
-    for digits in xnum.params.NUMERAL_MAPS.values():
+    for digits in xnum.params.SYSTEM_TO_DIGITS_MAP.values():
         assert len(digits) == 10
 
 
