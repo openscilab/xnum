@@ -10,7 +10,7 @@ def detect_conflicts() -> bool:
     :return: result as boolean
     """
     seen = {}
-    for system, digits in NUMERAL_MAPS.items():
+    for system, digits in SYSTEM_TO_DIGITS_MAP.items():
         for index, char in enumerate(digits):
             if char in seen:
                 other_system, other_index = seen[char]
