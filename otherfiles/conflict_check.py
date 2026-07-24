@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Conflict-check script."""
-from xnum.params import NUMERAL_MAPS
+from xnum.params import SYSTEM_TO_DIGITS_MAP
 
 
 def detect_conflicts() -> bool:
