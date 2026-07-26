@@ -82,7 +82,7 @@ GARAY_DIGITS = ['𐵀', '𐵁', '𐵂', '𐵃', '𐵄', '𐵅', '𐵆', '𐵇', 
 MEDEFAIDRIN_DIGITS = ['𖺀', '𖺁', '𖺂', '𖺃', '𖺄', '𖺅', '𖺆', '𖺇', '𖺈', '𖺉']
 NAG_MUNDARI_DIGITS = ['𞓰', '𞓱', '𞓲', '𞓳', '𞓴', '𞓵', '𞓶', '𞓷', '𞓸', '𞓹']
 
-NUMERAL_MAPS = {
+SYSTEM_TO_DIGITS_MAP = {
     "english": ENGLISH_DIGITS,
     "english_fullwidth": ENGLISH_FULLWIDTH_DIGITS,
     "english_subscript": ENGLISH_SUBSCRIPT_DIGITS,
@@ -246,12 +246,12 @@ class NumeralSystem(Enum):
     AUTO = "auto"
 
 
-ALL_DIGIT_MAPS = {}
-DIGIT_SYSTEM_MAP = {}
-for system, digits in NUMERAL_MAPS.items():
+DIGIT_TO_VALUE_MAP = {}
+DIGIT_TO_SYSTEM_MAP = {}
+for system, digits in SYSTEM_TO_DIGITS_MAP.items():
     for index, digit in enumerate(digits):
-        ALL_DIGIT_MAPS[digit] = str(index)
-        DIGIT_SYSTEM_MAP[digit] = NumeralSystem(system)
+        DIGIT_TO_VALUE_MAP[digit] = str(index)
+        DIGIT_TO_SYSTEM_MAP[digit] = NumeralSystem(system)
 
 
 INVALID_SOURCE_MESSAGE = "Invalid value. `source` must be an instance of NumeralSystem enum."

@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `detect_system` function renamed to `_detect_digit_system`
 - `translate_digit` function renamed to `_translate_digit`
+- `NUMERAL_MAPS` renamed to `SYSTEM_TO_DIGITS_MAP`
+- `ALL_DIGIT_MAPS` renamed to `DIGIT_TO_VALUE_MAP`
+- `DIGIT_SYSTEM_MAP` renamed to `DIGIT_TO_SYSTEM_MAP`
 - `README.md` updated
 - Test system modified
 - Dependencies structure modified
