@@ -69,10 +69,9 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
         :param match: a regular expression match object
         """
         token = match.group()
-        detected = _detect_digit_system(token)
         if source == NumeralSystem.AUTO:
             return _translate_digit(token, target)
-        elif detected == source:
+        elif _detect_digit_system(token) == source:
             return _translate_digit(token, target)
         return token
 
