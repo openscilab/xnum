@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `ALL_DIGIT_MAPS` renamed to `DIGIT_TO_VALUE_MAP`
 - `DIGIT_SYSTEM_MAP` renamed to `DIGIT_TO_SYSTEM_MAP`
 - `README.md` updated
+- `convert_match` function modified
 - Test system modified
 - Dependencies structure modified
 ## [1.5] - 2026-04-10
