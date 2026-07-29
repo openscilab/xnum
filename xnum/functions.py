@@ -75,7 +75,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
             return _translate_digit(token, target)
         return token
 
-    result = re.sub(pattern, convert_match, text)
+    result = DIGIT_PATTERN.sub(convert_match, text)
     return result
 
 
