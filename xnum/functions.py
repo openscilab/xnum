@@ -8,6 +8,9 @@ from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
 from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
 
 
+_ALL_DIGITS = sorted(DIGIT_TO_VALUE_MAP.keys(), key=len, reverse=True)
+DIGIT_PATTERN = re.compile(r"(?:{})".format("|".join(re.escape(d) for d in _ALL_DIGITS)))
+
 def _detect_digit_system(digit: str) -> NumeralSystem:
     """
     Detect a digit numeral system.
@@ -58,9 +61,6 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
     :param source: source numeral system
     """
     _validate_convert(text=text, target=target, source=source)
-    all_digits = list(DIGIT_TO_VALUE_MAP.keys())
-    all_digits.sort(key=len, reverse=True)
-    pattern = r"(?:{})".format("|".join(re.escape(digit) for digit in all_digits))
 
     def convert_match(match: Match[str]) -> str:
         """
@@ -75,7 +75,7 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
             return _translate_digit(token, target)
         return token
 
-    result = re.sub(pattern, convert_match, text)
+    result = DIGIT_PATTERN.sub(convert_match, text)
     return result
 
 
