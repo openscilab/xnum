@@ -11,6 +11,7 @@ from .params import INVALID_TARGET_MESSAGE1, INVALID_TARGET_MESSAGE2
 _ALL_DIGITS = sorted(DIGIT_TO_VALUE_MAP.keys(), key=len, reverse=True)
 DIGIT_PATTERN = re.compile(r"(?:{})".format("|".join(re.escape(d) for d in _ALL_DIGITS)))
 
+
 def _detect_digit_system(digit: str) -> NumeralSystem:
     """
     Detect a digit numeral system.
@@ -82,7 +83,6 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
 def available_systems() -> List[str]:
     """Return all supported numeral systems."""
     return sorted(SYSTEM_TO_DIGITS_MAP.keys())
-
 
 
 def detect_systems(text: str) -> List[NumeralSystem]:
