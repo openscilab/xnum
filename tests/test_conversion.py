@@ -1,6 +1,6 @@
 import pytest
 import xnum.params
-from xnum import convert, NumeralSystem, available_systems
+from xnum import convert, NumeralSystem, available_systems, detect_systems
 
 TEST_CASE_NAME = "Conversion tests"
 

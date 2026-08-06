@@ -1,6 +1,6 @@
 import pytest
 from xnum import XNumError, XNumValidationError
-from xnum import convert, NumeralSystem
+from xnum import convert, detect_systems, NumeralSystem
 
 TEST_CASE_NAME = "Errors tests"
 
