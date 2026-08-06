@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `XNumError` class
 - `XNumValidationError` class
 - Nag Mundari numeral system
+- `detect_systems` function
 - `available_systems` function
 - `_validate_convert` function
 ### Changed
