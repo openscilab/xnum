@@ -206,3 +206,39 @@ def test_available_systems():
         'wancho',
         'warang_citi']
     assert len(available_systems()) == 77
+
+
+def test_detect_single_system():
+    assert detect_systems("۱۲۳۴۵") == [NumeralSystem.PERSIAN]
+    assert detect_systems("12345") == [NumeralSystem.ENGLISH]
+
+
+def test_detect_multiple_systems1():
+    assert detect_systems("۱۲۳ and 456") == [
+        NumeralSystem.PERSIAN,
+        NumeralSystem.ENGLISH,
+    ]
+
+
+def test_detect_multiple_systems2():
+    text = "۱۲۳ 456 १२३"
+    assert detect_systems(text) == [
+        NumeralSystem.PERSIAN,
+        NumeralSystem.ENGLISH,
+        NumeralSystem.HINDI,
+    ]
+
+
+def test_detect_systems_are_unique():
+    assert detect_systems("۱۲۳ ۴۵۶ ۷۸۹") == [NumeralSystem.PERSIAN]
+
+
+def test_detect_systems_preserves_first_seen_order():
+    assert detect_systems("۱۲۳ 456 ۱۲۳ 456") == [
+        NumeralSystem.PERSIAN,
+        NumeralSystem.ENGLISH,
+    ]
+
+
+def test_detect_no_systems():
+    assert detect_systems("hello world") == []
