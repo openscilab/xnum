@@ -82,3 +82,27 @@ def convert(text: str, target: NumeralSystem, source: NumeralSystem = NumeralSys
 def available_systems() -> List[str]:
     """Return all supported numeral systems."""
     return sorted(SYSTEM_TO_DIGITS_MAP.keys())
+
+
+
+def detect_systems(text: str) -> List[NumeralSystem]:
+    """
+    Return all numeral systems appearing in text.
+
+    :param text: input text
+    """
+    if not isinstance(text, str):
+        raise XNumValidationError(INVALID_TEXT_MESSAGE)
+
+    systems = []
+
+    for ch in text:
+        if ch not in DIGIT_TO_VALUE_MAP:
+            continue
+
+        system = detect_system(ch)
+
+        if system not in systems:
+            systems.append(system)
+
+    return systems
