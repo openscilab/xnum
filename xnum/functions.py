@@ -100,7 +100,7 @@ def detect_systems(text: str) -> List[NumeralSystem]:
         if ch not in DIGIT_TO_VALUE_MAP:
             continue
 
-        system = detect_system(ch)
+        system = _detect_digit_system(ch)
 
         if system not in systems:
             systems.append(system)
