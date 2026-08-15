@@ -1,6 +1,6 @@
 import pytest
 from xnum import XNumError, XNumValidationError
-from xnum import convert, NumeralSystem
+from xnum import convert, detect_systems, NumeralSystem
 
 TEST_CASE_NAME = "Errors tests"
 
@@ -29,3 +29,8 @@ def test_target_error2():
 def test_source_error():
     with pytest.raises(XNumValidationError, match=r"Invalid value. `source` must be an instance of NumeralSystem enum."):
         _ = convert("12345", target=NumeralSystem.PERSIAN, source="English")
+
+
+def test_detect_text_error():
+    with pytest.raises(XNumValidationError, match=r"Invalid value. `text` must be a string."):
+        detect_systems(123)
