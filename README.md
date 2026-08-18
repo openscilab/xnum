@@ -83,17 +83,18 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 १२३ and 456
 ```
 
-ℹ️ By default, the `source` parameter is set to `NumeralSystem.AUTO`, which automatically detects the numeral system
+> [!NOTE]
+> By default, the `source` parameter is set to `NumeralSystem.AUTO`, which automatically detects the numeral system
 
 ### Detecting numeral systems
+
+`detect_systems()` returns a list of all unique numeral systems found in the input text, preserving their first appearance order.
 
 ```pycon
 >>> from xnum import detect_systems
 >>> print(detect_systems("۱۲۳ apples & 456 cars"))
 [<NumeralSystem.PERSIAN: 'persian'>, <NumeralSystem.ENGLISH: 'english'>]
 ```
-
-`detect_systems()` returns a list of all unique numeral systems found in the input text, preserving their first appearance order.
 
 If no supported numeral system is found, an empty list is returned:
 
