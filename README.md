@@ -110,7 +110,8 @@ If no supported numeral system is found, an empty list is returned:
 ['adlam', 'ahom', 'arabic_indic', ..., 'wancho', 'warang_citi']
 ```
 
-ℹ️ Use `available_systems()` to get the list of all supported numeral systems programmatically.
+> [!NOTE]
+> Use `available_systems()` to get the list of all supported numeral systems programmatically.
 
 
 ## Supported numeral systems
