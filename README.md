@@ -75,7 +75,7 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 
 ### Converting
 
-Convert digits between supported numeral systems while preserving the surrounding text.
+Convert digits between different numeral systems while preserving the surrounding text.
 
 ```pycon
 >>> from xnum import convert, NumeralSystem
