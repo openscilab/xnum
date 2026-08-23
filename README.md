@@ -111,7 +111,7 @@ Get the list of all numeral systems supported by XNum.
 
 ```pycon
 >>> from xnum import available_systems
->>> print(available_systems())
+>>> available_systems()
 ['adlam', 'ahom', 'arabic_indic', ..., 'wancho', 'warang_citi']
 ```
 
