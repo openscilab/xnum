@@ -79,10 +79,10 @@ Convert digits between different numeral systems while preserving the surroundin
 
 ```pycon
 >>> from xnum import convert, NumeralSystem
->>> print(convert("۱۲۳ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH))
-123 apples & 456 cars
->>> print(convert("۱۲۳ and 456", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
-१२३ and 456
+>>> convert("۱۲۳ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH)
+'123 apples & 456 cars'
+>>> convert("۱۲۳ and 456", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI)
+'१२३ and 456'
 ```
 
 > [!NOTE]
