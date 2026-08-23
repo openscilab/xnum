@@ -94,14 +94,14 @@ Detect all unique numeral systems in the input text, preserving their first appe
 
 ```pycon
 >>> from xnum import detect_systems
->>> print(detect_systems("۱۲۳ apples & 456 cars"))
+>>> detect_systems("۱۲۳ apples & 456 cars")
 [<NumeralSystem.PERSIAN: 'persian'>, <NumeralSystem.ENGLISH: 'english'>]
 ```
 
 If no supported numeral system is found, an empty list is returned:
 
 ```pycon
->>> print(detect_systems("hello world"))
+>>> detect_systems("hello world")
 []
 ```
 
