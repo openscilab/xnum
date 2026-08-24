@@ -79,10 +79,10 @@ Convert digits between different numeral systems while preserving the surroundin
 
 ```pycon
 >>> from xnum import convert, NumeralSystem
->>> print(convert("۱۲۳ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH))
-123 apples & 456 cars
->>> print(convert("۱۲۳ and 456", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI))
-१२३ and 456
+>>> convert("۱۲۳ apples & ꘤꘥꘦ cars", target=NumeralSystem.ENGLISH)
+'123 apples & 456 cars'
+>>> convert("۱۲۳ and 456", source=NumeralSystem.PERSIAN, target=NumeralSystem.HINDI)
+'१२३ and 456'
 ```
 
 > [!NOTE]
@@ -94,14 +94,14 @@ Detect all unique numeral systems in the input text, preserving their first appe
 
 ```pycon
 >>> from xnum import detect_systems
->>> print(detect_systems("۱۲۳ apples & 456 cars"))
+>>> detect_systems("۱۲۳ apples & 456 cars")
 [<NumeralSystem.PERSIAN: 'persian'>, <NumeralSystem.ENGLISH: 'english'>]
 ```
 
 If no supported numeral system is found, an empty list is returned:
 
 ```pycon
->>> print(detect_systems("hello world"))
+>>> detect_systems("hello world")
 []
 ```
 
@@ -111,7 +111,7 @@ Get the list of all numeral systems supported by XNum.
 
 ```pycon
 >>> from xnum import available_systems
->>> print(available_systems())
+>>> available_systems()
 ['adlam', 'ahom', 'arabic_indic', ..., 'wancho', 'warang_citi']
 ```
 
