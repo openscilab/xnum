@@ -96,11 +96,9 @@ def detect_systems(text: str) -> List[NumeralSystem]:
 
     systems = []
 
-    for ch in text:
-        if ch not in DIGIT_TO_VALUE_MAP:
-            continue
-
-        system = _detect_digit_system(ch)
+    for match in DIGIT_PATTERN.finditer(text):
+        digit = match.group()
+        system = _detect_digit_system(digit)
 
         if system not in systems:
             systems.append(system)
