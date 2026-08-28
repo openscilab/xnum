@@ -100,7 +100,7 @@ def detect_systems(text: str) -> List[NumeralSystem]:
         digit = match.group()
         system = _detect_digit_system(digit)
 
-        if system not in systems:
+        if system is not None and system not in systems:
             systems.append(system)
 
     return systems
