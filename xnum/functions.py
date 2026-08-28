@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """XNum functions."""
 import re
-from typing import Match, List, Any
+from typing import Match, List, Any, Optional
 from .errors import XNumValidationError
 from .params import NumeralSystem, SYSTEM_TO_DIGITS_MAP, DIGIT_TO_VALUE_MAP, DIGIT_TO_SYSTEM_MAP
 from .params import INVALID_SOURCE_MESSAGE, INVALID_TEXT_MESSAGE
@@ -12,13 +12,13 @@ _ALL_DIGITS = sorted(DIGIT_TO_VALUE_MAP.keys(), key=len, reverse=True)
 DIGIT_PATTERN = re.compile(r"(?:{})".format("|".join(re.escape(d) for d in _ALL_DIGITS)))
 
 
-def _detect_digit_system(digit: str) -> NumeralSystem:
+def _detect_digit_system(digit: str) -> Optional[NumeralSystem]:
     """
     Detect a digit numeral system.
 
     :param digit: input digit
     """
-    return DIGIT_TO_SYSTEM_MAP.get(digit, NumeralSystem.ENGLISH)
+    return DIGIT_TO_SYSTEM_MAP.get(digit, None)
 
 
 def _translate_digit(digit: str, target: NumeralSystem) -> str:
