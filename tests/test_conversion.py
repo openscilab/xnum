@@ -211,6 +211,8 @@ def test_available_systems():
 def test_detect_single_system():
     assert detect_systems("۱۲۳۴۵") == [NumeralSystem.PERSIAN]
     assert detect_systems("12345") == [NumeralSystem.ENGLISH]
+    assert detect_systems("1️⃣2️⃣3️⃣4️⃣5️⃣") == [NumeralSystem.ENGLISH_KEYCAP]
+    assert detect_systems("1️2️3️4️5️") == [NumeralSystem.ENGLISH_EMOJI]
 
 
 def test_detect_multiple_systems1():
@@ -226,6 +228,16 @@ def test_detect_multiple_systems2():
         NumeralSystem.PERSIAN,
         NumeralSystem.ENGLISH,
         NumeralSystem.HINDI,
+    ]
+
+
+def test_detect_multiple_systems3():
+    text = "۱۲۳ 4️⃣5️⃣6️⃣ 456"
+
+    assert detect_systems(text) == [
+        NumeralSystem.PERSIAN,
+        NumeralSystem.ENGLISH_KEYCAP,
+        NumeralSystem.ENGLISH,
     ]
 
 
