@@ -39,7 +39,7 @@ def test_mixed_language_context3():
 
 
 def test_detect_digit_system_default():
-    assert _detect_digit_system(" ") == NumeralSystem.ENGLISH
+    assert _detect_digit_system(" ") == None
 
 
 def test_translate_digit_pass():
