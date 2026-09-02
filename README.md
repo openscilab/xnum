@@ -119,13 +119,13 @@ Get the list of all numeral systems supported by XNum.
 ## Supported numeral systems
 
 - English
-	- Standard
-	- Fullwidth
-	- Subscript
-	- Superscript
-	- Double-Struck
-	- Bold
-	- Monospace
+    - Standard
+    - Fullwidth
+    - Subscript
+    - Superscript
+    - Double-Struck
+    - Bold
+    - Monospace
     - Sans-Serif
     - Sans-Serif Bold
     - Circled
