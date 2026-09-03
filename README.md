@@ -66,9 +66,9 @@ It can automatically detect mixed numeral formats in a piece of text and convert
 
 ### PyPI
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)
-- Run `pip install xnum==1.5`
+- Run `pip install xnum==1.6`
 ### Source code
-- Download [Version 1.5](https://github.com/openscilab/xnum/archive/v1.5.zip) or [Latest Source](https://github.com/openscilab/xnum/archive/dev.zip)
+- Download [Version 1.6](https://github.com/openscilab/xnum/archive/v1.6.zip) or [Latest Source](https://github.com/openscilab/xnum/archive/dev.zip)
 - Run `pip install .`
 
 ## Usage
@@ -119,13 +119,13 @@ Get the list of all numeral systems supported by XNum.
 ## Supported numeral systems
 
 - English
-	- Standard
-	- Fullwidth
-	- Subscript
-	- Superscript
-	- Double-Struck
-	- Bold
-	- Monospace
+    - Standard
+    - Fullwidth
+    - Subscript
+    - Superscript
+    - Double-Struck
+    - Bold
+    - Monospace
     - Sans-Serif
     - Sans-Serif Bold
     - Circled
